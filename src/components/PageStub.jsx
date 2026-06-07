@@ -9,6 +9,7 @@ export default function PageStub({ eyebrow, title, description, children }) {
             <div className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-gold-bright">
               <span className="h-px w-8 bg-gold-bright" />
               {eyebrow}
+              <span className="h-px w-8 bg-gold-bright" />
             </div>
           )}
           <h1 className="mt-4 font-display text-5xl text-ivory sm:text-6xl">
@@ -23,7 +24,7 @@ export default function PageStub({ eyebrow, title, description, children }) {
       <section className="bg-sheet">
         <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 lg:px-8">
           {children ?? (
-            <div className="rounded-xl border border-steel/10 bg-white p-10 text-center">
+            <div className="rounded-xl border border-gray-200 bg-white p-10 text-center">
               <p className="text-base text-gray-600">
                 Content for this page is being prepared. Check back soon — or get in
                 touch if you have a question.

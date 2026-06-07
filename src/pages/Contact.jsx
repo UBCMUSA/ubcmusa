@@ -8,7 +8,7 @@ export default function Contact() {
       description="Reach the MUSA executive team directly, find our offices, or drop by the student lounge on the fourth floor of the UBC School of Music."
     >
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="rounded-xl border border-steel/10 bg-white p-8">
+        <div className="rounded-xl border border-gray-200 bg-white p-8">
           <h2 className="font-display text-2xl text-steel">General Inquiries</h2>
           <dl className="mt-6 space-y-4 text-sm">
             <div>
@@ -28,7 +28,7 @@ export default function Contact() {
             </div>
           </dl>
         </div>
-        <div className="rounded-xl border border-steel/10 bg-white p-8">
+        <div className="rounded-xl border border-gray-200 bg-white p-8">
           <h2 className="font-display text-2xl text-steel">Visit Us</h2>
           <dl className="mt-6 space-y-4 text-sm">
             <div>

@@ -1,4 +1,5 @@
 import PageStub from "../../components/PageStub.jsx";
+import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 
 const PILLARS = [
   {
@@ -42,8 +43,8 @@ export default function WhatIsMUSA() {
     >
       <article className="space-y-12">
         <section>
-          <h2 className="font-display text-3xl text-steel">Our Mission</h2>
-          <p className="mt-4 text-base leading-relaxed text-gray-700">
+          <SectionEyebrow center>Our Mission</SectionEyebrow>
+          <p className="mt-5 text-base leading-relaxed text-gray-700">
             The Music Undergraduate Students' Association (MUSA) is the official
             student government, constituency council, and community backbone
             representing over 400 undergraduate musicians, scholars, and future
@@ -63,17 +64,15 @@ export default function WhatIsMUSA() {
         </section>
 
         <section>
-          <h2 className="font-display text-3xl text-steel">
-            Our Three Strategic Pillars
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-gray-700">
+          <SectionEyebrow center>Our Three Strategic Pillars</SectionEyebrow>
+          <p className="mt-5 text-base leading-relaxed text-gray-700">
             To deliver a professionalized, high-impact student experience, all of
             MUSA's initiatives, services, and operations are guided by three core
             mandates:
           </p>
           <ol className="mt-8 space-y-6">
             {PILLARS.map((p) => (
-              <li key={p.n} className="rounded-xl border border-steel/10 bg-white p-7">
+              <li key={p.n} className="rounded-xl border border-gray-200 bg-white p-7">
                 <div className="flex items-start gap-5">
                   <div className="font-display text-5xl leading-none text-steel/40">{p.n}</div>
                   <div>
@@ -89,8 +88,8 @@ export default function WhatIsMUSA() {
         </section>
 
         <section>
-          <h2 className="font-display text-3xl text-steel">The MUSA Experience</h2>
-          <p className="mt-4 text-base leading-relaxed text-gray-700">
+          <SectionEyebrow center>The MUSA Experience</SectionEyebrow>
+          <p className="mt-5 text-base leading-relaxed text-gray-700">
             Much like the largest undergraduate societies at UBC, MUSA supports its
             members through a diverse array of student-led initiatives, professional
             services, and community traditions. Throughout the academic year, we
@@ -100,7 +99,7 @@ export default function WhatIsMUSA() {
             {EXPERIENCE.map((e) => (
               <div
                 key={e.title}
-                className="rounded-xl border border-steel/10 bg-white p-6"
+                className="rounded-xl border border-gray-200 bg-white p-6"
               >
                 <h3 className="font-display text-xl text-steel">{e.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-gray-600">{e.body}</p>
@@ -109,11 +108,9 @@ export default function WhatIsMUSA() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-steel/10 bg-steel/5 p-10">
-          <h2 className="font-display text-3xl text-steel">
-            Our Commitment to Community
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-gray-700">
+        <section className="rounded-xl border border-gray-200 bg-steel/5 p-10">
+          <SectionEyebrow center>Our Commitment to Community</SectionEyebrow>
+          <p className="mt-5 text-base leading-relaxed text-gray-700">
             At MUSA, we strive to build a diverse, equitable, and inclusive
             community where every student feels safe, valued, and heard. Music is a
             universal language, but every student's academic and artistic journey

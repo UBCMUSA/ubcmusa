@@ -79,7 +79,7 @@ export default function WhoWeAre() {
         {EXECS.map((e) => (
           <article
             key={e.role}
-            className="overflow-hidden rounded-xl border border-steel/10 bg-white"
+            className="overflow-hidden rounded-xl border border-gray-200 bg-white"
           >
             <header className="bg-steel/5 px-8 py-6">
               <div className="text-xs font-semibold uppercase tracking-[0.22em] text-steel">

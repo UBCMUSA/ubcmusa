@@ -95,6 +95,39 @@ export default function Navbar() {
                     <path d="M2.5 4.5 L6 8 L9.5 4.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
+
+                {/* Per-section dropdown */}
+                <div
+                  className={`absolute left-0 top-full pt-2 ${
+                    isOpen ? "" : "pointer-events-none"
+                  }`}
+                >
+                  <div
+                    className={`min-w-[230px] origin-top overflow-hidden rounded-lg border border-white/10 bg-steel shadow-xl transition duration-150 ease-out ${
+                      isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
+                    }`}
+                    style={{ transformOrigin: "top" }}
+                  >
+                    <ul className="py-2">
+                      {section.children.map((child) => (
+                        <li key={child.to}>
+                          <Link
+                            to={child.to}
+                            className="group flex items-center justify-between gap-3 px-4 py-2 text-sm text-ivory transition-colors hover:bg-white/5 hover:text-gold-bright"
+                          >
+                            <span>{child.label}</span>
+                            <span
+                              aria-hidden
+                              className="translate-x-0 opacity-0 transition group-hover:translate-x-1 group-hover:opacity-100"
+                            >
+                              →
+                            </span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             );
           })}
@@ -118,32 +151,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Desktop dropdown panel */}
-      <div
-        className={`absolute inset-x-0 top-full hidden lg:block ${
-          openIndex !== null && navSections[openIndex]?.children ? "" : "pointer-events-none"
-        }`}
-        onMouseEnter={() => openIndex !== null && handleEnter(openIndex)}
-        onMouseLeave={handleLeave}
-      >
-        <div
-          className={`origin-top transition duration-200 ease-out ${
-            openIndex !== null && navSections[openIndex]?.children
-              ? "scale-y-100 opacity-100"
-              : "scale-y-95 opacity-0"
-          }`}
-          style={{ transformOrigin: "top" }}
-        >
-          <div className="border-t border-white/10 bg-steel shadow-lg">
-            <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-              {openIndex !== null && navSections[openIndex]?.children && (
-                <DropdownPanel section={navSections[openIndex]} />
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden">
@@ -157,37 +164,6 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  );
-}
-
-function DropdownPanel({ section }) {
-  return (
-    <div className="grid gap-x-12 gap-y-1 sm:grid-cols-2 lg:grid-cols-3">
-      <div>
-        <div className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-bright">
-          {section.label}
-        </div>
-        <div className="mt-2 h-px w-10 bg-gold" />
-      </div>
-      <ul className="col-span-1 space-y-1 sm:col-span-1 lg:col-span-2">
-        {section.children.map((child) => (
-          <li key={child.to}>
-            <Link
-              to={child.to}
-              className="group flex items-center justify-between rounded-md px-3 py-2 text-sm text-ivory transition-colors hover:bg-white/5 hover:text-gold-bright"
-            >
-              <span>{child.label}</span>
-              <span
-                aria-hidden
-                className="translate-x-0 opacity-0 transition group-hover:translate-x-1 group-hover:opacity-100"
-              >
-                →
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
 
