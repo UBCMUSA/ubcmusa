@@ -7,9 +7,9 @@ const UPCOMING_EVENTS = [
 ];
 
 const PILLARS = [
-  { title: "Academic", to: "/resources/academic" },
-  { title: "Personal", to: "/resources/personal" },
-  { title: "Professional", to: "/resources/professional" },
+  { title: "Academic", to: "/resources/academic", icon: "academic" },
+  { title: "Personal", to: "/resources/personal", icon: "personal" },
+  { title: "Professional", to: "/resources/professional", icon: "professional" },
 ];
 
 export default function Home() {
@@ -44,9 +44,17 @@ function Hero() {
               "linear-gradient(to bottom, rgba(78,104,160,0.78) 0%, rgba(78,104,160,0.58) 45%, rgba(48,64,100,0.88) 100%)",
           }}
         />
+        {/* Dark film concentrated behind the heading for legibility */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(900px 520px at 50% 46%, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.26) 58%, rgba(0,0,0,0.12) 100%)",
+          }}
+        />
         {/* Subtle warm stage glow */}
         <div
-          className="absolute inset-0 opacity-30 mix-blend-screen"
+          className="absolute inset-0 opacity-[0.18] mix-blend-screen"
           style={{
             backgroundImage:
               "radial-gradient(700px 420px at 50% 30%, #F7CB47 0%, transparent 65%)",
@@ -189,8 +197,11 @@ function PillarsSection() {
             <Link
               key={p.title}
               to={p.to}
-              className="group flex items-center justify-center rounded-xl border border-gray-200 bg-white px-8 py-14 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-steel hover:bg-steel hover:shadow-xl"
+              className="group flex flex-col items-center justify-center gap-5 rounded-xl border border-gray-200 bg-white px-8 py-12 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-steel hover:bg-steel hover:shadow-xl"
             >
+              <span className="text-steel transition-colors duration-300 group-hover:text-white">
+                <PillarIcon name={p.icon} />
+              </span>
               <h3 className="font-display text-3xl text-steel transition-colors duration-300 group-hover:text-white">
                 {p.title}
               </h3>
@@ -235,11 +246,49 @@ function AboutUsBand() {
 
 /* ────────────────────────────────────────────────────────── */
 
+function PillarIcon({ name }) {
+  const common = {
+    className: "h-12 w-12",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.5,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+  };
+  switch (name) {
+    case "academic":
+      return (
+        <svg {...common}>
+          <path d="M12 4 L22 9 L12 14 L2 9 Z" />
+          <path d="M6 11v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5" />
+          <path d="M22 9v5" />
+        </svg>
+      );
+    case "personal":
+      return (
+        <svg {...common}>
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+        </svg>
+      );
+    case "professional":
+      return (
+        <svg {...common}>
+          <rect x="3" y="7.5" width="18" height="12" rx="2" />
+          <path d="M8.5 7.5V6c0-1 .5-1.5 1.5-1.5h4c1 0 1.5.5 1.5 1.5v1.5" />
+          <path d="M3 12.5h18" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 function SectionEyebrow({ children, center = false }) {
   return (
     <div
       className={`inline-flex items-center gap-3 font-semibold uppercase tracking-[0.24em] text-steel ${
-        center ? "text-base" : "text-xs"
+        center ? "text-lg" : "text-xs"
       }`}
     >
       <span className="h-px w-8 bg-steel" />
