@@ -6,6 +6,8 @@ import Home from "./pages/Home.jsx";
 import WhatIsMUSA from "./pages/about/WhatIsMUSA.jsx";
 import WhoWeAre from "./pages/about/WhoWeAre.jsx";
 import HowWeRun from "./pages/about/HowWeRun.jsx";
+import MeetingAgendas from "./pages/about/MeetingAgendas.jsx";
+import MeetingMinutes from "./pages/about/MeetingMinutes.jsx";
 import Academic from "./pages/resources/Academic.jsx";
 import Personal from "./pages/resources/Personal.jsx";
 import Professional from "./pages/resources/Professional.jsx";
@@ -34,6 +36,8 @@ export default function App() {
           <Route path="/about/what-is-musa" element={<WhatIsMUSA />} />
           <Route path="/about/who-we-are" element={<WhoWeAre />} />
           <Route path="/about/how-we-run" element={<HowWeRun />} />
+          <Route path="/about/meeting-agendas" element={<MeetingAgendas />} />
+          <Route path="/about/meeting-minutes" element={<MeetingMinutes />} />
           <Route path="/resources/academic" element={<Academic />} />
           <Route path="/resources/personal" element={<Personal />} />
           <Route path="/resources/professional" element={<Professional />} />

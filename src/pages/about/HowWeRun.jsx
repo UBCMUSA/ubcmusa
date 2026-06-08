@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PageStub from "../../components/PageStub.jsx";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 
@@ -157,18 +158,18 @@ export default function HowWeRun() {
             </LeadItem>
           </ul>
           <div className="mt-5 flex flex-wrap gap-3">
-            <a
-              href="#"
+            <Link
+              to="/about/meeting-agendas"
               className="inline-flex items-center gap-2 rounded-lg border border-steel/40 px-5 py-3 text-sm font-semibold text-steel transition hover:border-steel hover:bg-steel/5"
             >
               Meeting Agendas →
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/about/meeting-minutes"
               className="inline-flex items-center gap-2 rounded-lg border border-steel/40 px-5 py-3 text-sm font-semibold text-steel transition hover:border-steel hover:bg-steel/5"
             >
               Meeting Minutes →
-            </a>
+            </Link>
           </div>
         </section>
 
