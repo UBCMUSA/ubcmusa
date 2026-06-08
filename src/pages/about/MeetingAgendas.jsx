@@ -5,7 +5,8 @@ export default function MeetingAgendas() {
     <MeetingDocsPage
       eyebrow="How We Run"
       title="Meeting Agendas"
-      description="Agendas are published 48 hours prior to every bi-weekly MUSA Council meeting, so undergraduate members can review upcoming legislative topics. Browse the 2025/26 agendas below."
+      description="Agendas are published 48 hours prior to every bi-weekly MUSA Council meeting, so undergraduate members can review upcoming legislative topics."
+      noun="Agendas"
       dir="agendas"
       prefix="agenda"
     />

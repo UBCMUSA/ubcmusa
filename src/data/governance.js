@@ -15,12 +15,8 @@ export const MEETING_DATES = [
   "2025-05-05",
 ];
 
-const MONTHS = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December",
-];
-
-export function formatMeetingDate(iso) {
-  const [y, m, d] = iso.split("-").map(Number);
-  return `${MONTHS[m - 1]} ${d}, ${y}`;
+// "2025-11-25" -> "11/25/25"
+export function formatShortDate(iso) {
+  const [y, m, d] = iso.split("-");
+  return `${m}/${d}/${y.slice(2)}`;
 }
