@@ -9,7 +9,7 @@ import HowWeRun from "./pages/about/HowWeRun.jsx";
 import Academic from "./pages/resources/Academic.jsx";
 import Personal from "./pages/resources/Personal.jsx";
 import Professional from "./pages/resources/Professional.jsx";
-import StudentLife from "./pages/musa/StudentLife.jsx";
+import MusaResources from "./pages/resources/Musa.jsx";
 import StudentLounge from "./pages/musa/StudentLounge.jsx";
 import Grads from "./pages/musa/Grads.jsx";
 import Downbeat from "./pages/musa/Downbeat.jsx";
@@ -37,7 +37,7 @@ export default function App() {
           <Route path="/resources/academic" element={<Academic />} />
           <Route path="/resources/personal" element={<Personal />} />
           <Route path="/resources/professional" element={<Professional />} />
-          <Route path="/musa/student-life" element={<StudentLife />} />
+          <Route path="/resources/musa" element={<MusaResources />} />
           <Route path="/musa/student-lounge" element={<StudentLounge />} />
           <Route path="/musa/grads" element={<Grads />} />
           <Route path="/musa/downbeat" element={<Downbeat />} />

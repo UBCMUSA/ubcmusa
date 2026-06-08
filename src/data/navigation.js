@@ -13,12 +13,12 @@ export const navSections = [
       { label: "Academic", to: "/resources/academic" },
       { label: "Personal", to: "/resources/personal" },
       { label: "Professional", to: "/resources/professional" },
+      { label: "MUSA", to: "/resources/musa" },
     ],
   },
   {
-    label: "MUSA",
+    label: "Student Life",
     children: [
-      { label: "Student Life", to: "/musa/student-life" },
       { label: "Student Lounge", to: "/musa/student-lounge" },
       { label: "Grads", to: "/musa/grads" },
       { label: "The Downbeat (Newsletter)", to: "/musa/downbeat" },
