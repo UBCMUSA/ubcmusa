@@ -41,7 +41,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center" aria-label="MUSA home">
-          <Logo className="h-10 w-auto" />
+          <Logo className="h-14 w-auto" />
         </Link>
 
         {/* Desktop nav */}

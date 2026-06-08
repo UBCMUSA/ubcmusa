@@ -354,7 +354,7 @@ function PillarsSection() {
             <Link
               key={p.title}
               to={p.to}
-              className="group flex flex-col items-center justify-center gap-5 rounded-xl border border-gray-200 bg-white px-8 py-12 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-steel hover:bg-steel hover:shadow-xl"
+              className="group flex flex-col items-center justify-center gap-5 rounded-xl border border-gray-200 bg-white px-8 py-12 text-center transition duration-300 ease-out hover:-translate-y-1 hover:scale-[1.03] hover:border-steel hover:bg-steel hover:shadow-2xl"
             >
               <span className="text-steel transition-colors duration-300 group-hover:text-white">
                 <PillarIcon name={p.icon} />

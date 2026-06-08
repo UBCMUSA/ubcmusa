@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PageStub from "../../components/PageStub.jsx";
+import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 
 const EXECS = [
   {
@@ -12,6 +13,8 @@ const EXECS = [
       "HR Committee Chair, AMS",
     ],
     email: "ubcmusa.president@gmail.com",
+    instagram: "millensandhu.musapresident",
+    linkedin: "https://www.linkedin.com/in/millen-sandhu/",
     photo: "/images/optimized/millen-headshot.jpg",
     bio: [
       "Millen Sandhu is a tenor studying opera performance at the UBC School of Music, serving as the President of the Music Undergraduate Students' Association (MUSA) and an AMS Councillor. Millen was born and raised here in Vancouver. In his role as president, Millen is focused on building strong, long-term support systems for music students, whether that is academically, financially, or socially. Through his work with MUSA and his seat on the AMS Council, he aims to advocate for an excellent academic experience while creating more opportunities for music students to collaborate with other faculties across campus.",
@@ -23,6 +26,7 @@ const EXECS = [
     name: "Almira Miao",
     meta: ["2nd-year BMus Undergraduate Student", "Flute Performance"],
     email: "ubc.musa@gmail.com",
+    instagram: "almiramiaoyf",
     photo: "/images/optimized/almira-headshot.jpg",
     bio: [
       "I am a Bachelor of Music student studying flute at the University of British Columbia. In high school, I was involved in the music council, where I helped organize events and initiatives that brought students together. I really enjoyed working with others in that setting and became more interested in creating opportunities for students.",
@@ -34,6 +38,7 @@ const EXECS = [
     name: "Aleksandra Van-Looy",
     meta: ["2nd-year BMus Undergraduate Student", "Soprano, UBC Opera"],
     email: "musa.vpfinance@gmail.com",
+    instagram: "_sashavl",
     photo: "/images/optimized/sasha-headshot.jpg",
     bio: [
       "My name is Aleksandra Van Looy, though most people know me as Sasha. I am from Burnaby, British Columbia, and I am proud to serve as MUSA's Vice-President of Finance this year.",
@@ -47,6 +52,7 @@ const EXECS = [
     name: "Zaiden Grayda-Reyes",
     meta: ["3rd-year BMus Undergraduate Student", "Flute Performance"],
     email: "ubcmusa.vpinternal@gmail.com",
+    instagram: "zaii.dn3",
     photo: "/images/optimized/zaiden-headshot.jpg",
     bio: [
       "I am a third-year flute student and am entering my third year with MUSA. Over the past two years, my involvement with the association has given me the opportunity to connect with students across the School of Music, contribute to initiatives that support student life, and help strengthen our sense of community. Through these experiences, I have developed a strong appreciation for the role MUSA plays in representing and supporting music students. As Vice-President Internal, I am excited to continue building meaningful relationships within our community while working alongside an incredible team to bring new ideas and initiatives to life.",
@@ -57,11 +63,12 @@ const EXECS = [
     name: "Rosie Lin",
     meta: ["2nd-year BMus Undergraduate Student", "Piano Performance"],
     email: "musa.vpexternal@gmail.com",
+    instagram: "ii.mrosie",
     photo: "/images/optimized/rosie-headshot.jpg",
     bio: [
       "I am a second-year student in Piano Performance, and this is my first year with MUSA. I'm very excited to be on this team as Vice-President External and am looking forward to supporting our student body wholeheartedly.",
       "I love meeting new people and building genuine relationships, and I see this role as an opportunity to do exactly that. I believe that the impact of what we do here extends far beyond the stage, and will contribute to developing the rising musicians here at UBC.",
-      "I'm also passionate about community, which is something I've carried with me through various volunteer and leadership experiences over the years. During high school, I consistently took initiative to be involved with my community— including founding a nonprofit organization and volunteering for the Peace Arch Hospital Foundation Youth in Action team, organizing fundraisers and city-wide events to support local healthcare initiatives. I plan to bring this passion and enthusiasm to this role, working with a genuine desire to make a difference. I'm so excited to work alongside such a talented and driven group of people, and I can't wait to see what we build together.",
+      "I'm also passionate about community, which is something I've carried with me through various volunteer and leadership experiences over the years. During high school, I consistently took initiative to be involved with my community— including founding a nonprofit organization and volunteering for the Peace Arch Hospital Foundation's Youth in Action team, organizing fundraisers and city-wide events to support local healthcare initiatives. I plan to bring this passion and enthusiasm to this role, working with a genuine desire to make a difference. I'm so excited to work alongside such a talented and driven group of people, and I can't wait to see what we build together.",
     ],
   },
   {
@@ -76,46 +83,98 @@ const EXECS = [
   },
 ];
 
+const [PRESIDENT, VP_ADMIN, VP_FINANCE, VP_INTERNAL, VP_EXTERNAL, VP_STUDENT] = EXECS;
+
+// Organizational structure (placeholders use { role } only).
+const GROUPS = [
+  {
+    label: "Direct Reports & Independent Officers",
+    members: [{ role: "Chief of Staff" }, { role: "Governance Commissioner" }],
+  },
+  {
+    label: "Executive Portfolios",
+    members: [
+      { ...VP_ADMIN, reports: [{ role: "Administrative Coordinator" }] },
+      { ...VP_FINANCE, reports: [{ role: "Financial Coordinator" }] },
+      {
+        ...VP_INTERNAL,
+        reports: [{ role: "Marketing Director" }, { role: "Creative Director" }],
+      },
+      {
+        ...VP_EXTERNAL,
+        reports: [
+          { role: "Community Engagement Director" },
+          { role: "Sponsorship Director" },
+        ],
+      },
+      { ...VP_STUDENT, reports: [{ role: "Lounge Manager" }] },
+    ],
+  },
+  {
+    label: "Elected Cohort Representatives",
+    members: [
+      { role: "1st Year Representative" },
+      { role: "2nd Year Representative" },
+      { role: "3rd Year Representative" },
+      { role: "4th Year Representative" },
+    ],
+  },
+];
+
 export default function WhoWeAre() {
   const [selected, setSelected] = useState(null);
+  const open = (p) => setSelected(p);
 
   return (
     <PageStub
       eyebrow="About Us"
       title="Who We Are"
-      description="Meet the 2025–26 MUSA executive team, the students working behind the scenes to advocate for, support, and connect the UBC School of Music community."
+      description="Behind every event, advocacy campaign, and student resource is a team of elected and hired undergraduate student leaders dedicated to making your experience at the UBC School of Music the best it can be. The MUSA Executive and Council are composed of peers from diverse musical disciplines—including performance, composition, education, and musicology—who balance their own rigorous hours in the practice rooms with a shared commitment to serving our community."
     >
-      <div className="grid grid-cols-1 gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-16">
-        {EXECS.map((e) => (
-          <button
-            key={e.role}
-            type="button"
-            onClick={() => setSelected(e)}
-            className="group block text-left"
-            aria-label={`Read bio for ${e.name}`}
-          >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-steel/5 shadow-sm ring-1 ring-steel/10 transition-[transform,box-shadow] duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-xl">
-              {e.photo ? (
-                <img
-                  src={e.photo}
-                  alt={e.name}
-                  className="h-full w-full object-cover object-top transition-transform duration-[600ms] ease-out group-hover:scale-105"
-                />
-              ) : (
-                <Placeholder />
-              )}
-              {/* hover overlay */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-steel/80 via-steel/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <span className="pointer-events-none absolute inset-x-0 bottom-4 translate-y-2 text-center text-sm font-semibold text-white opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                View bio →
-              </span>
-            </div>
-            <div className="mt-4 text-center">
-              <h3 className="font-display text-2xl text-steel">{e.name}</h3>
-              <p className="mt-1 text-sm font-medium text-gray-600">{e.role}</p>
-            </div>
-          </button>
-        ))}
+      <div className="mx-auto max-w-3xl space-y-5 text-center">
+        <p className="text-base leading-relaxed text-gray-700">
+          As your student representatives, we manage the day-to-day operations of
+          the society, represent your voice to faculty leadership, and work to
+          ensure you have a safe, vibrant, and enriching university experience.
+        </p>
+        <p className="text-base leading-relaxed text-gray-700">
+          Get to know the team leading your constituency this year, explore our
+          unique portfolios, and feel free to reach out to any of us directly or
+          find us around the School of Music or the Old Auditorium. We are always
+          here to chat, listen, and support you on your journey.
+        </p>
+      </div>
+
+      <div className="mt-16 text-center">
+        <SectionEyebrow center>Meet Your Team</SectionEyebrow>
+      </div>
+
+      {/* Vertical org tree */}
+      <div className="mx-auto mt-12 max-w-2xl">
+        <OrgCard person={PRESIDENT} onClick={open} />
+        <Branch>
+          {GROUPS.map((g) => (
+            <Twig key={g.label}>
+              <GroupLabel>{g.label}</GroupLabel>
+              <Branch>
+                {g.members.map((m) => (
+                  <Twig key={m.role}>
+                    <OrgCard person={m} onClick={open} />
+                    {m.reports && (
+                      <Branch>
+                        {m.reports.map((r) => (
+                          <Twig key={r.role}>
+                            <OrgCard person={r} onClick={open} />
+                          </Twig>
+                        ))}
+                      </Branch>
+                    )}
+                  </Twig>
+                ))}
+              </Branch>
+            </Twig>
+          ))}
+        </Branch>
       </div>
 
       {selected && <ExecModal exec={selected} onClose={() => setSelected(null)} />}
@@ -123,16 +182,83 @@ export default function WhoWeAre() {
   );
 }
 
+/* ── Tree primitives ───────────────────────────────────────── */
+
+function Branch({ children }) {
+  return (
+    <ul className="ml-3 space-y-0 border-l border-gray-300 pl-6">{children}</ul>
+  );
+}
+
+function Twig({ children }) {
+  return (
+    <li className="relative pb-3 before:absolute before:-left-6 before:top-7 before:h-px before:w-6 before:bg-gray-300 before:content-['']">
+      {children}
+    </li>
+  );
+}
+
+function GroupLabel({ children }) {
+  return (
+    <div className="flex min-h-[3.25rem] items-center text-xs font-semibold uppercase tracking-[0.18em] text-steel/70">
+      {children}
+    </div>
+  );
+}
+
+function OrgCard({ person, onClick }) {
+  const clickable = Array.isArray(person.bio);
+  const display = person.name && person.name !== "TBD" ? person.name : "TBD";
+  const common =
+    "group inline-flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-left";
+
+  const inner = (
+    <>
+      <div className="h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-steel/5 ring-1 ring-steel/10">
+        {person.photo ? (
+          <img
+            src={person.photo}
+            alt={person.name}
+            className="h-full w-full object-cover object-top"
+          />
+        ) : (
+          <Placeholder />
+        )}
+      </div>
+      <div className="min-w-0">
+        <div className="font-display text-base leading-tight text-steel">{display}</div>
+        <div className="truncate text-xs font-medium text-gray-600">{person.role}</div>
+      </div>
+    </>
+  );
+
+  if (!clickable) {
+    return <div className={`${common} opacity-90`}>{inner}</div>;
+  }
+  return (
+    <button
+      type="button"
+      onClick={() => onClick(person)}
+      aria-label={`Read bio for ${display}`}
+      className={`${common} cursor-pointer transition hover:-translate-y-0.5 hover:border-steel/40 hover:shadow-md`}
+    >
+      {inner}
+    </button>
+  );
+}
+
 function Placeholder() {
   return (
     <div className="flex h-full w-full items-center justify-center bg-steel/10 text-steel/50">
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.3">
+      <svg viewBox="0 0 24 24" className="h-1/2 w-1/2" fill="none" stroke="currentColor" strokeWidth="1.3">
         <circle cx="12" cy="8.5" r="3.75" />
         <path d="M4.5 20c1.3-3.8 4.2-5.5 7.5-5.5s6.2 1.7 7.5 5.5" strokeLinecap="round" />
       </svg>
     </div>
   );
 }
+
+/* ── Bio modal ─────────────────────────────────────────────── */
 
 function ExecModal({ exec, onClose }) {
   useEffect(() => {
@@ -172,7 +298,6 @@ function ExecModal({ exec, onClose }) {
         </button>
 
         <div className="max-h-[90vh] overflow-y-auto p-7 pt-16 sm:p-9 sm:pt-16">
-          {/* Top: name/info on the left, photo top-right (fixed size) */}
           <div className="flex items-start justify-between gap-6">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.22em] text-steel">
@@ -192,6 +317,30 @@ function ExecModal({ exec, onClose }) {
               >
                 {exec.email}
               </a>
+              {(exec.instagram || exec.linkedin) && (
+                <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+                  {exec.instagram && (
+                    <a
+                      href={`https://instagram.com/${exec.instagram}`}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="font-medium text-logo hover:text-steel"
+                    >
+                      @{exec.instagram}
+                    </a>
+                  )}
+                  {exec.linkedin && (
+                    <a
+                      href={exec.linkedin}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="font-medium text-logo hover:text-steel"
+                    >
+                      LinkedIn
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
 
             <div className="aspect-[4/5] w-36 shrink-0 overflow-hidden rounded-xl bg-steel/5 shadow-sm ring-1 ring-steel/15 sm:w-44">
@@ -207,7 +356,6 @@ function ExecModal({ exec, onClose }) {
             </div>
           </div>
 
-          {/* Bottom: bio */}
           <div className="mt-6 space-y-4 border-t border-gray-200 pt-6">
             {exec.bio.map((para, i) => (
               <p key={i} className="text-base leading-relaxed text-gray-700">

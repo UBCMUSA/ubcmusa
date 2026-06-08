@@ -1,50 +1,27 @@
 import PageStub from "../../components/PageStub.jsx";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 
-const PILLARS = [
-  {
-    n: "01",
-    title: "Academic & Institutional Advocacy",
-    body: "We serve as the direct, unyielding link between the student body, faculty leadership, and central university administration. MUSA actively champions student rights, baseline facility access, and optimal scheduling models. We work to ensure that our peer musicians have the safe, structurally sound, and state-of-the-art environments required to complete their high-caliber training without disruption.",
-  },
-  {
-    n: "02",
-    title: "Student Well-being & Community Building",
-    body: "The intense pressure of elite musical instruction can easily lead to academic and social isolation. MUSA is dedicated to turning a highly competitive conservatory environment into a supportive, collaborative family. We fund and execute targeted mental health initiatives, create dedicated social spaces, and establish vital peer-support networks to keep our students grounded, healthy, and inspired.",
-  },
-  {
-    n: "03",
-    title: "Professional Development & Cross-Faculty Collaboration",
-    body: "We actively bridge the gap between the classroom, the rehearsal hall, and the professional arts industry. This year, MUSA is intentionally breaking out of our traditional campus bubble. We are launching expansive collaborative mixers, educational seminars, and professional resources in partnership with other major UBC undergraduate societies, expanding our students' networks and preparing them to lead Vancouver's future cultural and business landscapes.",
-  },
-];
-
 const EXPERIENCE = [
   {
     title: "Flagship Social Traditions",
-    body: "Welcome Back BBQ, Koerner's Socials, Holiday Gatherings, and the marquee Spring Formal Gala.",
+    body: "Building an inclusive campus culture through events like our Welcome Back BBQ, Koerner's Socials, Holiday Gatherings, and the marquee Spring Formal Gala.",
   },
   {
     title: "Wellness & Academic Resources",
-    body: "Wellness Weeks, therapy animal visits, jury and recital prep guides, and a functional locker rental database.",
+    body: "Providing critical student support through Wellness Weeks, therapy animal visits, specialized jury and recital preparation guides, and a functional locker rental database.",
   },
   {
     title: "Career Readiness Frameworks",
-    body: "Professional headshot days, resume workshops, financial literacy for freelance artists, and a performance booking board.",
+    body: "Equipping future professionals with real-world tools through professional headshot days, resume workshops, financial literacy sessions for freelance artists, and an external performance booking board.",
   },
 ];
 
 export default function WhatIsMUSA() {
   return (
-    <PageStub
-      eyebrow="About Us"
-      title="What is MUSA"
-      description="Guided by the pillars of academic advocacy, student well-being, and professional development, MUSA is dedicated to empowering over 400 musicians at the UBC School of Music to achieve creative excellence and discover their unique journeys within an inclusive, collaborative community."
-    >
-      <article className="space-y-12">
-        <section>
-          <SectionEyebrow center>Our Mission</SectionEyebrow>
-          <p className="mt-5 text-base leading-relaxed text-gray-700">
+    <PageStub eyebrow="About Us" title="What is MUSA">
+      <article className="space-y-14">
+        <section className="space-y-5">
+          <p className="text-base leading-relaxed text-gray-700">
             The Music Undergraduate Students' Association (MUSA) is the official
             student government, constituency council, and community backbone
             representing over 400 undergraduate musicians, scholars, and future
@@ -53,7 +30,7 @@ export default function WhatIsMUSA() {
             serves as the collective voice and institutional anchor for our unique
             student body.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-gray-700">
+          <p className="text-base leading-relaxed text-gray-700">
             Unlike traditional academic paths, a music student's journey demands an
             extraordinary level of solitary discipline, high-stakes public
             performance, and rigorous creative training. MUSA is the heartbeat
@@ -61,30 +38,6 @@ export default function WhatIsMUSA() {
             holistically supported while maintaining the historic, world-class
             standard of excellence that defines our school.
           </p>
-        </section>
-
-        <section>
-          <SectionEyebrow center>Our Three Strategic Pillars</SectionEyebrow>
-          <p className="mt-5 text-base leading-relaxed text-gray-700">
-            To deliver a professionalized, high-impact student experience, all of
-            MUSA's initiatives, services, and operations are guided by three core
-            mandates:
-          </p>
-          <ol className="mt-8 space-y-6">
-            {PILLARS.map((p) => (
-              <li key={p.n} className="rounded-xl border border-gray-200 bg-white p-7">
-                <div className="flex items-start gap-5">
-                  <div className="font-display text-5xl leading-none text-steel/40">{p.n}</div>
-                  <div>
-                    <h3 className="font-display text-2xl text-steel">{p.title}</h3>
-                    <p className="mt-3 text-base leading-relaxed text-gray-700">
-                      {p.body}
-                    </p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
         </section>
 
         <section>
@@ -106,20 +59,6 @@ export default function WhatIsMUSA() {
               </div>
             ))}
           </div>
-        </section>
-
-        <section className="rounded-xl border border-gray-200 bg-steel/5 p-10">
-          <SectionEyebrow center>Our Commitment to Community</SectionEyebrow>
-          <p className="mt-5 text-base leading-relaxed text-gray-700">
-            At MUSA, we strive to build a diverse, equitable, and inclusive
-            community where every student feels safe, valued, and heard. Music is a
-            universal language, but every student's academic and artistic journey
-            is entirely personal. Whether you are a performance major preparing for
-            the international stage, a scholar engaging in cutting-edge musicology,
-            or an incoming student finding your footing, MUSA is here to empower
-            you to discover your own unique path, achieve creative excellence, and
-            thrive throughout your university years at UBC.
-          </p>
         </section>
       </article>
     </PageStub>
