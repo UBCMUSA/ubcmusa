@@ -13,7 +13,7 @@ export const EVENTS = [
     tag: "Social",
     blurb:
       "Kick off the year with free food, lawn games, and the chance to meet musicians from every studio and ensemble across the School of Music.",
-    image: "/images/ubc-chinese-ensemble.jpg",
+    image: "/images/optimized/ubc-chinese-ensemble.jpg",
     details:
       "Our flagship welcome event returns to the Old Auditorium lawn for a full afternoon of free food from local vendors, lawn games, and live student performances. It's the easiest way to meet people from every studio before the term gets busy — bring a friend or come solo and leave with new ones. All undergraduate music students are welcome, and no sign-up is required.",
   },

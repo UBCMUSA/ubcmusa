@@ -29,7 +29,7 @@ function Hero() {
       <div className="absolute inset-0 -z-10">
         {/* UBC Symphony Orchestra on the Chan Centre stage, choirs behind */}
         <img
-          src="/images/ubc-symphony-orchestra-2.jpg"
+          src="/images/optimized/hero-orchestra.jpg"
           alt="UBC Symphony Orchestra performing in the Chan Centre with the choirs in the background"
           className="h-full w-full object-cover"
         />

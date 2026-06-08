@@ -13,13 +13,13 @@ export default function EventDetails() {
         {EVENTS.map((ev) => (
           <article
             key={ev.title}
-            className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm sm:flex-row"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:border-steel/40 hover:shadow-2xl sm:flex-row"
           >
-            <div className="relative shrink-0 bg-steel/5 sm:w-2/5">
+            <div className="relative shrink-0 overflow-hidden bg-steel/5 sm:w-2/5">
               <img
                 src={ev.image}
                 alt={ev.title}
-                className="h-56 w-full object-cover sm:h-full"
+                className="h-56 w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 sm:h-full"
               />
             </div>
             <div className="p-7 sm:p-8">

@@ -21,6 +21,7 @@ import Hiring from "./pages/get-involved/Hiring.jsx";
 import Elections from "./pages/get-involved/Elections.jsx";
 import Sponsors from "./pages/Sponsors.jsx";
 import Contact from "./pages/Contact.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 export default function App() {
   return (
@@ -48,6 +49,7 @@ export default function App() {
           <Route path="/get-involved/elections" element={<Elections />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
