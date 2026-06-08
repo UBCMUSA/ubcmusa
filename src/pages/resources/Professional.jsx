@@ -3,11 +3,7 @@ import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 
 export default function Professional() {
   return (
-    <PageStub
-      eyebrow="Resources"
-      title="Professional"
-      description="Headshots, resumes, financial literacy for freelance artists, and a performance booking board — the tools to launch your career."
-    >
+    <PageStub eyebrow="Resources" title="Professional">
       <section>
         <SectionEyebrow center>Professional Development &amp; Cross-Faculty Collaboration</SectionEyebrow>
         <p className="mt-5 text-base leading-relaxed text-gray-700">

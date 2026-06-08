@@ -127,6 +127,7 @@ export default function WhoWeAre() {
 
   return (
     <PageStub
+      wide
       eyebrow="About Us"
       title="Who We Are"
       description="Behind every event, advocacy campaign, and student resource is a team of elected and hired undergraduate student leaders dedicated to making your experience at the UBC School of Music the best it can be. The MUSA Executive and Council are composed of peers from diverse musical disciplines—including performance, composition, education, and musicology—who balance their own rigorous hours in the practice rooms with a shared commitment to serving our community."
@@ -149,8 +150,8 @@ export default function WhoWeAre() {
         <SectionEyebrow center>Meet Your Team</SectionEyebrow>
       </div>
 
-      {/* Vertical org tree */}
-      <div className="mx-auto mt-12 max-w-2xl">
+      {/* Mobile: vertical indented tree */}
+      <div className="mx-auto mt-12 max-w-2xl lg:hidden">
         <OrgCard person={PRESIDENT} onClick={open} />
         <Branch>
           {GROUPS.map((g) => (
@@ -177,22 +178,125 @@ export default function WhoWeAre() {
         </Branch>
       </div>
 
+      {/* Desktop: top-down horizontal org chart */}
+      <div className="mt-12 hidden overflow-x-auto pb-4 lg:block">
+        <div className="mx-auto flex w-max min-w-full flex-col items-center px-4">
+          <ChartCard person={PRESIDENT} onClick={open} />
+
+          {GROUPS.map((g) => (
+            <div key={g.label} className="flex flex-col items-center">
+              <ChartLine />
+              <GroupChip>{g.label}</GroupChip>
+              <ChartLine />
+              <ul className="flex justify-center">
+                {g.members.map((m) => (
+                  <li key={m.role} className={CHART_LI}>
+                    <ChartCard person={m} onClick={open} />
+                    {m.reports && (
+                      <>
+                        <ChartLine />
+                        <ul className="flex justify-center">
+                          {m.reports.map((r) => (
+                            <li key={r.role} className={CHART_LI}>
+                              <ChartCard person={r} onClick={open} small />
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {selected && <ExecModal exec={selected} onClose={() => setSelected(null)} />}
     </PageStub>
+  );
+}
+
+/* ── Horizontal chart primitives (desktop) ─────────────────── */
+
+// Connector classes for a child cell: up-line (before) + horizontal bar (after,
+// trimmed on first/last, hidden for only-child).
+const CHART_LI =
+  "relative flex flex-col items-center px-3 pt-6 before:absolute before:left-1/2 before:top-0 before:h-6 before:w-px before:-translate-x-1/2 before:bg-gray-300 before:content-[''] after:absolute after:left-0 after:right-0 after:top-0 after:border-t after:border-gray-300 after:content-[''] first:after:left-1/2 last:after:right-1/2 only:after:hidden";
+
+function ChartLine() {
+  return <div className="h-6 w-px bg-gray-300" />;
+}
+
+function GroupChip({ children }) {
+  return (
+    <div className="rounded-full border border-gray-200 bg-steel/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-steel/70">
+      {children}
+    </div>
+  );
+}
+
+function ChartCard({ person, onClick, small = false }) {
+  const clickable = Array.isArray(person.bio);
+  const display = person.name && person.name !== "TBD" ? person.name : "TBD";
+  const w = small ? "w-32" : "w-36";
+  const av = small ? "h-11 w-11" : "h-14 w-14";
+
+  const inner = (
+    <>
+      <div className={`${av} overflow-hidden rounded-lg bg-steel/5 ring-1 ring-steel/10`}>
+        {person.photo ? (
+          <img
+            src={person.photo}
+            alt={person.name}
+            className="h-full w-full object-cover object-top"
+          />
+        ) : (
+          <Placeholder />
+        )}
+      </div>
+      <div className="mt-2">
+        <div className="font-display text-sm leading-tight text-steel">{display}</div>
+        <div className="mt-0.5 text-[11px] font-medium leading-tight text-gray-600">
+          {person.role}
+        </div>
+      </div>
+    </>
+  );
+
+  const base = `group flex ${w} flex-col items-center rounded-xl border border-gray-200 bg-white p-3 text-center`;
+  if (!clickable) {
+    return <div className={`${base} opacity-90`}>{inner}</div>;
+  }
+  return (
+    <button
+      type="button"
+      onClick={() => onClick(person)}
+      aria-label={`Read bio for ${display}`}
+      className={`${base} cursor-pointer transition hover:-translate-y-0.5 hover:border-steel/40 hover:shadow-md`}
+    >
+      {inner}
+    </button>
   );
 }
 
 /* ── Tree primitives ───────────────────────────────────────── */
 
 function Branch({ children }) {
+  // mt creates a gap below the parent card; the before bridges that gap so the
+  // vertical line still connects up to the parent.
   return (
-    <ul className="ml-3 space-y-0 border-l border-gray-300 pl-6">{children}</ul>
+    <ul className="relative ml-5 mt-5 space-y-0 pl-10 before:absolute before:-top-5 before:left-0 before:h-5 before:w-px before:bg-gray-300 before:content-['']">
+      {children}
+    </ul>
   );
 }
 
 function Twig({ children }) {
+  // before = horizontal stub to the node; after = vertical line (full height
+  // for siblings, trimmed at the last child so it ends at its stub).
   return (
-    <li className="relative pb-3 before:absolute before:-left-6 before:top-7 before:h-px before:w-6 before:bg-gray-300 before:content-['']">
+    <li className="relative pb-8 before:absolute before:-left-10 before:top-11 before:h-px before:w-10 before:bg-gray-300 before:content-[''] after:absolute after:-left-10 after:top-0 after:h-full after:w-px after:bg-gray-300 after:content-[''] last:after:h-11">
       {children}
     </li>
   );
@@ -200,7 +304,7 @@ function Twig({ children }) {
 
 function GroupLabel({ children }) {
   return (
-    <div className="flex min-h-[3.25rem] items-center text-xs font-semibold uppercase tracking-[0.18em] text-steel/70">
+    <div className="flex min-h-[5.5rem] items-center text-xs font-semibold uppercase tracking-[0.18em] text-steel/70">
       {children}
     </div>
   );
@@ -210,11 +314,11 @@ function OrgCard({ person, onClick }) {
   const clickable = Array.isArray(person.bio);
   const display = person.name && person.name !== "TBD" ? person.name : "TBD";
   const common =
-    "group inline-flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-left";
+    "group inline-flex items-center gap-4 rounded-xl border border-gray-200 bg-white px-5 py-3 text-left";
 
   const inner = (
     <>
-      <div className="h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-steel/5 ring-1 ring-steel/10">
+      <div className="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-steel/5 ring-1 ring-steel/10">
         {person.photo ? (
           <img
             src={person.photo}
@@ -226,8 +330,8 @@ function OrgCard({ person, onClick }) {
         )}
       </div>
       <div className="min-w-0">
-        <div className="font-display text-base leading-tight text-steel">{display}</div>
-        <div className="truncate text-xs font-medium text-gray-600">{person.role}</div>
+        <div className="font-display text-xl leading-tight text-steel">{display}</div>
+        <div className="truncate text-sm font-medium text-gray-600">{person.role}</div>
       </div>
     </>
   );

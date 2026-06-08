@@ -3,11 +3,7 @@ import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 
 export default function Personal() {
   return (
-    <PageStub
-      eyebrow="Resources"
-      title="Personal"
-      description="Wellness initiatives, peer-support networks, and social spaces designed to keep students grounded, healthy, and inspired."
-    >
+    <PageStub eyebrow="Resources" title="Personal">
       <section>
         <SectionEyebrow center>Student Well-being &amp; Community Building</SectionEyebrow>
         <p className="mt-5 text-base leading-relaxed text-gray-700">
