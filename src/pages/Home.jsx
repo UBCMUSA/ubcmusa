@@ -159,10 +159,10 @@ function UpcomingEventsSection() {
 
             <div className="mt-8">
               <Link
-                to="/events/calendar"
+                to="/events"
                 className="inline-flex items-center gap-2 rounded-md bg-steel px-5 py-3 text-sm font-semibold text-white transition hover:bg-steel-dark"
               >
-                View Calendar →
+                View All Events →
               </Link>
             </div>
 
@@ -316,11 +316,11 @@ function EventModal({ event, onClose }) {
             </p>
             <div className="mt-8">
               <Link
-                to="/events/calendar"
+                to="/events"
                 onClick={onClose}
                 className="inline-flex items-center gap-2 rounded-md bg-steel px-5 py-3 text-sm font-semibold text-white transition hover:bg-steel-dark"
               >
-                View Calendar →
+                View All Events →
               </Link>
             </div>
           </div>

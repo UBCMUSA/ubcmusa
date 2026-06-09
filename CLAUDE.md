@@ -33,52 +33,48 @@ used sparingly but consistently.
 
 ## Color Palette
 
-```css
-:root {
-  --primary: #4A6FA5;       /* Medium blue — navbar, footer, buttons, accents */
-  --primary-hover: #3a5a8f; /* Slightly darker for hover states */
-  --primary-light: #e8eef6; /* Very light blue for subtle section tints */
-  --white: #ffffff;          /* Page background, card backgrounds */
-  --off-white: #f8f9fa;     /* Alternate section backgrounds */
-  --text-dark: #1a1a1a;     /* Body text */
-  --text-muted: #666666;    /* Secondary text, captions */
-  --border: #e5e5e5;        /* Dividers, card borders */
+Tokens are defined as Tailwind v4 `@theme` colors in `src/index.css` (use them as Tailwind
+utility classes, e.g. `text-steel`, `bg-steel-dark`, `text-logo`). Mirror `:root` CSS vars
+exist for raw CSS.
 
-  /* Animation easings */
-  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
-  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+```css
+@theme {
+  --color-steel: #5B79B8;       /* Primary blue — navbar, footer, buttons, headings, accents */
+  --color-steel-dark: #45608F;  /* Darker blue for hover states */
+  --color-logo: #5B82E0;        /* Link blue (hover → steel) */
+  --color-soft: #9DB6EC;        /* Soft blue for subtle tints */
+  --color-gold: #E6B82F;        /* Warm gold — used sparingly (hero eyebrow only) */
+  --color-gold-bright: #F7CB47; /* Bright gold accent */
+  --color-ivory: #F0EEE8;       /* Warm off-white section background */
+  --color-sheet: #FFFFFF;       /* Page / card background */
 }
 ```
 
 **Rules:**
-- Page background: white (`--white`)
-- Navbar: `--primary` (solid, no transparency)
-- Footer: `--primary` (solid)
-- Buttons/CTAs: `--primary` background, white text
-- Headings: `--text-dark`
-- Body text: `--text-dark` or `--text-muted`
-- Stats bar: `--primary` background, white text
-- Cards: white with subtle `--border`
-- NO gold, NO ivory, NO gradients, NO color mixing
+- Page background: white (`bg-sheet` / white)
+- Navbar: `steel` (solid, no transparency)
+- Footer: `steel` (solid)
+- Buttons/CTAs: `steel` background, white text; hover → `steel-dark`
+- Headings: `steel` (Cormorant Garamond display font)
+- Body text: gray-700 / gray-500 for secondary
+- Links: `logo` blue, hover → `steel`
+- Cards: white with subtle border
+- Gold is reserved for tiny accents (hero eyebrow) — never large areas. No gradients.
 
-Never use hardcoded hex values. Always reference CSS variables.
+Use the Tailwind token classes (`text-steel`, etc.); avoid hardcoded hex values.
 
 ---
 
 ## Typography
 
-Use **DM Sans** from Google Fonts — clean, modern, highly readable, professional.
-Single font family for the entire site. No serif fonts.
+Three font families, mapped to Tailwind tokens in `src/index.css`:
 
-```html
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-```
+- **Cormorant Garamond** (`font-display`, `--font-display`) — headings (h1–h4), page titles.
+- **Montserrat** (`font-heavy`, `--font-heavy`) — heavy/uppercase labels, eyebrows, nav.
+- **Inter** (`font-sans`, `--font-sans`) — body copy (default).
 
-- Headings: DM Sans 700
-- Subheadings: DM Sans 600
-- Body: DM Sans 400
-- Nav items: DM Sans 500
+Loaded via Google Fonts in `index.html`. Use the Tailwind classes (`font-display`,
+`font-heavy`, `font-sans`).
 
 ---
 
@@ -97,8 +93,7 @@ Single font family for the entire site. No serif fonts.
 /student-life/grads        Grads
 /student-life/downbeat     The Downbeat (Newsletter)
 /student-life/journal      UBC Music Journal
-/events/calendar           Calendar
-/events/details            Event Details
+/events                    Events (combined timeline — replaces old Calendar/Details; /events/calendar & /events/details redirect here)
 /get-involved/join         Join MUSA
 /get-involved/hiring       Hiring Opportunities
 /get-involved/elections    Elections
@@ -110,9 +105,10 @@ Single font family for the entire site. No serif fonts.
 
 ## Navigation Structure
 
-Sticky navbar. `--primary` background, white text. Main headers open dropdowns on hover
+Sticky navbar. `steel` background, white text. Main headers open dropdowns on hover
 (no direct page link). Subheaders link to pages. Clean text-only dropdowns — white
-background, dark text, subtle shadow, no images.
+background, dark text, subtle shadow, no images. Nav structure lives in
+`src/data/navigation.js`.
 
 **Dropdown animation:** scale from 0.95 + opacity 0 → scale 1 + opacity 1, 150ms ease-out.
 Transform origin at top. Never ease-in.
@@ -133,9 +129,7 @@ Student Life
   - Grads              → /student-life/grads
   - The Downbeat       → /student-life/downbeat
   - UBC Music Journal  → /student-life/journal
-Events
-  - Calendar           → /events/calendar
-  - Event Details      → /events/details
+Events                 → /events   (direct link, no dropdown — combined timeline)
 Get Involved
   - Join MUSA          → /get-involved/join
   - Hiring Opportunities → /get-involved/hiring

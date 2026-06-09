@@ -114,7 +114,7 @@ export default function Academic() {
           </p>
           <p className="mt-3 text-sm italic text-gray-500">
             These seminars will be updated under the{" "}
-            <Link to="/events/calendar" className="text-logo hover:text-steel">
+            <Link to="/events" className="text-logo hover:text-steel">
               Events
             </Link>{" "}
             tab and posted on MUSA social media pages.
@@ -138,8 +138,8 @@ export default function Academic() {
           </p>
           <p className="mt-3 text-sm italic text-gray-500">
             Find updates regarding the Town Hall Program under{" "}
-            <Link to="/events/details" className="text-logo hover:text-steel">
-              Event Details
+            <Link to="/events" className="text-logo hover:text-steel">
+              Events
             </Link>{" "}
             or on MUSA social media pages.
           </p>

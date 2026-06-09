@@ -16,8 +16,7 @@ import StudentLounge from "./pages/musa/StudentLounge.jsx";
 import Grads from "./pages/musa/Grads.jsx";
 import Downbeat from "./pages/musa/Downbeat.jsx";
 import Journal from "./pages/musa/Journal.jsx";
-import Calendar from "./pages/events/Calendar.jsx";
-import EventDetails from "./pages/events/EventDetails.jsx";
+import Events from "./pages/events/Events.jsx";
 import Join from "./pages/get-involved/Join.jsx";
 import Hiring from "./pages/get-involved/Hiring.jsx";
 import Elections from "./pages/get-involved/Elections.jsx";
@@ -46,8 +45,10 @@ export default function App() {
           <Route path="/musa/grads" element={<Grads />} />
           <Route path="/musa/downbeat" element={<Downbeat />} />
           <Route path="/musa/journal" element={<Journal />} />
-          <Route path="/events/calendar" element={<Calendar />} />
-          <Route path="/events/details" element={<EventDetails />} />
+          <Route path="/events" element={<Events />} />
+          {/* legacy routes redirect to the combined Events page */}
+          <Route path="/events/calendar" element={<Events />} />
+          <Route path="/events/details" element={<Events />} />
           <Route path="/get-involved/join" element={<Join />} />
           <Route path="/get-involved/hiring" element={<Hiring />} />
           <Route path="/get-involved/elections" element={<Elections />} />
