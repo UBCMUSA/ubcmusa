@@ -26,6 +26,16 @@
     <meta name="twitter:image" content="https://www.ubcmusa.ca/images/optimized/hero-orchestra.jpg" />
   </head>
   <body>
+    <!-- Hidden static form so Netlify Forms detects "town-hall" at build time.
+         The live form is rendered by React (src/components/TownHallForm.jsx). -->
+    <form name="town-hall" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="text" name="studentNumber" />
+      <input type="text" name="areaOfStudy" />
+      <textarea name="concern"></textarea>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
