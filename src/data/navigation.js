@@ -25,7 +25,6 @@ export const navSections = [
       { label: "UBC Music Journal", to: "/musa/journal" },
     ],
   },
-  { label: "Events", to: "/events" },
   {
     label: "Get Involved",
     children: [
@@ -34,6 +33,7 @@ export const navSections = [
       { label: "Elections", to: "/get-involved/elections" },
     ],
   },
+  { label: "Events", to: "/events", plain: true },
   { label: "Sponsors", to: "/sponsors" },
   { label: "Contact Us", to: "/contact" },
 ];

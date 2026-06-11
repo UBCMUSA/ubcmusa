@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.ubcmusa.ca/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.ubcmusa.ca/about/what-is-musa</loc><priority>0.8</priority></url>
+  <url><loc>https://www.ubcmusa.ca/about/who-we-are</loc><priority>0.8</priority></url>
+  <url><loc>https://www.ubcmusa.ca/about/how-we-run</loc><priority>0.7</priority></url>
+  <url><loc>https://www.ubcmusa.ca/about/meeting-agendas</loc><priority>0.5</priority></url>
+  <url><loc>https://www.ubcmusa.ca/about/meeting-minutes</loc><priority>0.5</priority></url>
+  <url><loc>https://www.ubcmusa.ca/resources/academic</loc><priority>0.7</priority></url>
+  <url><loc>https://www.ubcmusa.ca/resources/personal</loc><priority>0.7</priority></url>
+  <url><loc>https://www.ubcmusa.ca/resources/professional</loc><priority>0.7</priority></url>
+  <url><loc>https://www.ubcmusa.ca/resources/musa</loc><priority>0.7</priority></url>
+  <url><loc>https://www.ubcmusa.ca/musa/student-lounge</loc><priority>0.6</priority></url>
+  <url><loc>https://www.ubcmusa.ca/musa/grads</loc><priority>0.6</priority></url>
+  <url><loc>https://www.ubcmusa.ca/musa/downbeat</loc><priority>0.6</priority></url>
+  <url><loc>https://www.ubcmusa.ca/musa/journal</loc><priority>0.6</priority></url>
+  <url><loc>https://www.ubcmusa.ca/events</loc><priority>0.8</priority></url>
+  <url><loc>https://www.ubcmusa.ca/get-involved/join</loc><priority>0.8</priority></url>
+  <url><loc>https://www.ubcmusa.ca/get-involved/hiring</loc><priority>0.7</priority></url>
+  <url><loc>https://www.ubcmusa.ca/get-involved/elections</loc><priority>0.6</priority></url>
+  <url><loc>https://www.ubcmusa.ca/sponsors</loc><priority>0.7</priority></url>
+  <url><loc>https://www.ubcmusa.ca/contact</loc><priority>0.7</priority></url>
+</urlset>
