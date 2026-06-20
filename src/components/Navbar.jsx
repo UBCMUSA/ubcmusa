@@ -41,7 +41,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center" aria-label="MUSA home">
-          <Logo className="h-14 w-auto" />
+          <Logo className="h-16 w-auto" />
         </Link>
 
         {/* Desktop nav */}
@@ -59,9 +59,13 @@ export default function Navbar() {
                   key={section.label}
                   to={section.to}
                   className={({ isActive: a }) =>
-                    `ml-2 inline-flex items-center rounded-full border border-ivory/40 px-4 py-1.5 text-sm font-medium tracking-wide transition-colors hover:border-gold-bright hover:text-gold-bright ${
-                      a ? "border-gold-bright text-gold-bright" : "text-ivory"
-                    }`
+                    section.plain
+                      ? `flex items-center px-3 py-2 text-sm font-medium tracking-wide transition-colors hover:text-gold-bright ${
+                          a ? "text-gold-bright" : "text-ivory"
+                        }`
+                      : `ml-2 inline-flex items-center rounded-full border border-ivory/40 px-4 py-1.5 text-sm font-medium tracking-wide transition-colors hover:border-gold-bright hover:text-gold-bright ${
+                          a ? "border-gold-bright text-gold-bright" : "text-ivory"
+                        }`
                   }
                 >
                   {section.label}

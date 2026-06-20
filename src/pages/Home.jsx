@@ -147,7 +147,7 @@ function UpcomingEventsSection() {
           <div className="order-2">
             <div key={`txt-${index}`} className={animIn}>
               <div className="text-sm font-semibold uppercase tracking-wider text-steel">
-                {ev.date} · {ev.location}
+                {[ev.date || "Date TBA", ev.location].filter(Boolean).join(" · ")}
               </div>
               <h3 className="mt-3 font-display text-4xl text-steel sm:text-5xl">
                 {ev.title}
@@ -214,12 +214,19 @@ function UpcomingEventsSection() {
               aria-label={`View details for ${ev.title}`}
               className="group relative block w-full overflow-hidden rounded-2xl text-left shadow-lg transition-[transform,box-shadow] duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-2xl"
             >
-              <img
-                key={`img-${index}`}
-                src={ev.image}
-                alt={ev.title}
-                className={`h-[300px] w-full object-cover sm:h-[380px] lg:h-[460px] ${animIn}`}
-              />
+              {ev.image ? (
+                <img
+                  key={`img-${index}`}
+                  src={ev.image}
+                  alt={ev.title}
+                  className={`h-[300px] w-full object-cover sm:h-[380px] lg:h-[460px] ${animIn}`}
+                />
+              ) : (
+                <EventImagePlaceholder
+                  key={`img-${index}`}
+                  className={`h-[300px] w-full sm:h-[380px] lg:h-[460px] ${animIn}`}
+                />
+              )}
               {/* gradient + caption */}
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/60 to-transparent" />
               <div
@@ -227,7 +234,7 @@ function UpcomingEventsSection() {
                 className={`pointer-events-none absolute bottom-0 left-0 right-0 p-6 ${animIn}`}
               >
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-bright">
-                  {ev.date}
+                  {ev.date || "Date TBA"}
                 </div>
                 <div className="mt-1 font-display text-2xl text-white">{ev.title}</div>
               </div>
@@ -289,15 +296,19 @@ function EventModal({ event, onClose }) {
 
         <div className="max-h-[90vh] overflow-y-auto">
           <div className="relative">
-            <img
-              src={event.image}
-              alt={event.title}
-              className="h-56 w-full object-cover sm:h-72"
-            />
+            {event.image ? (
+              <img
+                src={event.image}
+                alt={event.title}
+                className="h-56 w-full object-cover sm:h-72"
+              />
+            ) : (
+              <EventImagePlaceholder className="h-56 w-full sm:h-72" />
+            )}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/65 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6">
               <div className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-bright">
-                {event.date} · {event.time}
+                {[event.date || "Date TBA", event.time].filter(Boolean).join(" · ")}
               </div>
               <h3 className="mt-2 font-display text-3xl text-white sm:text-4xl">
                 {event.title}
@@ -307,9 +318,9 @@ function EventModal({ event, onClose }) {
 
           <div className="p-6 sm:p-8">
             <dl className="grid grid-cols-1 gap-4 border-b border-gray-200 pb-6 sm:grid-cols-3">
-              <EventMeta label="Date" value={event.date} />
-              <EventMeta label="Time" value={event.time} />
-              <EventMeta label="Location" value={event.location} />
+              <EventMeta label="Date" value={event.date || "TBA"} />
+              <EventMeta label="Time" value={event.time || "TBA"} />
+              <EventMeta label="Location" value={event.location || "TBA"} />
             </dl>
             <p className="mt-6 text-base leading-relaxed text-gray-700">
               {event.details}
@@ -326,6 +337,27 @@ function EventModal({ event, onClose }) {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function EventImagePlaceholder({ className = "" }) {
+  return (
+    <div
+      className={`flex items-center justify-center bg-ivory ${className}`}
+      aria-hidden
+    >
+      <svg
+        viewBox="0 0 24 24"
+        className="h-16 w-16 text-steel/25"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.3"
+      >
+        <path d="M9 18V5l12-2v13" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+      </svg>
     </div>
   );
 }
