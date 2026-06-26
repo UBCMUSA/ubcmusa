@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import PageStub from "../../components/PageStub.jsx";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 import Lead from "../../components/Lead.jsx";
+import ContentImage from "../../components/ContentImage.jsx";
 
 function SubHead({ children }) {
   return (
@@ -69,7 +70,12 @@ export default function Personal() {
             spaces designed to give you a much-needed break during midterm and jury
             seasons.
           </p>
-          <p className="mt-3 text-sm italic text-gray-500">
+          <ContentImage
+            className="mt-6 mx-auto max-w-sm"
+            src="/images/optimized/wellness-week.jpg"
+            alt="MUSA Wellness Week initiatives"
+          />
+          <p className="mt-6 text-sm italic text-gray-500">
             Find details regarding these events under the{" "}
             <Link to="/events" className="text-logo hover:text-steel">
               Events

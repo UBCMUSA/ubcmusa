@@ -1,6 +1,7 @@
 import PageStub from "../../components/PageStub.jsx";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 import Lead from "../../components/Lead.jsx";
+import ContentImage from "../../components/ContentImage.jsx";
 
 export default function Grads() {
   return (
@@ -24,6 +25,11 @@ export default function Grads() {
             senior events, studio portraits, and transition resources.
           </p>
         </div>
+
+        <ContentImage
+          src="/images/optimized/grad-2.jpg"
+          alt="UBC School of Music graduating class"
+        />
 
         <section>
           <SectionEyebrow center>Official Graduation Portraits &amp; Class Composite</SectionEyebrow>
@@ -62,6 +68,11 @@ export default function Grads() {
           <p className="mt-4 text-sm italic text-gray-500">
             More details will be published during the academic year. Stay tuned.
           </p>
+          <ContentImage
+            className="mt-6"
+            src="/images/optimized/grad-1.jpg"
+            alt="UBC School of Music graduation"
+          />
         </section>
 
         <section>

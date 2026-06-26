@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import PageStub from "../../components/PageStub.jsx";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 import TownHallForm from "../../components/TownHallForm.jsx";
+import ContentImage from "../../components/ContentImage.jsx";
 
 export default function Academic() {
   return (
@@ -119,6 +120,11 @@ export default function Academic() {
             </Link>{" "}
             tab and posted on MUSA social media pages.
           </p>
+          <ContentImage
+            className="mt-6"
+            src="/images/optimized/faculty-workshops.jpg"
+            alt="MUSA academic workshop with faculty and staff"
+          />
         </section>
 
         {/* 5 */}
@@ -143,6 +149,11 @@ export default function Academic() {
             </Link>{" "}
             or on MUSA social media pages.
           </p>
+          <ContentImage
+            className="mt-6"
+            src="/images/optimized/town-hall.jpg"
+            alt="A MUSA student-faculty town hall"
+          />
           <p className="mt-5 text-base leading-relaxed text-gray-700">
             For pressing concerns, please fill out the Virtual Town Hall Form below
             or send an email to the MUSA VP Student Resource with your

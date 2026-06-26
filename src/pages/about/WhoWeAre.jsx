@@ -18,7 +18,7 @@ const EXECS = [
     photo: "/images/optimized/millen-headshot.jpg",
     bio: [
       "Millen Sandhu is a tenor studying opera performance at the UBC School of Music, serving as the President of the Music Undergraduate Students' Association (MUSA) and an AMS Councillor. Millen was born and raised here in Vancouver. In his role as president, Millen is focused on building strong, long-term support systems for music students, whether that is academically, financially, or socially. Through his work with MUSA and his seat on the AMS Council, he aims to advocate for an excellent academic experience while creating more opportunities for music students to collaborate with other faculties across campus.",
-      "As a classical singer himself, Millen knows firsthand the intense discipline, long hours, and dedication required to pursue a music degree. His daily experience in the practice rooms and rehearsal halls gives him a genuine understanding of the unique challenges performance students face, which directly guides his approach to student leadership. He has recently performed the lead role in Leonard Bernstein's Candide, and other roles in Street Scene and Die Zauberflöte, he also has a deep love for German Lied. Outside of music and student government, Millen loves to stay active and unwind by travelling, hiking, playing board games, and hanging out with friends.",
+      "As a classical singer himself, Millen knows firsthand the intense discipline, long hours, and dedication required to pursue a music degree. His daily experience in the practice rooms and rehearsal halls gives him a genuine understanding of the unique challenges performance students face, which directly guides his approach to student leadership. He has recently performed the title role in Leonard Bernstein's Candide, and other roles in Street Scene and Die Zauberflöte, he also has a deep love for German Lied. Outside of music and student government, Millen loves to stay active and unwind by travelling, hiking, playing board games, and hanging out with friends.",
     ],
   },
   {
@@ -27,6 +27,7 @@ const EXECS = [
     meta: ["2nd-year BMus Undergraduate Student", "Flute Performance"],
     email: "ubc.musa@gmail.com",
     instagram: "almiramiaoyf",
+    linkedin: "https://www.linkedin.com/in/almira-miao-29b9b2409",
     photo: "/images/optimized/almira-headshot.jpg",
     bio: [
       "I am a Bachelor of Music student studying flute at the University of British Columbia. In high school, I was involved in the music council, where I helped organize events and initiatives that brought students together. I really enjoyed working with others in that setting and became more interested in creating opportunities for students.",
@@ -53,6 +54,7 @@ const EXECS = [
     meta: ["3rd-year BMus Undergraduate Student", "Flute Performance"],
     email: "ubcmusa.vpinternal@gmail.com",
     instagram: "zaii.dn3",
+    linkedin: "https://www.linkedin.com/in/zaiden-grayda-reyes-bb771432b",
     photo: "/images/optimized/zaiden-headshot.jpg",
     bio: [
       "I am a third-year flute student and am entering my third year with MUSA. Over the past two years, my involvement with the association has given me the opportunity to connect with students across the School of Music, contribute to initiatives that support student life, and help strengthen our sense of community. Through these experiences, I have developed a strong appreciation for the role MUSA plays in representing and supporting music students. As Vice-President Internal, I am excited to continue building meaningful relationships within our community while working alongside an incredible team to bring new ideas and initiatives to life.",
@@ -72,33 +74,69 @@ const EXECS = [
     ],
   },
   {
-    role: "Vice-President Student Resource",
-    name: "TBD",
-    meta: ["Position currently open"],
+    role: "Vice-President Student Resource (Interim)",
+    name: "Pin Yi Hu",
+    meta: ["2nd-year BMus Undergraduate Student", "Viola Performance"],
     email: "ubcmusa.vpstudentresource@gmail.com",
-    photo: null,
+    instagram: "p.inyi",
+    linkedin: "https://www.linkedin.com/in/pinyihu",
+    photo: "/images/optimized/pinyi-headshot.jpg",
     bio: [
-      "This position is currently open. If you are interested in joining the MUSA executive team, please reach out. We welcome candidates across the School of Music who are passionate about advocacy and student well-being.",
+      "Pin Yi Hu is a second-year Viola Performance student at the UBC School of Music and VP Student Resource for the Music Undergraduate Students' Association. Having grown up in the lower mainland, Pin Yi has been involved in the BC youth music community for years, performing with local ensembles across the Tri-Cities and Vancouver. This background within the local arts community motivates her commitment to creating stronger support networks for her peers. As the primary link between the student body and MUSA, her goal is to support an inclusive community where student voices are not just heard, but actively put into practice.",
+      "Deeply curious about human behaviour, Pin Yi is currently working toward a double major in Music and Psychology. When she isn't practicing her viola or studying, you can find her mindlessly sketching on any paper surface, or attempting to make a new variation of a matcha latte.",
+      "Pin Yi is incredibly excited to connect with everyone this year! Whether you have a quick question about navigating UBC resources, want to pitch an idea, or just need someone to chat with, please do not hesitate to contact her.",
     ],
   },
 ];
 
 const [PRESIDENT, VP_ADMIN, VP_FINANCE, VP_INTERNAL, VP_EXTERNAL, VP_STUDENT] = EXECS;
 
+// Hired & appointed council members.
+const CHIEF_OF_STAFF = {
+  role: "Chief of Staff",
+  name: "Jeremy Han",
+  linkedin: "https://www.linkedin.com/in/jeremytaekyunghan",
+  instagram: "taekyungjhan",
+};
+
+const GOVERNANCE_COMMISSIONER = {
+  role: "Governance Commissioner",
+  name: "Kira Hu",
+  instagram: "kiira.hu",
+};
+
+const ADMIN_COORDINATOR = {
+  role: "Administrative Coordinator",
+  name: "Megan Arboleda West",
+  meta: ["3rd-year Arts Undergraduate Student", "Music & Sociology Double Major"],
+  linkedin: "https://www.linkedin.com/in/megan-a-38175526a",
+  bio: [
+    "Megan Arboleda West is a third-year Arts student at UBC, double majoring in Music and Sociology, and currently serves as the Administrative Coordinator for the Music Undergraduate Students' Association.",
+    "With a strong passion for the intersections of arts, culture, and community, Megan is always eager to get involved and support programs that cultivate artistic communities. Their interests have led them to volunteer with many arts and cultural events around Vancouver. They have volunteered as part of the Fringe Festival Production Crew, as the Assistant Volunteer Registration Lead for the Lapu Lapu Day Block Party, and as a Rehearsal Liaison for the Unison Choral Festival. Megan is excited to put their experience to use in supporting the MUSA team and the music students at UBC.",
+    "Outside of the campus community and volunteering, you can find Megan spending time with friends and family, frequenting local artist markets, attending live performances, and creating artwork and jewelry.",
+  ],
+};
+
+const MARKETING_DIRECTOR = {
+  role: "Marketing Director",
+  name: "Max Luo",
+  instagram: "procockfiev",
+};
+
 // Organizational structure (placeholders use { role } only).
 const GROUPS = [
   {
     label: "Direct Reports & Independent Officers",
-    members: [{ role: "Chief of Staff" }, { role: "Governance Commissioner" }],
+    members: [CHIEF_OF_STAFF, GOVERNANCE_COMMISSIONER],
   },
   {
     label: "Executive Portfolios",
     members: [
-      { ...VP_ADMIN, reports: [{ role: "Administrative Coordinator" }] },
+      { ...VP_ADMIN, reports: [ADMIN_COORDINATOR] },
       { ...VP_FINANCE, reports: [{ role: "Financial Coordinator" }] },
       {
         ...VP_INTERNAL,
-        reports: [{ role: "Marketing Director" }, { role: "Creative Director" }],
+        reports: [MARKETING_DIRECTOR, { role: "Creative Director" }],
       },
       {
         ...VP_EXTERNAL,
@@ -132,6 +170,14 @@ export default function WhoWeAre() {
       title="Who We Are"
       description="Behind every event, advocacy campaign, and student resource is a team of elected and hired undergraduate student leaders dedicated to making your experience at the UBC School of Music the best it can be. The MUSA Executive and Council are composed of peers from diverse musical disciplines—including performance, composition, education, and musicology—who balance their own rigorous hours in the practice rooms with a shared commitment to serving our community."
     >
+      <div className="mx-auto mb-14 max-w-4xl overflow-hidden rounded-2xl shadow-md ring-1 ring-steel/10">
+        <img
+          src="/images/optimized/who-are-we.jpg"
+          alt="The MUSA executive and council team"
+          className="h-full w-full object-cover"
+        />
+      </div>
+
       <div className="mx-auto max-w-3xl space-y-5 text-center">
         <p className="text-base leading-relaxed text-gray-700">
           As your student representatives, we manage the day-to-day operations of
@@ -237,7 +283,8 @@ function GroupChip({ children }) {
 }
 
 function ChartCard({ person, onClick, small = false }) {
-  const clickable = Array.isArray(person.bio);
+  const clickable =
+    Array.isArray(person.bio) || !!(person.instagram || person.linkedin);
   const display = person.name && person.name !== "TBD" ? person.name : "TBD";
   const w = small ? "w-32" : "w-36";
   const av = small ? "h-11 w-11" : "h-14 w-14";
@@ -311,7 +358,8 @@ function GroupLabel({ children }) {
 }
 
 function OrgCard({ person, onClick }) {
-  const clickable = Array.isArray(person.bio);
+  const clickable =
+    Array.isArray(person.bio) || !!(person.instagram || person.linkedin);
   const display = person.name && person.name !== "TBD" ? person.name : "TBD";
   const common =
     "group inline-flex items-center gap-4 rounded-xl border border-gray-200 bg-white px-5 py-3 text-left";
@@ -410,17 +458,21 @@ function ExecModal({ exec, onClose }) {
               <h3 className="mt-2 font-display text-3xl text-steel sm:text-4xl">
                 {exec.name}
               </h3>
-              <div className="mt-3 text-sm text-gray-600">
-                {exec.meta.map((line, i) => (
-                  <p key={i}>{line}</p>
-                ))}
-              </div>
-              <a
-                href={`mailto:${exec.email}`}
-                className="mt-3 inline-block text-sm font-medium text-logo hover:text-steel"
-              >
-                {exec.email}
-              </a>
+              {exec.meta && (
+                <div className="mt-3 text-sm text-gray-600">
+                  {exec.meta.map((line, i) => (
+                    <p key={i}>{line}</p>
+                  ))}
+                </div>
+              )}
+              {exec.email && (
+                <a
+                  href={`mailto:${exec.email}`}
+                  className="mt-3 inline-block text-sm font-medium text-logo hover:text-steel"
+                >
+                  {exec.email}
+                </a>
+              )}
               {(exec.instagram || exec.linkedin) && (
                 <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
                   {exec.instagram && (
@@ -460,13 +512,15 @@ function ExecModal({ exec, onClose }) {
             </div>
           </div>
 
-          <div className="mt-6 space-y-4 border-t border-gray-200 pt-6">
-            {exec.bio.map((para, i) => (
-              <p key={i} className="text-base leading-relaxed text-gray-700">
-                {para}
-              </p>
-            ))}
-          </div>
+          {exec.bio && (
+            <div className="mt-6 space-y-4 border-t border-gray-200 pt-6">
+              {exec.bio.map((para, i) => (
+                <p key={i} className="text-base leading-relaxed text-gray-700">
+                  {para}
+                </p>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
