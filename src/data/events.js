@@ -1,40 +1,38 @@
 // Shared event data for the home "Upcoming Events" carousel.
-// These mirror the first three entries in the Events timeline (/events).
-// Images are intentionally left blank (placeholder) until photos are chosen,
-// and dates are blank for events that aren't scheduled yet.
+// Images left as "" render a placeholder until a photo is supplied.
 
 export const EVENTS = [
   {
-    title: "Imagine Day & Welcome Back BBQ",
-    date: "Sept 8",
+    title: "Welcome Back BBQ",
+    date: "Sept 11, 2026",
     time: "",
-    location: "UBC Campus",
-    image: "",
+    location: "School of Music Courtyard",
+    image: "/images/optimized/welcome-bbq.jpg",
     blurb:
-      "MUSA kicks off the academic year by welcoming incoming and returning music undergraduates with our signature Welcome Back BBQ, specialized care packages, and custom MUSA stickers.",
+      "Kick off the year with free food, games, and the chance to meet students and faculty from every studio and ensemble across the School of Music.",
     details:
-      "MUSA kicks off the academic year on campus by welcoming incoming and returning music undergraduates by bringing back our signature Welcome Back BBQ. Alongside the food, council members distribute specialized care packages and custom MUSA stickers to build community spirit from day one.",
+      "Kick off the year with free food, games, and the chance to meet students and faculty from every studio and ensemble across the School of Music.",
   },
   {
-    title: "Annual General Meeting (AGM)",
-    date: "",
+    title: "Wellness Week",
+    date: "November 2026",
     time: "",
-    location: "School of Music",
-    image: "",
+    location: "",
+    image: "/images/optimized/wellness-week.jpg",
     blurb:
-      "Our open governance forum where the Executive Board presents the society's yearly roadmap and financial transparency models.",
+      "A full week of events and initiatives centred around supporting student wellbeing.",
     details:
-      "Hosted early in the term in the School of Music, the AGM serves as our open governance forum where the Executive Board presents the society's yearly roadmap and financial transparency models. It is highly recommended for fall election nominees to present a brief 1–2 minute speech or campaign platform to the student body during this assembly.",
+      "A full week of events and initiatives centred around supporting student wellbeing.",
   },
   {
-    title: "Professional Headshots",
-    date: "",
+    title: "Imagine Day",
+    date: "Sept 8, 2026",
     time: "",
-    location: "Roy Barnett Recital Hall",
-    image: "",
+    location: "",
+    image: "/images/optimized/imagine-day.jpg",
     blurb:
-      "Affordable, high-resolution portrait sessions so students can secure industry-standard headshots for recital programs and professional music portfolios.",
+      "A day for all UBC students, returning and incoming, to meet each other and the UBC faculty and staff. Full of events to socialize, and opportunities to find clubs and services.",
     details:
-      "An essential professional readiness service held inside the Roy Barnett Recital Hall. MUSA provides affordable, high-resolution portrait sessions for students to secure industry-standard headshots for upcoming recital programs, casting agencies, and professional music portfolios.",
+      "A day for all UBC students, returning and incoming, to meet each other and the UBC faculty and staff. Full of events to socialize, and opportunities to find clubs and services.",
   },
 ];

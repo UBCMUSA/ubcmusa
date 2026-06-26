@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import PageStub from "../../components/PageStub.jsx";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 import Lead from "../../components/Lead.jsx";
+import ContentImage from "../../components/ContentImage.jsx";
 
 export default function StudentLounge() {
   return (
@@ -25,6 +26,11 @@ export default function StudentLounge() {
             lounge is open to you throughout the academic year.
           </p>
         </div>
+
+        <ContentImage
+          src="/images/optimized/lounge.jpg"
+          alt="Inside the MUSA Student Lounge"
+        />
 
         <section>
           <SectionEyebrow center>What's Inside: Amenities &amp; Resources</SectionEyebrow>

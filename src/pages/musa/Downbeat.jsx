@@ -1,6 +1,16 @@
 import PageStub from "../../components/PageStub.jsx";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 import Lead from "../../components/Lead.jsx";
+import DownloadButton from "../../components/DownloadButton.jsx";
+
+// Published editions, newest first. file lives in /public/documents/downbeat/.
+const EDITIONS = [
+  { date: "03/11/2026", file: "2026-03-11.pdf" },
+  { date: "11/25/2025", file: "2025-11-25.pdf" },
+  { date: "11/01/2025", file: "2025-11-01.pdf" },
+  { date: "10/15/2025", file: "2025-10-15.pdf" },
+  { date: "10/01/2025", file: "2025-10-01.pdf" },
+];
 
 export default function Downbeat() {
   return (
@@ -79,10 +89,19 @@ export default function Downbeat() {
         <section>
           <SectionEyebrow center>Find All the Editions Here</SectionEyebrow>
           <p className="mt-5 text-sm italic text-gray-500">
-            Past editions of The Downbeat will be archived here as they are published
-            — listed as "The Downbeat [mm/dd/yyyy]."
+            Past editions of The Downbeat are archived here as they are published —
+            listed as "The Downbeat [mm/dd/yyyy]."
           </p>
-          <p className="mt-4 text-base leading-relaxed text-gray-700">
+          <div className="mt-6 flex flex-wrap gap-3">
+            {EDITIONS.map((e) => (
+              <DownloadButton
+                key={e.file}
+                label={`The Downbeat [${e.date}]`}
+                href={`/documents/downbeat/${e.file}`}
+              />
+            ))}
+          </div>
+          <p className="mt-6 text-base leading-relaxed text-gray-700">
             If you are looking for any that are not here, please contact our MUSA VP
             Administration at{" "}
             <a href="mailto:ubc.musa@gmail.com" className="text-logo hover:text-steel">
