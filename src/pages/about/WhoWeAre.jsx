@@ -95,14 +95,23 @@ const [PRESIDENT, VP_ADMIN, VP_FINANCE, VP_INTERNAL, VP_EXTERNAL, VP_STUDENT] = 
 const CHIEF_OF_STAFF = {
   role: "Chief of Staff",
   name: "Jeremy Han",
+  meta: ["4th-year Arts Undergraduate Student"],
   linkedin: "https://www.linkedin.com/in/jeremytaekyunghan",
   instagram: "taekyungjhan",
+  bio: [
+    "Jeremy is a settler learning, living and working between the ancestral, traditional and unceded territories of the xʷməθkʷəy̓əm (Musqueam) people. Jeremy is a 4th year arts student at the University of British Columbia and is passionate about community, governance, leadership and creating spaces where people feel heard and represented. He is thrilled to be a part of MUSA this year and to be able to advocate for various goals and initiatives at UBC. He is also looking forward to working alongside other like minded people and with the AMS along with the other faculty societies at UBC. Outside of school, Jeremy enjoys music in every capacity and being involved with the not for & nonprofit sector!",
+  ],
 };
 
 const GOVERNANCE_COMMISSIONER = {
   role: "Governance Commissioner",
   name: "Kira Hu",
+  meta: ["4th-year BMus & B+MM Undergraduate Student"],
   instagram: "kiira.hu",
+  bio: [
+    "Kira Hu is a 4th year BMUS and B+MM student at the University of British Columbia, serving as Governance Commissioner for the Music Undergraduate Students' Association (MUSA) for this '26/'27 school year. As an aspiring law student, Kira strives to bring a thoughtful approach to her role, aiming to contribute to a more engaging community within the music faculty. As well, in her last year at UBC, she also hopes to give back to the community that has provided her with such a welcoming and supportive undergraduate experience. Having experienced the close-knit environment within the Faculty of Music firsthand, she hopes to help create more opportunities for students to connect, collaborate, and support one another. She looks forward to making the most of her final year as well as getting to know more members of the Faculty of Music.",
+    "Outside of academics, Kira likes to spend time with friends, and enjoys traveling, going for long walks, and baking. She also loves exploring new spots and checking out new restaurants and cafes around the city.",
+  ],
 };
 
 const ADMIN_COORDINATOR = {
@@ -110,6 +119,7 @@ const ADMIN_COORDINATOR = {
   name: "Megan Arboleda West",
   meta: ["3rd-year Arts Undergraduate Student", "Music & Sociology Double Major"],
   linkedin: "https://www.linkedin.com/in/megan-a-38175526a",
+  photo: "/images/optimized/megan-headshot.jpg",
   bio: [
     "Megan Arboleda West is a third-year Arts student at UBC, double majoring in Music and Sociology, and currently serves as the Administrative Coordinator for the Music Undergraduate Students' Association.",
     "With a strong passion for the intersections of arts, culture, and community, Megan is always eager to get involved and support programs that cultivate artistic communities. Their interests have led them to volunteer with many arts and cultural events around Vancouver. They have volunteered as part of the Fringe Festival Production Crew, as the Assistant Volunteer Registration Lead for the Lapu Lapu Day Block Party, and as a Rehearsal Liaison for the Unison Choral Festival. Megan is excited to put their experience to use in supporting the MUSA team and the music students at UBC.",
