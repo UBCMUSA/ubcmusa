@@ -133,6 +133,18 @@ const MARKETING_DIRECTOR = {
   instagram: "procockfiev",
 };
 
+const SOFTWARE_DEVELOPER = {
+  role: "Software Developer",
+  name: "Nathan Wu",
+  meta: ["4th-year BSc Undergraduate Student", "Computer Science"],
+  linkedin: "https://www.linkedin.com/in/nathanwu05/",
+  photo: "/images/optimized/nathan-headshot.jpg",
+  bio: [
+    "Hey I'm Nathan, a fourth-year Computer Science student in the Faculty of Science at UBC. I had the opportunity to design and build the MUSA website from scratch this year, replacing the club's old Wix setup with a fully custom site to give MUSA a more professional online presence.",
+    "If you'd like to see more of my work or get in touch, feel free to visit nathanwu.ca.",
+  ],
+};
+
 // Organizational structure (placeholders use { role } only).
 const GROUPS = [
   {
@@ -142,7 +154,7 @@ const GROUPS = [
   {
     label: "Executive Portfolios",
     members: [
-      { ...VP_ADMIN, reports: [ADMIN_COORDINATOR] },
+      { ...VP_ADMIN, reports: [ADMIN_COORDINATOR, SOFTWARE_DEVELOPER] },
       { ...VP_FINANCE, reports: [{ role: "Financial Coordinator" }] },
       {
         ...VP_INTERNAL,
@@ -278,10 +290,10 @@ export default function WhoWeAre() {
 // Connector classes for a child cell: up-line (before) + horizontal bar (after,
 // trimmed on first/last, hidden for only-child).
 const CHART_LI =
-  "relative flex flex-col items-center px-3 pt-6 before:absolute before:left-1/2 before:top-0 before:h-6 before:w-px before:-translate-x-1/2 before:bg-gray-300 before:content-[''] after:absolute after:left-0 after:right-0 after:top-0 after:border-t after:border-gray-300 after:content-[''] first:after:left-1/2 last:after:right-1/2 only:after:hidden";
+  "relative flex flex-col items-center px-1.5 pt-4 before:absolute before:left-1/2 before:top-0 before:h-4 before:w-px before:-translate-x-1/2 before:bg-gray-300 before:content-[''] after:absolute after:left-0 after:right-0 after:top-0 after:border-t after:border-gray-300 after:content-[''] first:after:left-1/2 last:after:right-1/2 only:after:hidden";
 
 function ChartLine() {
-  return <div className="h-6 w-px bg-gray-300" />;
+  return <div className="h-4 w-px bg-gray-300" />;
 }
 
 function GroupChip({ children }) {
