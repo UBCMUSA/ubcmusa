@@ -4,7 +4,7 @@
 export const EVENTS = [
   {
     title: "Welcome Back BBQ",
-    date: "Sept 11, 2026",
+    date: "",
     time: "",
     location: "School of Music Courtyard",
     image: "/images/optimized/welcome-bbq.jpg",
