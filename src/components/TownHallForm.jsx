@@ -20,7 +20,7 @@ function Field({ label, name, type = "text", required = false }) {
 /**
  * Virtual Town Hall submission form. Wired to Netlify Forms (name="town-hall").
  * Submissions appear in the Netlify dashboard; add an email notification there
- * to forward them to ubcmusa.vpstudentresource@gmail.com.
+ * to forward them to vpstudentresource@ubcmusa.ca.
  * (Submitting only works on the deployed Netlify site, not local dev.)
  */
 export default function TownHallForm() {
@@ -105,8 +105,8 @@ export default function TownHallForm() {
         {status === "error" && (
           <p className="text-sm text-red-600">
             Something went wrong. Please email{" "}
-            <a href="mailto:ubcmusa.vpstudentresource@gmail.com" className="underline">
-              ubcmusa.vpstudentresource@gmail.com
+            <a href="mailto:vpstudentresource@ubcmusa.ca" className="underline">
+              vpstudentresource@ubcmusa.ca
             </a>{" "}
             directly.
           </p>

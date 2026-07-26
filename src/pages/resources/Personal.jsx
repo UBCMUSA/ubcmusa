@@ -46,10 +46,10 @@ export default function Personal() {
           <p className="mt-3 text-sm italic text-gray-500">
             Please contact the MUSA VP Student Resource at{" "}
             <a
-              href="mailto:ubcmusa.vpstudentresource@gmail.com"
+              href="mailto:vpstudentresource@ubcmusa.ca"
               className="text-logo hover:text-steel"
             >
-              ubcmusa.vpstudentresource@gmail.com
+              vpstudentresource@ubcmusa.ca
             </a>{" "}
             for all inquiries.
           </p>

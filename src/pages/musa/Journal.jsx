@@ -96,8 +96,8 @@ export default function Journal() {
           <p className="mt-4 text-base leading-relaxed text-gray-700">
             To register your interest or ask questions about the upcoming timeline,
             please reach out to the MUSA Executive Office directly at{" "}
-            <a href="mailto:ubc.musa@gmail.com" className="text-logo hover:text-steel">
-              ubc.musa@gmail.com
+            <a href="mailto:admin@ubcmusa.ca" className="text-logo hover:text-steel">
+              admin@ubcmusa.ca
             </a>
             .
           </p>

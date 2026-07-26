@@ -90,8 +90,8 @@ export default function Musa() {
               allowing undergraduate members to review upcoming legislative topics. To
               have something added to the agenda or to be a Student at Large / Guest
               Speaker, please contact the MUSA President at{" "}
-              <a href="mailto:ubcmusa.president@gmail.com" className="text-logo hover:text-steel">
-                ubcmusa.president@gmail.com
+              <a href="mailto:president@ubcmusa.ca" className="text-logo hover:text-steel">
+                president@ubcmusa.ca
               </a>
               .
             </Lead>
@@ -116,8 +116,8 @@ export default function Musa() {
           <p className="mt-4 text-sm italic text-gray-500">
             For documents not listed or found here, please contact the MUSA VP
             Administration to receive the documents you wish to obtain at{" "}
-            <a href="mailto:ubc.musa@gmail.com" className="text-logo hover:text-steel">
-              ubc.musa@gmail.com
+            <a href="mailto:vpadmin@ubcmusa.ca" className="text-logo hover:text-steel">
+              vpadmin@ubcmusa.ca
             </a>
             .
           </p>
@@ -153,8 +153,8 @@ export default function Musa() {
           <p className="mt-4 text-sm italic text-gray-500">
             For inquiries regarding ongoing advocacy efforts, or to bring a new
             situation to MUSA's attention, please contact the MUSA President at{" "}
-            <a href="mailto:ubcmusa.president@gmail.com" className="text-logo hover:text-steel">
-              ubcmusa.president@gmail.com
+            <a href="mailto:president@ubcmusa.ca" className="text-logo hover:text-steel">
+              president@ubcmusa.ca
             </a>
             .
           </p>

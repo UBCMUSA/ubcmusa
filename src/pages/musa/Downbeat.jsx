@@ -104,8 +104,8 @@ export default function Downbeat() {
           <p className="mt-6 text-base leading-relaxed text-gray-700">
             If you are looking for any that are not here, please contact our MUSA VP
             Administration at{" "}
-            <a href="mailto:ubc.musa@gmail.com" className="text-logo hover:text-steel">
-              ubc.musa@gmail.com
+            <a href="mailto:vpadmin@ubcmusa.ca" className="text-logo hover:text-steel">
+              vpadmin@ubcmusa.ca
             </a>{" "}
             to find past copies.
           </p>
@@ -130,8 +130,8 @@ export default function Downbeat() {
             <span className="font-semibold text-steel">How to Submit:</span> To request
             an addition to the next issue of the newsletter, please contact the MUSA
             Vice-President Internal directly via email at{" "}
-            <a href="mailto:ubcmusa.vpinternal@gmail.com" className="text-logo hover:text-steel">
-              ubcmusa.vpinternal@gmail.com
+            <a href="mailto:vpinternal@ubcmusa.ca" className="text-logo hover:text-steel">
+              vpinternal@ubcmusa.ca
             </a>
             . Ensure you submit your text copy, relevant web links, or promotional
             graphics at least 48 hours prior to our biweekly printing block to

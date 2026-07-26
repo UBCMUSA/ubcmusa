@@ -150,12 +150,12 @@ export default function Grads() {
           </ul>
           <p className="mt-4 text-sm italic text-gray-500">
             Please contact our MUSA Vice-President External at{" "}
-            <a href="mailto:musa.vpexternal@gmail.com" className="text-logo hover:text-steel">
-              musa.vpexternal@gmail.com
+            <a href="mailto:vpexternal@ubcmusa.ca" className="text-logo hover:text-steel">
+              vpexternal@ubcmusa.ca
             </a>{" "}
             or the MUSA President at{" "}
-            <a href="mailto:ubcmusa.president@gmail.com" className="text-logo hover:text-steel">
-              ubcmusa.president@gmail.com
+            <a href="mailto:president@ubcmusa.ca" className="text-logo hover:text-steel">
+              president@ubcmusa.ca
             </a>
             . We look forward to staying in touch and building on the extensive
             community surrounding the UBC School of Music.

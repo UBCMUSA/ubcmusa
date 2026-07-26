@@ -1,0 +1,62 @@
+// Single source of truth for MUSA contact addresses. Consumed by the Contact
+// page directory and the Who We Are org chart so the two can't drift apart.
+export const EMAILS = {
+  general: "admin@ubcmusa.ca",
+
+  // Council
+  president: "president@ubcmusa.ca",
+  vpAdmin: "vpadmin@ubcmusa.ca",
+  vpStudentResource: "vpstudentresource@ubcmusa.ca",
+  vpFinance: "vpfinance@ubcmusa.ca",
+  vpInternal: "vpinternal@ubcmusa.ca",
+  vpExternal: "vpexternal@ubcmusa.ca",
+
+  // Student government
+  chiefOfStaff: "chiefofstaff@ubcmusa.ca",
+  governance: "governance@ubcmusa.ca",
+  elections: "elections@ubcmusa.ca",
+  adminCoordinator: "admin@ubcmusa.ca",
+  loungeManager: "lounge@ubcmusa.ca",
+  financeCoordinator: "finance@ubcmusa.ca",
+  marketing: "marketing@ubcmusa.ca",
+  creative: "design@ubcmusa.ca",
+  community: "community@ubcmusa.ca",
+  sponsorship: "sponsorship@ubcmusa.ca",
+};
+
+// Contact directory. Entries without an `email` render as "To be announced" —
+// the cohort reps are elected later in the year, and the software developer
+// role has no published address.
+export const DIRECTORY = [
+  {
+    group: "Council",
+    entries: [
+      { role: "President", email: EMAILS.president },
+      { role: "VP Administration", email: EMAILS.vpAdmin },
+      { role: "VP Student Resource", email: EMAILS.vpStudentResource },
+      { role: "VP Finance", email: EMAILS.vpFinance },
+      { role: "VP Internal", email: EMAILS.vpInternal },
+      { role: "VP External", email: EMAILS.vpExternal },
+      { role: "Fourth Year Representative" },
+      { role: "Third Year Representative" },
+      { role: "Second Year Representative" },
+      { role: "First Year Representative" },
+    ],
+  },
+  {
+    group: "Student Government",
+    entries: [
+      { role: "Chief of Staff", email: EMAILS.chiefOfStaff },
+      { role: "Governance Commissioner", email: EMAILS.governance },
+      { role: "Elections Officer", email: EMAILS.elections },
+      { role: "Administrative Coordinator", email: EMAILS.adminCoordinator },
+      { role: "Software Developer" },
+      { role: "Lounge Manager", email: EMAILS.loungeManager },
+      { role: "Finance Coordinator", email: EMAILS.financeCoordinator },
+      { role: "Marketing Director", email: EMAILS.marketing },
+      { role: "Creative Director", email: EMAILS.creative },
+      { role: "Community Outreach Director", email: EMAILS.community },
+      { role: "Sponsorship Director", email: EMAILS.sponsorship },
+    ],
+  },
+];

@@ -35,8 +35,8 @@ export default function Academic() {
           </p>
           <p className="mt-3 text-sm italic text-gray-500">
             Please contact the MUSA VP Administration at{" "}
-            <a href="mailto:ubc.musa@gmail.com" className="text-logo hover:text-steel">
-              ubc.musa@gmail.com
+            <a href="mailto:vpadmin@ubcmusa.ca" className="text-logo hover:text-steel">
+              vpadmin@ubcmusa.ca
             </a>{" "}
             for any inquiries.
           </p>
@@ -64,8 +64,8 @@ export default function Academic() {
           </p>
           <p className="mt-3 text-sm italic text-gray-500">
             Please contact the MUSA VP Administration at{" "}
-            <a href="mailto:ubc.musa@gmail.com" className="text-logo hover:text-steel">
-              ubc.musa@gmail.com
+            <a href="mailto:vpadmin@ubcmusa.ca" className="text-logo hover:text-steel">
+              vpadmin@ubcmusa.ca
             </a>{" "}
             for any inquiries.
           </p>
@@ -90,10 +90,10 @@ export default function Academic() {
             Sessions will vary in size and content. Please reach out to the MUSA VP
             Student Resource at{" "}
             <a
-              href="mailto:ubcmusa.vpstudentresource@gmail.com"
+              href="mailto:vpstudentresource@ubcmusa.ca"
               className="text-logo hover:text-steel"
             >
-              ubcmusa.vpstudentresource@gmail.com
+              vpstudentresource@ubcmusa.ca
             </a>{" "}
             for inquiries regarding becoming a mentor or if you are a student seeking
             mentorship.
@@ -159,10 +159,10 @@ export default function Academic() {
             or send an email to the MUSA VP Student Resource with your
             concerns/comments at{" "}
             <a
-              href="mailto:ubcmusa.vpstudentresource@gmail.com"
+              href="mailto:vpstudentresource@ubcmusa.ca"
               className="text-logo hover:text-steel"
             >
-              ubcmusa.vpstudentresource@gmail.com
+              vpstudentresource@ubcmusa.ca
             </a>
             .
           </p>

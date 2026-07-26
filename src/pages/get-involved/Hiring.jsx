@@ -62,13 +62,13 @@ export default function Hiring() {
               Administrative Coordinator
             </Lead>
             <Lead term="Financial Branch (Under VP Finance)">
-              Financial Coordinator
+              Finance Coordinator
             </Lead>
             <Lead term="Internal Branch (Under VP Internal)">
               Marketing Director, Creative Director
             </Lead>
             <Lead term="External Branch (Under VP External)">
-              Community Engagement Director, Sponsorship Director
+              Community Outreach Director, Sponsorship Director
             </Lead>
             <Lead term="Student Resource Branch (Under VP Student Resource)">
               Lounge Manager

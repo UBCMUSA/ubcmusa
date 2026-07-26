@@ -5,12 +5,12 @@ const CONTACTS = [
   {
     name: "Rosie Lin",
     role: "Vice-President External",
-    email: "musa.vpexternal@gmail.com",
+    email: "vpexternal@ubcmusa.ca",
   },
   {
     name: "Millen Sandhu",
     role: "President",
-    email: "ubcmusa.president@gmail.com",
+    email: "president@ubcmusa.ca",
   },
 ];
 
@@ -149,7 +149,7 @@ export default function Sponsors() {
           </div>
           <div className="mt-8 text-center">
             <a
-              href="mailto:musa.vpexternal@gmail.com"
+              href="mailto:vpexternal@ubcmusa.ca"
               className="inline-flex items-center gap-2 rounded-md bg-steel px-6 py-3 text-sm font-semibold text-white transition hover:bg-steel-dark"
             >
               Email Our Sponsorship Team →

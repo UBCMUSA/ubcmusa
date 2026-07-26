@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import PageStub from "../../components/PageStub.jsx";
+import { EMAILS } from "../../data/directory.js";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 
 const EXECS = [
@@ -12,7 +14,7 @@ const EXECS = [
       "Councillor, AMS",
       "HR Committee Chair, AMS",
     ],
-    email: "ubcmusa.president@gmail.com",
+    email: EMAILS.president,
     instagram: "millensandhu.musapresident",
     linkedin: "https://www.linkedin.com/in/millen-sandhu/",
     photo: "/images/optimized/millen-headshot.jpg",
@@ -25,7 +27,7 @@ const EXECS = [
     role: "Vice-President Administration",
     name: "Almira Miao",
     meta: ["2nd-year BMus Undergraduate Student", "Flute Performance"],
-    email: "ubc.musa@gmail.com",
+    email: EMAILS.vpAdmin,
     instagram: "almiramiaoyf",
     linkedin: "https://www.linkedin.com/in/almira-miao-29b9b2409",
     photo: "/images/optimized/almira-headshot.jpg",
@@ -38,7 +40,7 @@ const EXECS = [
     role: "Vice-President Finance",
     name: "Aleksandra Van-Looy",
     meta: ["2nd-year BMus Undergraduate Student", "Soprano, UBC Opera"],
-    email: "musa.vpfinance@gmail.com",
+    email: EMAILS.vpFinance,
     instagram: "_sashavl",
     photo: "/images/optimized/sasha-headshot.jpg",
     bio: [
@@ -52,7 +54,7 @@ const EXECS = [
     role: "Vice-President Internal",
     name: "Zaiden Grayda-Reyes",
     meta: ["3rd-year BMus Undergraduate Student", "Flute Performance"],
-    email: "ubcmusa.vpinternal@gmail.com",
+    email: EMAILS.vpInternal,
     instagram: "zaii.dn3",
     linkedin: "https://www.linkedin.com/in/zaiden-grayda-reyes-bb771432b",
     photo: "/images/optimized/zaiden-headshot.jpg",
@@ -64,7 +66,7 @@ const EXECS = [
     role: "Vice-President External",
     name: "Rosie Lin",
     meta: ["2nd-year BMus Undergraduate Student", "Piano Performance"],
-    email: "musa.vpexternal@gmail.com",
+    email: EMAILS.vpExternal,
     instagram: "ii.mrosie",
     photo: "/images/optimized/rosie-headshot.jpg",
     bio: [
@@ -77,7 +79,7 @@ const EXECS = [
     role: "Vice-President Student Resource (Interim)",
     name: "Pin Yi Hu",
     meta: ["2nd-year BMus Undergraduate Student", "Viola Performance"],
-    email: "ubcmusa.vpstudentresource@gmail.com",
+    email: EMAILS.vpStudentResource,
     instagram: "p.inyi",
     linkedin: "https://www.linkedin.com/in/pinyihu",
     photo: "/images/optimized/pinyi-headshot.jpg",
@@ -96,8 +98,7 @@ const CHIEF_OF_STAFF = {
   role: "Chief of Staff",
   name: "Jeremy Han",
   meta: ["4th-year Arts Undergraduate Student"],
-  linkedin: "https://www.linkedin.com/in/jeremytaekyunghan",
-  instagram: "taekyungjhan",
+  email: EMAILS.chiefOfStaff,
   bio: [
     "Jeremy is a settler learning, living and working between the ancestral, traditional and unceded territories of the xʷməθkʷəy̓əm (Musqueam) people. Jeremy is a 4th year arts student at the University of British Columbia and is passionate about community, governance, leadership and creating spaces where people feel heard and represented. He is thrilled to be a part of MUSA this year and to be able to advocate for various goals and initiatives at UBC. He is also looking forward to working alongside other like minded people and with the AMS along with the other faculty societies at UBC. Outside of school, Jeremy enjoys music in every capacity and being involved with the not for & nonprofit sector!",
   ],
@@ -107,6 +108,7 @@ const GOVERNANCE_COMMISSIONER = {
   role: "Governance Commissioner",
   name: "Kira Hu",
   meta: ["4th-year BMus & B+MM Undergraduate Student"],
+  email: EMAILS.governance,
   instagram: "kiira.hu",
   bio: [
     "Kira Hu is a 4th year BMUS and B+MM student at the University of British Columbia, serving as Governance Commissioner for the Music Undergraduate Students' Association (MUSA) for this '26/'27 school year. As an aspiring law student, Kira strives to bring a thoughtful approach to her role, aiming to contribute to a more engaging community within the music faculty. As well, in her last year at UBC, she also hopes to give back to the community that has provided her with such a welcoming and supportive undergraduate experience. Having experienced the close-knit environment within the Faculty of Music firsthand, she hopes to help create more opportunities for students to connect, collaborate, and support one another. She looks forward to making the most of her final year as well as getting to know more members of the Faculty of Music.",
@@ -114,10 +116,19 @@ const GOVERNANCE_COMMISSIONER = {
   ],
 };
 
+// Independent officer — impartial of the executive, so the chart renders this
+// one off to the side with no reporting line.
+const ELECTIONS_OFFICER = {
+  role: "Elections Officer",
+  name: "Jeremy Solomon",
+  email: EMAILS.elections,
+};
+
 const ADMIN_COORDINATOR = {
   role: "Administrative Coordinator",
   name: "Megan Arboleda West",
   meta: ["3rd-year Arts Undergraduate Student", "Music & Sociology Double Major"],
+  email: EMAILS.adminCoordinator,
   linkedin: "https://www.linkedin.com/in/megan-a-38175526a",
   photo: "/images/optimized/megan-headshot.jpg",
   bio: [
@@ -130,7 +141,36 @@ const ADMIN_COORDINATOR = {
 const MARKETING_DIRECTOR = {
   role: "Marketing Director",
   name: "Max Luo",
+  email: EMAILS.marketing,
   instagram: "procockfiev",
+};
+
+// Open roles. `applyUrl` surfaces an "Apply for this role" link in the bio
+// modal; Lounge Manager is filled outside the hiring cycle, so it has none.
+const HIRING_URL = "/get-involved/hiring";
+const CREATIVE_DIRECTOR = {
+  role: "Creative Director",
+  email: EMAILS.creative,
+  applyUrl: HIRING_URL,
+};
+const COMMUNITY_OUTREACH_DIRECTOR = {
+  role: "Community Outreach Director",
+  email: EMAILS.community,
+  applyUrl: HIRING_URL,
+};
+const SPONSORSHIP_DIRECTOR = {
+  role: "Sponsorship Director",
+  email: EMAILS.sponsorship,
+  applyUrl: HIRING_URL,
+};
+const FINANCE_COORDINATOR = {
+  role: "Finance Coordinator",
+  email: EMAILS.financeCoordinator,
+  applyUrl: HIRING_URL,
+};
+const LOUNGE_MANAGER = {
+  role: "Lounge Manager",
+  email: EMAILS.loungeManager,
 };
 
 const SOFTWARE_DEVELOPER = {
@@ -150,24 +190,22 @@ const GROUPS = [
   {
     label: "Direct Reports & Independent Officers",
     members: [CHIEF_OF_STAFF, GOVERNANCE_COMMISSIONER],
+    aside: ELECTIONS_OFFICER,
   },
   {
     label: "Executive Portfolios",
     members: [
       { ...VP_ADMIN, reports: [ADMIN_COORDINATOR, SOFTWARE_DEVELOPER] },
-      { ...VP_FINANCE, reports: [{ role: "Financial Coordinator" }] },
+      { ...VP_FINANCE, reports: [FINANCE_COORDINATOR] },
       {
         ...VP_INTERNAL,
-        reports: [MARKETING_DIRECTOR, { role: "Creative Director" }],
+        reports: [MARKETING_DIRECTOR, CREATIVE_DIRECTOR],
       },
       {
         ...VP_EXTERNAL,
-        reports: [
-          { role: "Community Engagement Director" },
-          { role: "Sponsorship Director" },
-        ],
+        reports: [COMMUNITY_OUTREACH_DIRECTOR, SPONSORSHIP_DIRECTOR],
       },
-      { ...VP_STUDENT, reports: [{ role: "Lounge Manager" }] },
+      { ...VP_STUDENT, reports: [LOUNGE_MANAGER] },
     ],
   },
   {
@@ -240,6 +278,11 @@ export default function WhoWeAre() {
                     )}
                   </Twig>
                 ))}
+                {g.aside && (
+                  <Twig key={g.aside.role}>
+                    <OrgCard person={g.aside} onClick={open} />
+                  </Twig>
+                )}
               </Branch>
             </Twig>
           ))}
@@ -256,25 +299,38 @@ export default function WhoWeAre() {
               <ChartLine />
               <GroupChip>{g.label}</GroupChip>
               <ChartLine />
-              <ul className="flex justify-center">
-                {g.members.map((m) => (
-                  <li key={m.role} className={CHART_LI}>
-                    <ChartCard person={m} onClick={open} />
-                    {m.reports && (
-                      <>
-                        <ChartLine />
-                        <ul className="flex justify-center">
-                          {m.reports.map((r) => (
-                            <li key={r.role} className={CHART_LI}>
-                              <ChartCard person={r} onClick={open} small />
-                            </li>
-                          ))}
-                        </ul>
-                      </>
-                    )}
-                  </li>
-                ))}
-              </ul>
+              <div className="relative">
+                <ul className="flex justify-center">
+                  {g.members.map((m) => (
+                    <li key={m.role} className={CHART_LI}>
+                      <ChartCard person={m} onClick={open} />
+                      {m.reports && (
+                        <>
+                          <ChartLine />
+                          <ul className="flex justify-center">
+                            {m.reports.map((r) => (
+                              <li key={r.role} className={CHART_LI}>
+                                <ChartCard person={r} onClick={open} small />
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Detached from the tree on purpose: this officer reports to
+                    no one, so no connector is drawn. */}
+                {g.aside && (
+                  <div className="absolute left-full top-4 ml-14 flex flex-col items-center">
+                    <ChartCard person={g.aside} onClick={open} />
+                    <div className="mt-2 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.16em] text-steel/50">
+                      Independent Officer
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -282,6 +338,15 @@ export default function WhoWeAre() {
 
       {selected && <ExecModal exec={selected} onClose={() => setSelected(null)} />}
     </PageStub>
+  );
+}
+
+// Whether the modal has anything to show — vacant roles still qualify via
+// their contact email and application link.
+function hasDetail(person) {
+  return (
+    Array.isArray(person.bio) ||
+    !!(person.instagram || person.linkedin || person.email || person.applyUrl)
   );
 }
 
@@ -305,8 +370,7 @@ function GroupChip({ children }) {
 }
 
 function ChartCard({ person, onClick, small = false }) {
-  const clickable =
-    Array.isArray(person.bio) || !!(person.instagram || person.linkedin);
+  const clickable = hasDetail(person);
   const display = person.name && person.name !== "TBD" ? person.name : "TBD";
   const w = small ? "w-32" : "w-36";
   const av = small ? "h-11 w-11" : "h-14 w-14";
@@ -380,8 +444,7 @@ function GroupLabel({ children }) {
 }
 
 function OrgCard({ person, onClick }) {
-  const clickable =
-    Array.isArray(person.bio) || !!(person.instagram || person.linkedin);
+  const clickable = hasDetail(person);
   const display = person.name && person.name !== "TBD" ? person.name : "TBD";
   const common =
     "group inline-flex items-center gap-4 rounded-xl border border-gray-200 bg-white px-5 py-3 text-left";
@@ -452,7 +515,7 @@ function ExecModal({ exec, onClose }) {
       className="fixed inset-0 z-[100] flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
-      aria-label={exec.name}
+      aria-label={exec.name || exec.role}
     >
       <div
         className="animate-overlay-in absolute inset-0 bg-black/60 backdrop-blur-sm"
@@ -478,7 +541,7 @@ function ExecModal({ exec, onClose }) {
                 {exec.role}
               </div>
               <h3 className="mt-2 font-display text-3xl text-steel sm:text-4xl">
-                {exec.name}
+                {exec.name || "Position Open"}
               </h3>
               {exec.meta && (
                 <div className="mt-3 text-sm text-gray-600">
@@ -517,6 +580,18 @@ function ExecModal({ exec, onClose }) {
                       LinkedIn
                     </a>
                   )}
+                </div>
+              )}
+              {exec.applyUrl && (
+                <div className="mt-4">
+                  <Link
+                    to={exec.applyUrl}
+                    onClick={onClose}
+                    className="inline-flex items-center gap-1.5 rounded-full bg-steel px-4 py-2 text-sm font-medium text-white transition hover:bg-steel-dark active:scale-97"
+                  >
+                    Apply for this role
+                    <span aria-hidden="true">→</span>
+                  </Link>
                 </div>
               )}
             </div>

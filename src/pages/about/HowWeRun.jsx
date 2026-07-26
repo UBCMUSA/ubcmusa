@@ -62,7 +62,7 @@ export default function HowWeRun() {
           <p className="mt-5 text-base leading-relaxed text-gray-700">
             MUSA manages student fees and corporate sponsorships with the highest
             level of fiscal discipline. Under the mandate of the Vice President
-            Finance and the Financial Coordinator, our budgets undergo rigorous
+            Finance and the Finance Coordinator, our budgets undergo rigorous
             internal accounting and structural audits.
           </p>
           <p className="mt-4 text-base leading-relaxed text-gray-700">
