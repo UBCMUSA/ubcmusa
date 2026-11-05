@@ -23,8 +23,8 @@ export default function HowWeRun() {
         <p className="text-base leading-relaxed text-gray-700">
           Our operations, legislative processes, and financial decisions are
           governed by democratic frameworks, clear constitutional guidelines, and
-          an unwavering commitment to open data. Under the oversight of our
-          Executive, Chief of Staff, and Governance Commissioner, MUSA ensures that
+          an unwavering commitment to open data. Under the oversight of our Executives and Council,
+           MUSA ensures that
           every dollar spent and every policy enacted is fully accessible to our
           members, faculty partners, and the broader university community.
         </p>
@@ -35,7 +35,7 @@ export default function HowWeRun() {
           <p className="mt-5 text-base leading-relaxed text-gray-700">
             Our society's legal and administrative boundaries are defined by our
             core governing documents. These frameworks ensure that MUSA operates
-            fairly, ethically, and in total alignment with the regulations of the
+            fairly ethically, and in alignment with the regulations of the
             UBC Alma Mater Society (AMS).
           </p>
           <ul className="mt-5 space-y-3 text-base leading-relaxed">
@@ -103,7 +103,7 @@ export default function HowWeRun() {
           </p>
           <p className="mt-4 text-base leading-relaxed text-gray-700">
             Coordinated by the Vice President Administration and the Administrative
-            Coordinator, MUSA hosts a public archive of all official corporate
+            Coordinator, MUSA hosts a public archive of all official
             schedules and records.
           </p>
           <ul className="mt-5 space-y-3 text-base leading-relaxed">
@@ -143,8 +143,10 @@ export default function HowWeRun() {
           </p>
           <ul className="mt-5 space-y-3 text-base leading-relaxed">
             <LeadItem term="General Elections">
-              Held annually in the spring term to elect the incoming President and
-              Vice Presidents, and in the fall term to elect representatives.
+              Held annually in the spring term to elect the incoming Presidents, Vice Presidents, and Division Representatives.
+            </LeadItem>
+            <LeadItem term="By-elections">
+                Held annually in the fall term to elect the incoming First Year Committee, and any vacant Executive/Council positions.
             </LeadItem>
             <LeadItem term="Voter Guides & Campaign Transparency">
               MUSA publishes a comprehensive nomination package and official voter
