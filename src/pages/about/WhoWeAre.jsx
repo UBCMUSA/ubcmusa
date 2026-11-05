@@ -4,6 +4,8 @@ import PageStub from "../../components/PageStub.jsx";
 import { EMAILS } from "../../data/directory.js";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 
+const HIRING_URL = "/get-involved/hiring";
+
 const EXECS = [
   {
     role: "President",
@@ -25,15 +27,16 @@ const EXECS = [
   },
   {
     role: "Vice-President Administration",
-    name: "Almira Miao",
-    meta: ["2nd-year BMus Undergraduate Student", "Flute Performance"],
+    name: "Megan Arboleda West",
+    meta: ["3rd-year Arts Undergraduate Student", "Music & Sociology Double Major"],
     email: EMAILS.vpAdmin,
-    instagram: "almiramiaoyf",
-    linkedin: "https://www.linkedin.com/in/almira-miao-29b9b2409",
-    photo: "/images/optimized/almira-headshot.jpg",
+    linkedin: "https://www.linkedin.com/in/megan-a-38175526a",
+    photo: "/images/optimized/megan-headshot.jpg",
+
     bio: [
-      "I am a Bachelor of Music student studying flute at the University of British Columbia. In high school, I was involved in the music council, where I helped organize events and initiatives that brought students together. I really enjoyed working with others in that setting and became more interested in creating opportunities for students.",
-      "As I begin my first year with MUSA, I am excited to connect with students across the School of Music and contribute to initiatives that support student life. I look forward to working with an incredible team to strengthen our community, advocate for students, and help create a welcoming and engaging environment in the Faculty of Music.",
+        "Megan Arboleda West is a third-year Arts student at UBC, double majoring in Music and Sociology, and currently serves as the Administrative Coordinator for the Music Undergraduate Students' Association.",
+        "With a strong passion for the intersections of arts, culture, and community, Megan is always eager to get involved and support programs that cultivate artistic communities. Their interests have led them to volunteer with many arts and cultural events around Vancouver. They have volunteered as part of the Fringe Festival Production Crew, as the Assistant Volunteer Registration Lead for the Lapu Lapu Day Block Party, and as a Rehearsal Liaison for the Unison Choral Festival. Megan is excited to put their experience to use in supporting the MUSA team and the music students at UBC.",
+        "Outside of the campus community and volunteering, you can find Megan spending time with friends and family, frequenting local artist markets, attending live performances, and creating artwork and jewelry.",
     ],
   },
   {
@@ -64,16 +67,8 @@ const EXECS = [
   },
   {
     role: "Vice-President External",
-    name: "Rosie Lin",
-    meta: ["2nd-year BMus Undergraduate Student", "Piano Performance"],
     email: EMAILS.vpExternal,
-    instagram: "ii.mrosie",
-    photo: "/images/optimized/rosie-headshot.jpg",
-    bio: [
-      "I am a second-year student in Piano Performance, and this is my first year with MUSA. I'm very excited to be on this team as Vice-President External and am looking forward to supporting our student body wholeheartedly.",
-      "I love meeting new people and building genuine relationships, and I see this role as an opportunity to do exactly that. I believe that the impact of what we do here extends far beyond the stage, and will contribute to developing the rising musicians here at UBC.",
-      "I'm also passionate about community, which is something I've carried with me through various volunteer and leadership experiences over the years. During high school, I consistently took initiative to be involved with my community— including founding a nonprofit organization and volunteering for the Peace Arch Hospital Foundation's Youth in Action team, organizing fundraisers and city-wide events to support local healthcare initiatives. I plan to bring this passion and enthusiasm to this role, working with a genuine desire to make a difference. I'm so excited to work alongside such a talented and driven group of people, and I can't wait to see what we build together.",
-    ],
+    applyUrl: HIRING_URL,
   },
   {
     role: "Vice-President Student Resource (Interim)",
@@ -124,20 +119,6 @@ const ELECTIONS_OFFICER = {
   email: EMAILS.elections,
 };
 
-const ADMIN_COORDINATOR = {
-  role: "Administrative Coordinator",
-  name: "Megan Arboleda West",
-  meta: ["3rd-year Arts Undergraduate Student", "Music & Sociology Double Major"],
-  email: EMAILS.adminCoordinator,
-  linkedin: "https://www.linkedin.com/in/megan-a-38175526a",
-  photo: "/images/optimized/megan-headshot.jpg",
-  bio: [
-    "Megan Arboleda West is a third-year Arts student at UBC, double majoring in Music and Sociology, and currently serves as the Administrative Coordinator for the Music Undergraduate Students' Association.",
-    "With a strong passion for the intersections of arts, culture, and community, Megan is always eager to get involved and support programs that cultivate artistic communities. Their interests have led them to volunteer with many arts and cultural events around Vancouver. They have volunteered as part of the Fringe Festival Production Crew, as the Assistant Volunteer Registration Lead for the Lapu Lapu Day Block Party, and as a Rehearsal Liaison for the Unison Choral Festival. Megan is excited to put their experience to use in supporting the MUSA team and the music students at UBC.",
-    "Outside of the campus community and volunteering, you can find Megan spending time with friends and family, frequenting local artist markets, attending live performances, and creating artwork and jewelry.",
-  ],
-};
-
 const MARKETING_DIRECTOR = {
   role: "Marketing Director",
   name: "Max Luo",
@@ -147,7 +128,14 @@ const MARKETING_DIRECTOR = {
 
 // Open roles. `applyUrl` surfaces an "Apply for this role" link in the bio
 // modal; Lounge Manager is filled outside the hiring cycle, so it has none.
-const HIRING_URL = "/get-involved/hiring";
+
+
+const ADMIN_COORDINATOR = {
+  role: "Administrative Coordinator",
+  email: EMAILS.adminCoordinator,
+  applyUrl: HIRING_URL,
+};
+
 const CREATIVE_DIRECTOR = {
   role: "Creative Director",
   email: EMAILS.creative,
@@ -185,6 +173,18 @@ const SOFTWARE_DEVELOPER = {
   ],
 };
 
+const SOFTWARE_DEVELOPER_2 = {
+  role: "Software Developer",
+  name: "Colin Yang",
+  meta: ["4th-year BSc Undergraduate Student", "Computer Science"],
+  bio: [
+    "Colin is a 4th year at UBC pursuing a combined major in Computer Science and Statistics",
+  ],
+};
+
+
+
+
 // Organizational structure (placeholders use { role } only).
 const GROUPS = [
   {
@@ -195,7 +195,7 @@ const GROUPS = [
   {
     label: "Executive Portfolios",
     members: [
-      { ...VP_ADMIN, reports: [ADMIN_COORDINATOR, SOFTWARE_DEVELOPER] },
+      { ...VP_ADMIN, reports: [ADMIN_COORDINATOR, SOFTWARE_DEVELOPER, SOFTWARE_DEVELOPER_2] },
       { ...VP_FINANCE, reports: [FINANCE_COORDINATOR] },
       {
         ...VP_INTERNAL,
@@ -209,12 +209,15 @@ const GROUPS = [
     ],
   },
   {
-    label: "Elected Cohort Representatives",
+    label: "Division Representatives",
     members: [
-      { role: "1st Year Representative" },
-      { role: "2nd Year Representative" },
-      { role: "3rd Year Representative" },
-      { role: "4th Year Representative" },
+      { role: "Strings" },
+      { role: "Keyboard" },
+      { role: "Voice/Opera" },
+      { role: "Brass" },
+      { role: "Percussion" },
+      { role: "Composition" },
+      { role: "BA in Music" },
     ],
   },
 ];
@@ -228,7 +231,7 @@ export default function WhoWeAre() {
       wide
       eyebrow="About Us"
       title="Who We Are"
-      description="Behind every event, advocacy campaign, and student resource is a team of elected and hired undergraduate student leaders dedicated to making your experience at the UBC School of Music the best it can be. The MUSA Executive and Council are composed of peers from diverse musical disciplines—including performance, composition, education, and musicology—who balance their own rigorous hours in the practice rooms with a shared commitment to serving our community."
+      description="Behind every event, advocacy campaign, and student resource is a team of elected and hired undergraduate student leaders dedicated to making your experience at the UBC School of Music the best it can be. The MUSA Executive and Council are composed of peers from diverse musical disciplines, including performance, composition, education, and musicology, who balance their own rigorous hours in the practice rooms with a shared commitment to serving our community."
     >
       <div className="mx-auto mb-14 max-w-4xl overflow-hidden rounded-2xl shadow-md ring-1 ring-steel/10">
         <img
