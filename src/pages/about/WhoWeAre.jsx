@@ -14,7 +14,7 @@ const EXECS = [
       "4th-year BMus Undergraduate Student",
       "Tenor, UBC Opera",
       "Councillor, AMS",
-      "HR Committee Chair, AMS",
+      "Board Member, CiTR 101.9 FM",
     ],
     email: EMAILS.president,
     instagram: "millensandhu.musapresident",
@@ -126,6 +126,27 @@ const MARKETING_DIRECTOR = {
   instagram: "procockfiev",
 };
 
+const SOFTWARE_DEVELOPER = {
+  role: "Software Developer",
+  name: "Nathan Wu",
+  meta: ["4th-year BSc Undergraduate Student", "Computer Science"],
+  linkedin: "https://www.linkedin.com/in/nathanwu05/",
+  photo: "/images/optimized/nathan-headshot.jpg",
+  bio: [
+    "Hey I'm Nathan, a fourth-year Computer Science student in the Faculty of Science at UBC. I had the opportunity to design and build the MUSA website from scratch this year, replacing the club's old Wix setup with a fully custom site to give MUSA a more professional online presence.",
+    "If you'd like to see more of my work or get in touch, feel free to visit nathanwu.ca.",
+  ],
+};
+
+const SOFTWARE_DEVELOPER_2 = {
+  role: "Software Developer",
+  name: "Colin Yang",
+  meta: ["4th-year BSc Undergraduate Student", "Computer Science"],
+  bio: [
+    "Colin is a 4th year at UBC pursuing a combined major in Computer Science and Statistics",
+  ],
+};
+
 // Open roles. `applyUrl` surfaces an "Apply for this role" link in the bio
 // modal; Lounge Manager is filled outside the hiring cycle, so it has none.
 
@@ -161,26 +182,64 @@ const LOUNGE_MANAGER = {
   email: EMAILS.loungeManager,
 };
 
-const SOFTWARE_DEVELOPER = {
-  role: "Software Developer",
-  name: "Nathan Wu",
-  meta: ["4th-year BSc Undergraduate Student", "Computer Science"],
-  linkedin: "https://www.linkedin.com/in/nathanwu05/",
-  photo: "/images/optimized/nathan-headshot.jpg",
-  bio: [
-    "Hey I'm Nathan, a fourth-year Computer Science student in the Faculty of Science at UBC. I had the opportunity to design and build the MUSA website from scratch this year, replacing the club's old Wix setup with a fully custom site to give MUSA a more professional online presence.",
-    "If you'd like to see more of my work or get in touch, feel free to visit nathanwu.ca.",
-  ],
-};
+const STRING = {
+    role: "Strings",
+    applyURL: HIRING_URL,
+}
 
-const SOFTWARE_DEVELOPER_2 = {
-  role: "Software Developer",
-  name: "Colin Yang",
-  meta: ["4th-year BSc Undergraduate Student", "Computer Science"],
-  bio: [
-    "Colin is a 4th year at UBC pursuing a combined major in Computer Science and Statistics",
-  ],
-};
+const KEYBOARD = {
+    role: "Keyboard",
+    applyURL: HIRING_URL,
+}
+
+const VOICE_OPERA = {
+    role: "Voice/Opera",
+    applyURL: HIRING_URL,
+}
+
+const BRASS = {
+    role: "Brass",
+    applyURL: HIRING_URL,
+}
+
+const PERCUSSION = {
+    role: "Percussion",
+    applyURL: HIRING_URL,
+}
+
+const COMPOSITION = {
+    role: "Composition",
+    applyURL: HIRING_URL,
+}
+
+const BAMUSIC = {
+    role: "BA in Music",
+    applyURL: HIRING_URL,
+}
+const FIRST_YEAR_CHAIR = {
+    role: "First Year Chair",
+    applyURL: HIRING_URL,
+}
+
+const FIRST_YEAR_MEMBER1 = {
+    role: "First Year Committee",
+    applyURL: HIRING_URL,
+}
+
+const FIRST_YEAR_MEMBER2 = {
+    role: "First Year Committee",
+    applyURL: HIRING_URL,
+}
+
+const FIRST_YEAR_MEMBER3 = {
+    role: "First Year Committee",
+    applyURL: HIRING_URL,
+}
+
+const FIRST_YEAR_MEMBER4 = {
+    role: "First Year Committee",
+    applyURL: HIRING_URL,
+}
 
 
 
@@ -211,15 +270,21 @@ const GROUPS = [
   {
     label: "Division Representatives",
     members: [
-      { role: "Strings" },
-      { role: "Keyboard" },
-      { role: "Voice/Opera" },
-      { role: "Brass" },
-      { role: "Percussion" },
-      { role: "Composition" },
-      { role: "BA in Music" },
+      STRING,
+      KEYBOARD,
+      VOICE_OPERA,
+      BRASS,
+      PERCUSSION,
+      COMPOSITION,
+      BAMUSIC
     ],
   },
+  {
+    label: "First Year Committee",
+    members: [
+        {...FIRST_YEAR_CHAIR, reports: [FIRST_YEAR_MEMBER1, FIRST_YEAR_MEMBER2, FIRST_YEAR_MEMBER3, FIRST_YEAR_MEMBER4] }
+    ],
+  }
 ];
 
 export default function WhoWeAre() {
