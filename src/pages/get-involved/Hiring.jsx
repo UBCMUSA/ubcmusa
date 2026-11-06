@@ -43,14 +43,9 @@ export default function Hiring() {
           </p>
           <SubHead>Core Internal Recruitment Windows</SubHead>
           <ul className="mt-3 space-y-3 text-base leading-relaxed">
-            <Lead term="Fall Council Hiring (Early September)">
+            <Lead term="Summer Council Hiring ">
               Applications open for specialized executive portfolio staff, including
               directors, coordinators, and facility managers.
-            </Lead>
-            <Lead term="Junior Committee Recruitment (Late September)">
-              Designed specifically to onboard first-year students and new members
-              into active council operations, providing an excellent stepping stone
-              for future student government leadership.
             </Lead>
           </ul>
           <SubHead>Portfolio Teams</SubHead>
@@ -59,7 +54,7 @@ export default function Hiring() {
               Chief of Staff, Governance Commissioner
             </Lead>
             <Lead term="Administrative Branch (Under VP Admin)">
-              Administrative Coordinator
+              Administrative Coordinator, Software Developer
             </Lead>
             <Lead term="Financial Branch (Under VP Finance)">
               Finance Coordinator
@@ -95,11 +90,6 @@ export default function Hiring() {
               managers, score/ensemble librarians, and specialized tech operators to
               assist with concert logistics in the Chan Centre, Roy Barnett Hall, and
               the Old Auditorium.
-            </Lead>
-            <Lead term="Academic Work Learn Roles">
-              Look out for faculty-backed positions including office assistants,
-              digital media creators, and research assistants, posted at the start of
-              each term.
             </Lead>
           </ul>
         </section>
@@ -137,12 +127,15 @@ export default function Hiring() {
           </p>
           <ul className="mt-5 space-y-3 text-base leading-relaxed">
             <Lead term="UBC Work Learn Program">
-              The premier on-campus employment framework for undergraduate students.
-              Work Learn roles provide subsidized, professional part-time jobs (up to
-              10 hours/week in the winter and 20 hours/week in the summer) across
-              various university departments, allowing you to earn an income while
-              maintaining your academic balance.
-            </Lead>
+  The premier on-campus employment framework for undergraduate students.
+  Work Learn roles provide subsidized, professional part-time jobs (up to
+  10 hours/week in the winter and 20 hours/week in the summer) across
+  various university departments, allowing you to earn an income while
+  maintaining your academic balance.{" "}
+  <a href="https://students.ubc.ca/career/work-learn-program/" className="text-logo hover:text-steel">
+    Learn More
+  </a>
+</Lead>
             <Lead term="UBC Careers Online">
               The main job board accessible to all UBC students and alumni, matching
               you with hundreds of off-campus internships, summer jobs, and graduate

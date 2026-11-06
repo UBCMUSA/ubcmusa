@@ -32,17 +32,14 @@ export default function Elections() {
             academic years and welcome incoming cohorts:
           </p>
           <ul className="mt-5 space-y-3 text-base leading-relaxed">
-            <Lead term="Fall Elections (October)">
-              Focused on electing our academic class leaders, specifically our 1st
-              Year, 2nd Year, 3rd Year, and 4th Year Representatives. This cycle allows
-              incoming classes to select their own peer advocates early in the fall
-              term.
-            </Lead>
             <Lead term="Spring Elections (March)">
-              Our primary general election cycle held to select the central executive
-              board for the upcoming academic year — including the President, VP Admin,
-              VP Finance, VP Internal, VP External, and VP Student Resource.
+              Our primary general election cycle held to select the President, VP Student Resource, VP Admin,
+              VP Finance, VP Internal, VP External, and Division Representatives. 
             </Lead>
+            <Lead term="Fall By-elections (October)">
+              Focused on electing First Year Committee members and electing any vacant executive/council positions.
+            </Lead>
+
           </ul>
         </section>
 
