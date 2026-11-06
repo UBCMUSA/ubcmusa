@@ -13,10 +13,10 @@ export default function Join() {
       <article className="space-y-14">
         <div className="space-y-4">
           <p className="text-base leading-relaxed text-gray-700">
-            Join MUSA under the right role for you! Under MUSA's Restructuring Plan,
+            Join MUSA under the right role for you! Under MUSA's Restructured Plan,
             many new positions have been introduced, increasing MUSA's capacity for
             excellence while providing more student opportunities. The majority of our
-            positions are open to ALL UBC Undergraduate Students, providing valuable
+            hired positions are open to all undergraduate Students, providing valuable
             skills and experience to all students who share a common interest in
             Music.
           </p>
@@ -61,18 +61,18 @@ export default function Join() {
             you can join MUSA through three distinct avenues:
           </p>
           <ul className="mt-5 space-y-3 text-base leading-relaxed">
-            <Lead term="Elected Leadership (Executive Board & Year Representatives)">
+            <Lead term="Elected Leadership (Executive & Division Representatives)">
               Run for office during our formal election cycles to directly vote on
               legislation, control core budgets, and serve as the face of your
-              academic cohort.
+              academic cohort, open only to BMus and BA in Music students.
             </Lead>
             <Lead term="Hired Staff & Appointed Directors">
               Apply for specialized operational roles within our executive portfolios
               to drive our administrative tracking, marketing graphics, financial
               coordination, or facility management.
             </Lead>
-            <Lead term="Junior Committees & Volunteer Crews">
-              Perfect for first-year students or those looking for a low-stakes
+            <Lead term="First Year Committee & Volunteer Crews">
+              Perfect for first-year students or those looking for an
               introduction to student government. Help coordinate day-to-day event
               logistics, manage the lobby booths, or join seasonal planning
               committees.
