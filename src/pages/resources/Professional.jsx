@@ -28,32 +28,17 @@ export default function Professional() {
           projects, and prepare to lead Vancouver's cultural landscape.
         </p>
 
-        <section>
-          <SectionEyebrow center>Recital Raffles &amp; Audience Building</SectionEyebrow>
-          <p className="mt-5 text-base leading-relaxed text-gray-700">
-            Your degree recitals are the culmination of years of hard work, but
-            drawing an audience and building buzz can be challenging for a busy
-            student. MUSA provides an interactive promotion system to elevate your
-            performance milestones.
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-gray-700">
-            <span className="font-semibold text-steel">Concert Incentives:</span> MUSA
-            hosts promotional Recital Raffles for student performances, offering prize
-            incentives to attendees to drive high turnout, foster a vibrant concert
-            culture, and celebrate our peers' artistic achievements.
-          </p>
-          <EventNote />
-        </section>
+        
 
         <section>
-          <SectionEyebrow center>Professional Workshops with Faculty &amp; Staff</SectionEyebrow>
+          <SectionEyebrow center>Workshops With Industry Professionals</SectionEyebrow>
           <p className="mt-5 text-base leading-relaxed text-gray-700">
             Succeeding as a professional artist or cultural leader requires practical
             business skills that traditional performance curricula often skip.
           </p>
           <p className="mt-4 text-base leading-relaxed text-gray-700">
             <span className="font-semibold text-steel">Industry Seminars:</span> We
-            host regular career readiness workshops featuring expert faculty and staff
+            host career readiness workshops featuring expert faculty and staff
             and industry professional panel discussions. Learn real-world
             fundamentals, including freelance tax strategies, private teaching studio
             management, audition preparation, and arts grant writing.

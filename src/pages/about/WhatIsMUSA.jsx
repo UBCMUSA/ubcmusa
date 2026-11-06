@@ -4,7 +4,7 @@ import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 const EXPERIENCE = [
   {
     title: "Flagship Social Traditions",
-    body: "Building an inclusive campus culture through events like our Welcome Back BBQ, Koerner's Socials, Holiday Gatherings, and the marquee Spring Formal Gala.",
+    body: "Building an inclusive campus culture through events like our Welcome Back BBQ, Holiday Gatherings, and the marquee Spring Formal Gala.",
   },
   {
     title: "Wellness & Academic Resources",
