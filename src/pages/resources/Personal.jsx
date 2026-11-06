@@ -138,7 +138,35 @@ export default function Personal() {
               treatment.
             </Lead>
           </ul>
-
+          <SubHead>Sexual Misconduct and Violence Support</SubHead>
+          <p className="mt-2 text-base leading-relaxed text-gray-700">
+            Access resources for students affected by sexual harassment, misconduct, or violence, 
+            including guidance, counselling, and assistance in acessing available campus services.
+          </p>
+          <ul className="mt-3 space-y-3 text-base leading-relaxed">
+            <Lead term="UBC SVPRO (Confidential Trauma-Informed Crisis Support)">
+              Provides confidential, trauma-informed support, safety planning, academic and workplace accommodations, 
+              and guidance on reporting options. Located in Room 2110, Brock Commons South (6180 Walter Gage Rd). 
+              Open Monday-Friday, 8:30 AM-4:30 PM. Call 604-822-1588 or email {" "}
+              <a href="mailto:svpro.vancouver@ubc.ca" className="text-logo hover:text-steel">
+              svpro.vancouver@ubc.ca
+              </a>{" "}
+            </Lead> 
+            <Lead term="AMS SASC (Confidential Peer Support and Advocacy)">
+              Offers free, confidential emotional support, crisis intervention, support groups, 
+              safety planning, and advocacy for people of all genders. Located in Nest Room 3130 (6133 University Blvd). 
+              Open weekdays 9:00 AM-8:00 PM and weekends 11:00 AM-7:00 PM. Call 604-827-5180 or email {" "}
+              <a href="mailto:sasc@ams.ubc.ca" className="text-logo hover:text-steel">
+              sasc@ams.ubc.ca
+              </a>{" "}
+            </Lead>
+            <Lead term="UBC Hospital (Immediate Medical and Forensic Care)">
+              Provides specialized medical care following sexual assault, including treatment, emotional support, 
+              and optional forensic examinations. Located at the UBC Hospital Urgent Care Centre (2211 Wesbrook Mall), 
+              with specialized services available 8:00 AM-8:00 PM daily. Call 604-822-7121 for UBC Hospital; 
+              for 24-hour emergency care, visit Vancouver General Hospital's Emergency Department.
+            </Lead>
+          </ul>
           <SubHead>BC Student &amp; Non-Emergency Health Resources</SubHead>
           <p className="mt-2 text-base leading-relaxed text-gray-700">
             Access specialized, free medical advice and student-focused single-session
