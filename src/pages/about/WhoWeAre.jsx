@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import PageStub from "../../components/PageStub.jsx";
 import { EMAILS } from "../../data/directory.js";
 import SectionEyebrow from "../../components/SectionEyebrow.jsx";
@@ -289,7 +289,25 @@ const GROUPS = [
 
 export default function WhoWeAre() {
   const [selected, setSelected] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const profile = searchParams.get("profile");
+
+  useEffect(() => {
+    if (profile === "lounge-manager") {
+      setSelected(LOUNGE_MANAGER);
+    }
+  }, [profile]);
+
   const open = (p) => setSelected(p);
+  const closeProfile = () => {
+    setSelected(null);
+
+    if (searchParams.has("profile")) {
+      const nextParams = new URLSearchParams(searchParams);
+      nextParams.delete("profile");
+      setSearchParams(nextParams, { replace: true });
+    }
+  };
 
   return (
     <PageStub
@@ -404,7 +422,7 @@ export default function WhoWeAre() {
         </div>
       </div>
 
-      {selected && <ExecModal exec={selected} onClose={() => setSelected(null)} />}
+      {selected && <ExecModal exec={selected} onClose={closeProfile} />}
     </PageStub>
   );
 }

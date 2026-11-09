@@ -51,10 +51,6 @@ export default function StudentLounge() {
               Stocked with plates, cups, and utensils so you never have to worry if
               you forgot your own pack.
             </Lead>
-            <Lead term="MUSA Coffee Machine (Coming Soon!)">
-              We are actively working on expanding our amenities to provide
-              affordable, fresh coffee directly inside the lounge space.
-            </Lead>
             <Lead term="The MUSA Bookshelf & Library">
               A community bookshelf featuring a rotating selection of sheet music,
               reference materials, and free books available for students to take,
@@ -76,10 +72,6 @@ export default function StudentLounge() {
             student events, including:
           </p>
           <ul className="mt-5 space-y-3 text-base leading-relaxed">
-            <Lead term="The MUSA Halloween Social">
-              Complete with festive decorations, candy bowls, costume contests, and
-              themed stress-relief activities right before midterm season.
-            </Lead>
             <Lead term="The MUSA Holiday & Christmas Gathering">
               A cozy end-of-term celebration featuring hot cocoa bars, holiday music,
               gingerbread decorating, and a warm community escape from winter exam
@@ -92,7 +84,10 @@ export default function StudentLounge() {
           <SectionEyebrow center>Shared Space Expectations: Keep It Clean</SectionEyebrow>
           <p className="mt-5 text-base leading-relaxed text-gray-700">
             The lounge is proudly managed by the MUSA{" "}
-            <Link to="/about/who-we-are" className="text-logo hover:text-steel">
+            <Link
+              to="/about/who-we-are?profile=lounge-manager"
+              className="text-logo hover:text-steel"
+            >
               Lounge Manager
             </Link>
             , who oversees daily operations, equipment maintenance, and space
@@ -115,6 +110,10 @@ export default function StudentLounge() {
               space to study or rest can do so comfortably.
             </Lead>
           </ul>
+        </section>
+          <SectionEyebrow center>Meet your lounge manager!</SectionEyebrow>
+        <section>
+
         </section>
 
         <section>
