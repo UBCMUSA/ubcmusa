@@ -10,6 +10,7 @@ import Home from "./pages/Home.jsx";
 const WhatIsMUSA = lazy(() => import("./pages/about/WhatIsMUSA.jsx"));
 const WhoWeAre = lazy(() => import("./pages/about/WhoWeAre.jsx"));
 const HowWeRun = lazy(() => import("./pages/about/HowWeRun.jsx"));
+const BudgetArchive = lazy(() => import("./pages/about/BudgetArchive.jsx"));
 const MeetingAgendas = lazy(() => import("./pages/about/MeetingAgendas.jsx"));
 const MeetingMinutes = lazy(() => import("./pages/about/MeetingMinutes.jsx"));
 const Academic = lazy(() => import("./pages/resources/Academic.jsx"));
@@ -40,6 +41,7 @@ export default function App() {
             <Route path="/about/what-is-musa" element={<WhatIsMUSA />} />
             <Route path="/about/who-we-are" element={<WhoWeAre />} />
             <Route path="/about/how-we-run" element={<HowWeRun />} />
+            <Route path="/about/budgets" element={<BudgetArchive />} />
             <Route path="/about/meeting-agendas" element={<MeetingAgendas />} />
             <Route path="/about/meeting-minutes" element={<MeetingMinutes />} />
             <Route path="/resources/academic" element={<Academic />} />

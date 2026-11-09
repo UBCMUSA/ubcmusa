@@ -5,6 +5,7 @@ export const navSections = [
       { label: "What is MUSA", to: "/about/what-is-musa" },
       { label: "Who We Are", to: "/about/who-we-are" },
       { label: "How We Run", to: "/about/how-we-run" },
+      { label: "Budget Archive", to: "/about/budgets" },
     ],
   },
   {

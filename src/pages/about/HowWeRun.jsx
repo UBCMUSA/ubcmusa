@@ -83,13 +83,15 @@ export default function HowWeRun() {
           </ul>
           <div className="mt-5 flex flex-wrap gap-3">
             <DownloadButton
-              label="Approved 2026–2027 Budget Projection (PDF)"
-              note="To be released in August 2026"
-            />
-            <DownloadButton
-              label="Past Financial Ledger Archive"
+              label="MUSA 2026–2027 Budget (XLSX)"
               note="To be released"
             />
+            <Link
+              to="/about/budgets"
+              className="inline-flex items-center gap-2 rounded-lg border border-steel/40 px-5 py-3 text-sm font-semibold text-steel transition hover:border-steel hover:bg-steel/5"
+            >
+              View Budget Archive →
+            </Link>
           </div>
         </section>
 

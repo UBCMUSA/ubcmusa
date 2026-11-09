@@ -1,5 +1,6 @@
 import PageStub from "./PageStub.jsx";
 import SectionEyebrow from "./SectionEyebrow.jsx";
+import DownloadButton from "./DownloadButton.jsx";
 import { MEETING_DATES, formatShortDate } from "../data/governance.js";
 
 /**
@@ -21,17 +22,24 @@ export default function MeetingDocsPage({ eyebrow, title, description, noun, dir
 
         <section>
           <SectionEyebrow center>{noun} 2025/2026</SectionEyebrow>
-          <ul className="mt-5 list-disc space-y-2 pl-6 text-base marker:text-steel/50">
+          <ul className="mt-6 space-y-4">
             {MEETING_DATES.map((d) => (
-              <li key={d}>
-                <a
+              <li
+                key={d}
+                className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <div>
+                  <h2 className="font-display text-2xl text-steel">
+                    {noun} — {formatShortDate(d)}
+                  </h2>
+                  <p className="mt-1 text-sm text-gray-500">
+                    {prefix}-{d}.pdf
+                  </p>
+                </div>
+                <DownloadButton
+                  label={`Download ${noun} (${formatShortDate(d)})`}
                   href={`/documents/${dir}/${prefix}-${d}.pdf`}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="font-medium text-logo underline-offset-2 hover:text-steel hover:underline"
-                >
-                  [{formatShortDate(d)}]
-                </a>
+                />
               </li>
             ))}
           </ul>
