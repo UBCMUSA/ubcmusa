@@ -3,11 +3,6 @@ import SectionEyebrow from "../components/SectionEyebrow.jsx";
 
 const CONTACTS = [
   {
-    name: "Rosie Lin",
-    role: "Vice-President External",
-    email: "vpexternal@ubcmusa.ca",
-  },
-  {
     name: "Millen Sandhu",
     role: "President",
     email: "president@ubcmusa.ca",
@@ -56,12 +51,12 @@ export default function Sponsors() {
               <p className="text-base leading-relaxed text-gray-700">
                 MUSA is the official student government for over 400 musicians at the
                 UBC School of Music. A partnership with MUSA puts your organization in
-                front of a highly engaged campus community — our members, faculty
+                front of a highly engaged campus community: our members, faculty
                 leadership, and the broader audiences who attend the School of Music's
                 recitals, formals, and showcases throughout the year.
               </p>
               <p className="text-base leading-relaxed text-gray-700">
-                When you support MUSA, you're not just sponsoring an event — you're
+                When you support MUSA, you're not just sponsoring an event, you're
                 investing directly in student wellness, academic support, and the next
                 generation of Vancouver's musicians.
               </p>
@@ -149,7 +144,7 @@ export default function Sponsors() {
           </div>
           <div className="mt-8 text-center">
             <a
-              href="mailto:vpexternal@ubcmusa.ca"
+              href="mailto:sponsorship@ubcmusa.ca"
               className="inline-flex items-center gap-2 rounded-md bg-steel px-6 py-3 text-sm font-semibold text-white transition hover:bg-steel-dark"
             >
               Email Our Sponsorship Team →
