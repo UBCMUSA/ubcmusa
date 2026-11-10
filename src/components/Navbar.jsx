@@ -41,11 +41,13 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center" aria-label="MUSA home">
-          <Logo className="h-16 w-auto" />
+        <div className="flex h-20 w-20 translate-y-3 items-center justify-center overflow-hidden rounded-full bg-white shadow-lg ring-2 ring-white/30 transition-transform duration-200 hover:scale-105">
+            <Logo className="h-16 w-auto max-w-[85%] object-contain" />
+        </div>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex lg:items-center lg:gap-1">
+        <nav className="hidden lg:flex lg:items-center lg:gap-3">
           {navSections.map((section, i) => {
             const hasChildren = !!section.children;
             const isOpen = openIndex === i;
