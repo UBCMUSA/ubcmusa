@@ -67,8 +67,7 @@ function Hero() {
           Welcome to MUSA
         </h1>
         <p className="mt-6 max-w-2xl text-lg font-medium text-ivory/90 sm:text-xl">
-          The official student government, constituency council, and community
-          backbone for over 400 musicians at the UBC School of Music.
+          The official constituency for over 400 musicians at the UBC School of Music.
         </p>
       </div>
     </section>
@@ -325,6 +324,18 @@ function EventModal({ event, onClose }) {
             <p className="mt-6 text-base leading-relaxed text-gray-700">
               {event.details}
             </p>
+            {/* Optional event link */}
+            {event.link && (
+            <a
+                href={event.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 flex items-center justify-between gap-3 rounded-xl border border-steel/20 bg-steel/5 px-5 py-4 font-semibold text-steel transition-all duration-200 hover:border-steel hover:bg-steel/10 hover:shadow-md"
+            >
+                <span>{event.linkText || "Learn More"}</span>
+                <span aria-hidden="true">↗</span>
+            </a>
+            )}
             <div className="mt-8">
               <Link
                 to="/events"
