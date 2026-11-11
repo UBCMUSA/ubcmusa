@@ -191,7 +191,19 @@ const FINANCE_COORDINATOR = {
 };
 const LOUNGE_MANAGER = {
   role: "Lounge Manager",
+  name: "Tia Lau",
+  pronouns: "She/Her",
   email: EMAILS.loungeManager,
+  meta: ["1st-year BMus & BEd Undergraduate Student", "Harp General Studies"],
+  instagram: "tialau_1112",
+  photo: "/images/optimized/tia-lau-headshot.jpg",
+  bio: [
+    "Tia Lau is a first-year Harp General Studies and Music Education student at the UBC School of Music.",
+    "Tia is excited about joining MUSA as the Lounge Manager. She hopes to bring new ideas, enhance the lounge experience and plan fun events that will help students make connections with each other. She sees this role as a great opportunity to meet more music students from different years, build connections and become more involved in the UBC music community.",
+    "As someone who is passionate about music and enjoys being part of a creative community, Tia hopes to provide an environment where students feel welcomed, comfortable and connected. She is excited to collaborate with the MUSA team, hear students’ suggestions and help create a positive and enjoyable lounge experience for everyone.",
+    "She looks forward to making the most of her first year at UBC and contributing to the School of Music community!",
+
+  ]
 };
 
 const STRING = {
@@ -255,8 +267,9 @@ const FIRST_YEAR_CHAIR = {
     role: "First Year Chair",
     name: "Ian Avila",
     pronouns: "He/Him",
-    meta: ["1st-year BMus Undergraduate Student","General Studies - Secondary Education"],
+    meta: ["1st-year BMus Undergraduate Student","General Studies, Secondary Education"],
     email: EMAILS.fycChair,
+    instagram: "Ian_avila17",
     photo: "/images/optimized/ian-headshot.jpg",
     bio: [
         "Ian Avila is a first-year Bachelor of Music student specializing in General Studies with a focus on Secondary Education, with saxophone as his primary instrument. Originally from Calgary, he completed his secondary musical education through Western Canada High School’s Band Program, where he performed in the Wind Ensemble and Jazz Band as Lead Alto Saxophonist. Beyond the alto saxophone, he is also active on tenor and soprano saxophone, with occasional experience on baritone saxophone and piano.",
