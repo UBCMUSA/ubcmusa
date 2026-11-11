@@ -218,11 +218,12 @@ const STRING = {
     role: "Strings",
     name: "Alesha Chan",
     pronouns: "She/Her",
+    email: EMAILS.stringsRep,
     photo: "/images/optimized/alesha-headshot.jpg",
     meta: ["2nd-year BMus Undergraduate Student", "Violin Performance"],
     bio: [
-        "Alesha Chan is a second-year Violin Performance student at UBC, currently serving as the Violin Representative for the Music Undergraduate Students’ Association. With a passion for music and community involvement, Alesha was a member of the Richmond Delta Youth Orchestra for nine years, where she gained experience as both a principal violinist and concertmaster. Throughout her musical journey, she has also enjoyed performing in chamber ensembles, including quartets and quintets.",
-        "As the Violin Representative, Alesha hopes to serve as a bridge between string students and MUSA, ensuring that students feel heard and supported within the School of Music. She is excited to contribute to creating a welcoming and inclusive environment for everyone.",
+        "Alesha Chan is a second-year Violin Performance student at UBC, currently serving as the Violin Representative for the Strings Undergraduate Students’ Association. With a passion for music and community involvement, Alesha was a member of the Richmond Delta Youth Orchestra for nine years, where she gained experience as both a principal violinist and concertmaster. Throughout her musical journey, she has also enjoyed performing in chamber ensembles, including quartets and quintets.",
+        "As the Strings Representative, Alesha hopes to serve as a bridge between string students and MUSA, ensuring that students feel heard and supported within the School of Music. She is excited to contribute to creating a welcoming and inclusive environment for everyone.",
         "Outside of practicing and performing, Alesha enjoys cooking and baking for friends and family. She looks forward to meeting more students this year and encourages everyone to reach out with any questions or concerns!",
     ]
 }
@@ -230,6 +231,7 @@ const STRING = {
 const KEYBOARD = {
     role: "Keyboard",
     name: "Shua Cho",
+    email: EMAILS.keyboardRep,
     applyURL: HIRING_URL,
 }
 
@@ -282,6 +284,7 @@ const COMPOSITION = {
 const BAMUSIC = {
     role: "BA in Music",
     name: "Ethan Kerouac",
+    email: EMAILS.baMusicRep,
     applyURL: HIRING_URL,
 }
 const FIRST_YEAR_CHAIR = {
