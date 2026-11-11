@@ -28,7 +28,26 @@ export default function Professional() {
           projects, and prepare to lead Vancouver's cultural landscape.
         </p>
 
-        
+        <section>
+          <SectionEyebrow center>Gig Opportunities</SectionEyebrow>
+          <p className="mt-5 text-base leading-relaxed text-gray-700">
+            Looking for gig opportunities this academic year? MUSA is building a
+            database of musicians and ensembles for upcoming galas, live shows,
+            conferences, weddings, parties, and more. Fill out the form to join our
+            email list and receive gig offers. You can submit the promotional
+            materials you have now and follow up with additional materials later.
+          </p>
+          <div className="mt-6">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSekaMK2ZQ85bL6kaSrNXhy12119u_yY4Uy15pof64XxBJLqCw/viewform?usp=sharing&ouid=116069813193679950870"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex items-center gap-2 rounded-md bg-steel px-5 py-3 text-sm font-semibold text-white transition hover:bg-steel-dark"
+            >
+              Sign Up for Gig Offers <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
 
         <section>
           <SectionEyebrow center>Workshops With Industry Professionals</SectionEyebrow>

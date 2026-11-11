@@ -54,7 +54,7 @@ export const EVENTS = [
     title: "Pizza Lunch with Dr. Law",
     date: "Dec 4 2026",
     time: "12:00 - 1:00 PM",
-    location: "",
+    location: "Room 462",
     image: "/images/optimized/dr-law-headshot.jpg",
     blurb:
       "Join us for a pizza lunch with Dr. Law from UBC! Enjoy some pizza, meet fellow students, and chat with Dr. Law in a casual setting.",
