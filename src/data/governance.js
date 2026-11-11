@@ -15,6 +15,17 @@ export const MEETING_DATES = [
   "2025-05-05",
 ];
 
+export const AGENDA_DATES_2026_2027 = [
+  "2026-10-28",
+  "2026-10-21",
+  "2026-10-01",
+];
+
+export const MINUTES_DATES_2026_2027 = [
+  "2026-10-21",
+  "2026-10-01",
+];
+
 // "2025-11-25" -> "11/25/25"
 export function formatShortDate(iso) {
   const [y, m, d] = iso.split("-");

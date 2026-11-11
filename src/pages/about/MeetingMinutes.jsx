@@ -1,4 +1,5 @@
 import MeetingDocsPage from "../../components/MeetingDocsPage.jsx";
+import { MINUTES_DATES_2026_2027 } from "../../data/governance.js";
 
 export default function MeetingMinutes() {
   return (
@@ -9,6 +10,7 @@ export default function MeetingMinutes() {
       noun="Minutes"
       dir="minutes"
       prefix="minutes"
+      dates2026_2027={MINUTES_DATES_2026_2027}
     />
   );
 }
