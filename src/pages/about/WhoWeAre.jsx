@@ -97,6 +97,7 @@ const CHIEF_OF_STAFF = {
   name: "Jeremy Han",
   meta: ["4th-year Arts Undergraduate Student"],
   email: EMAILS.chiefOfStaff,
+  photo: "/images/optimized/jeremyhan-headshot.png",
   bio: [
     "Jeremy is a settler learning, living and working between the ancestral, traditional and unceded territories of the xʷməθkʷəy̓əm (Musqueam) people. Jeremy is a 4th year arts student at the University of British Columbia and is passionate about community, governance, leadership and creating spaces where people feel heard and represented. He is thrilled to be a part of MUSA this year and to be able to advocate for various goals and initiatives at UBC. He is also looking forward to working alongside other like minded people and with the AMS along with the other faculty societies at UBC. Outside of school, Jeremy enjoys music in every capacity and being involved with the not for & nonprofit sector!",
   ],
@@ -134,8 +135,15 @@ const ELECTIONS_OFFICER = {
 const MARKETING_DIRECTOR = {
   role: "Marketing Director",
   name: "Max Luo",
+  pronouns: "He/Him",
+  meta: ["1st-year BMus Undergraduate Student","General Studies, Piano Focus"],
   email: EMAILS.marketing,
-  instagram: "procockfiev",
+  instagram: "mushhmelon",
+  bio: [
+    "Hello, I’m Max and I am a 1st year transfer student currently studying General Studies in Music with a concentration in piano. Being a music content creator for the past 2 years, I always enjoy looking for new ways to promote music and engage the audience.",
+    "As marketing director, my goal is to use my content-creating experience to bring school-wide attention to issues and events involving our music school. This will mostly be in the form of short videos or skits, so feel free to contact me if you would like to be part of the content!",
+
+  ]
 };
 
 const SOFTWARE_DEVELOPER = {
@@ -309,13 +317,20 @@ const FIRST_YEAR_MEMBER3 = {
         "Hi! My name is Rae Huang, and I am a first-year music student at UBC, majoring in cello performance. I am serving as a member of MUSA’s First Year Committee!",
         "I’ve been playing the cello for many years, and music has always been a huge part of my life. Throughout my musical journey, I’ve had the opportunity to perform in various places and ensembles. These experiences have allowed me to connect with other musicians and develop a strong appreciation for my community.",
         "As a member of FYC, I hope to help create a welcoming and inclusive environment where everyone feels supported. I’m excited to work with the rest of MUSA to organize events, bring new ideas to life, and make UBC music even better!",
-
     ]
 }
 
 const FIRST_YEAR_MEMBER4 = {
     role: "First Year Committee",
     name: "Johnny Shen",
+    pronouns: "He/Him",
+    email: "johnnyshen2@gmail.com",
+    instagram: "johnnyshen_",
+    photo: "/images/optimized/johnnyshen-headshot.jpg",
+    bio: [
+        "Johnny Shen is a first-year trumpet performance major studying at the UBC School of Music and a part of First Year Committee. Having played in various ensembles at Burnaby North Secondary, Johnny has experience in many band settings, along with a strong passion for exploring music. Johnny also participated in the Vancouver Youth Symphony Orchestra, where he found his dream to become a musician. Johnny's interest in music also travelled to different instruments, including the French horn and piano. Outside of trumpet, Johnny pursued athletics and leadership, playing and coaching in Burnaby North Secondary's badminton team and teaching children French horn at the Vancouver Oriental Philharmonic Orchestra.",
+        "I am excited to be joining MUSA for the first year and cannot wait to connect and make new friends. I can't wait to contribute to the community through events and service, along with being a source of positive energy within the community.",
+    ]
 }
 
 
