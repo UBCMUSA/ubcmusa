@@ -10,6 +10,9 @@ export const EMAILS = {
   vpFinance: "vpfinance@ubcmusa.ca",
   vpInternal: "vpinternal@ubcmusa.ca",
   vpExternal: "vpexternal@ubcmusa.ca",
+  compositionRep: "compositionrep@ubcmusa.ca",
+  windBrassPercussionRep: "wbprep@ubcmusa.ca",
+  fycChair: "fycchair@ubcmusa.ca",
 
   // Student government
   chiefOfStaff: "chiefofstaff@ubcmusa.ca",
@@ -38,14 +41,13 @@ export const DIRECTORY = [
       { role: "VP Finance", email: EMAILS.vpFinance },
       { role: "VP Internal", email: EMAILS.vpInternal },
       { role: "VP External", email: EMAILS.vpExternal },
-      { role: "Strings Representative" },
+      { role: "Strings Representative"  },
       { role: "Keyboard Representative" },
       { role: "Voice/Opera Representative" },
-      { role: "Brass Representative" },
-      { role: "Percussion Representative" },
-      { role: "Composition Representative" },
+      { role: "Wind, Brass, and Percussion Representative", email: EMAILS.windBrassPercussionRep },
+      { role: "Composition Representative", email: EMAILS.compositionRep },
       { role: "BA in Music Representative" },
-      { role: "First Year Committee Chair" },
+      { role: "First Year Committee Chair", email: EMAILS.fycChair },
     ],
   },
   {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import PageStub from "../../components/PageStub.jsx";
 import { EMAILS } from "../../data/directory.js";
@@ -28,15 +28,18 @@ const EXECS = [
   {
     role: "Vice-President Administration",
     name: "Megan Arboleda West",
+    pronouns: "They/Them",
     meta: ["3rd-year Arts Undergraduate Student", "Music & Sociology Double Major"],
     email: EMAILS.vpAdmin,
     linkedin: "https://www.linkedin.com/in/megan-a-38175526a",
     photo: "/images/optimized/megan-headshot.jpg",
 
     bio: [
-        "Megan Arboleda West is a third-year Arts student at UBC, double majoring in Music and Sociology, and currently serves as the Administrative Coordinator for the Music Undergraduate Students' Association.",
-        "With a strong passion for the intersections of arts, culture, and community, Megan is always eager to get involved and support programs that cultivate artistic communities. Their interests have led them to volunteer with many arts and cultural events around Vancouver. They have volunteered as part of the Fringe Festival Production Crew, as the Assistant Volunteer Registration Lead for the Lapu Lapu Day Block Party, and as a Rehearsal Liaison for the Unison Choral Festival. Megan is excited to put their experience to use in supporting the MUSA team and the music students at UBC.",
-        "Outside of the campus community and volunteering, you can find Megan spending time with friends and family, frequenting local artist markets, attending live performances, and creating artwork and jewelry.",
+        "Megan Arboleda West is a third-year Arts student at UBC, double majoring in Music and Sociology, and currently serves as VP Administration for the Music Undergraduate Students’ Association.",
+
+        "With a strong passion for the intersections of the arts, culture and community, Megan is always eager to get involved and support programs that cultivate artistic and culture-centered initiatives. They have volunteered with the Lapu Lapu Day Block Party as the Assistant Volunteer Registration Lead, as a Rehearsal Liaison for the Unison Choral Festival, and currently volunteers with the Building Bayanihan Project. Megan is excited to put their experience to use in supporting the MUSA team and the music students at UBC.",
+
+        "Outside of the campus community and volunteering, you can find Megan spending time with friends and family, frequenting local artist markets, and attending live performances.",
     ],
   },
   {
@@ -116,7 +119,16 @@ const GOVERNANCE_COMMISSIONER = {
 const ELECTIONS_OFFICER = {
   role: "Elections Officer",
   name: "Jeremy Solomon",
+  pronouns: "He/Him",
+  meta: ["5th-year BMus Undergraduate Student", "Horn Performance"],
   email: EMAILS.elections,
+  instagram: "jeremy.solomon_",
+  photo: "/images/optimized/jeremy-solomon-headshot.jpg",
+  bio: [
+    "Jeremy Solomon is a fifth year undergraduate Horn performance major at UBC, currently serving as the 2026/27 MUSA Chief Elections Officer. Born in Vancouver, Jeremy has performed with numerous ensembles around Vancouver and spreads his love of music wherever and whenever he has the chance. Outside of music, Jeremy enjoys playing sports with his friends and watching the latest movies in theatres.",
+    "As an advocate for student involvement, Jeremy is pleased to be continuing his third year in the role of Elections Officer and has served on the MUSA council as Fourth-Floor Lounge Manager in his second and third year at UBC. Jeremy is also the Large Ensemble Music Librarian for the UBC School of Music, creating sheet music for over 150 students.",
+
+  ]
 };
 
 const MARKETING_DIRECTOR = {
@@ -184,61 +196,113 @@ const LOUNGE_MANAGER = {
 
 const STRING = {
     role: "Strings",
+    name: "Alesha Chan",
     applyURL: HIRING_URL,
 }
 
 const KEYBOARD = {
     role: "Keyboard",
+    name: "Shua Cho",
     applyURL: HIRING_URL,
 }
 
 const VOICE_OPERA = {
     role: "Voice/Opera",
+    name: "Anastasia Lutsenko",
     applyURL: HIRING_URL,
 }
 
-const BRASS = {
-    role: "Brass",
-    applyURL: HIRING_URL,
-}
+const WIND_BRASS_PERCUSSION = {
+    role: "Wind, Brass, and Percussion",
+    name: "Nicholas Hoshida",
+    pronouns: "He/Him",
+    meta: ["2nd-year B-Mus Undergraduate Student","Trombone Performance"],
+    email: EMAILS.windBrassPercussionRep,
+    photo: "/images/optimized/nicholas-headshot.jpg",
+    instagram: "keikikritic",
+    bio: [
+        "Hi, I'm Nicholas Hoshida (or Nick, if you prefer), the Winds Brass Percussion representative for the Music Undergraduate Students’ Association! If you have any questions regarding MUSA and any issues regarding Woodwind, Brass, or Percussion (WBP) topics, I’ll be more than happy to help you in any way I can.",
+        "I am also the UBC music school’s Chamber Music Librarian for WBP, so if your chamber group needs any music regarding future events, feel free to contact me.",
+        "I am currently undergoing an undergraduate trombone performance degree (29’), and also have a long history with music ever since I was little, playing piano since 1st grade, and trombone since 6th. I have also had many opportunities to play with professional orchestras back in high school, which allowed me to get to know all about the non-string instruments.",
+        "I hope to be of assistance to anyone in need of WBP issues, and I am more than grateful to be a part of this association. I look forward to meeting and supporting you throughout the year!",
 
-const PERCUSSION = {
-    role: "Percussion",
-    applyURL: HIRING_URL,
+    ]
 }
 
 const COMPOSITION = {
     role: "Composition",
-    applyURL: HIRING_URL,
+    name: "Hailan Gao",
+    pronouns: "She/Her",
+    meta: ["1st-year BMus Undergraduate Student","Composition"],
+    email: EMAILS.compositionRep,
+    photo: "/images/optimized/hailan-headshot.jpg",
+    instagram: "hailan_music",
+    linkedin: "https://www.linkedin.com/in/hailan-gao-composer/",
+    bio: [
+        "Hailan Gao is a first-year Composition student at the UBC School of Music and acts as Composition Representative for the Music Undergraduate Students’ Association.",
+        "Having studied in Germany for ten years and completed the Abitur, alongside performing in a traditional Chinese orchestra, Hailan focuses on writing soundtracks that blend Western cinematic orchestration with traditional Asian instrumentation. Her goal is to bridge these diverse musical worlds to tell unique, culturally rich stories through sound.",
+        "In her role as the Composition Representative, Hailan aims to amplify student voices within the department and create collaborative platforms for composers across all year levels. She is excited to hear all your thoughts and ideas to improve, so please don’t hesitate to email her or come up and talk to her in person!",
+
+    ]
 }
 
 const BAMUSIC = {
     role: "BA in Music",
+    name: "Ethan Kerouac",
     applyURL: HIRING_URL,
 }
 const FIRST_YEAR_CHAIR = {
     role: "First Year Chair",
-    applyURL: HIRING_URL,
+    name: "Ian Avila",
+    pronouns: "He/Him",
+    meta: ["1st-year BMus Undergraduate Student","General Studies - Secondary Education"],
+    email: EMAILS.fycChair,
+    photo: "/images/optimized/ian-headshot.jpg",
+    bio: [
+        "Ian Avila is a first-year Bachelor of Music student specializing in General Studies with a focus on Secondary Education, with saxophone as his primary instrument. Originally from Calgary, he completed his secondary musical education through Western Canada High School’s Band Program, where he performed in the Wind Ensemble and Jazz Band as Lead Alto Saxophonist. Beyond the alto saxophone, he is also active on tenor and soprano saxophone, with occasional experience on baritone saxophone and piano.",
+        "Outside of performing, Ian has always valued student leadership and community involvement. During his time at Western Canada High School, he served on the Band Leadership Executive, contributing to the Facilities and Logistics Committee. Through this experience, he developed an appreciation for the work that goes on behind the scenes to support a thriving student community. It also shaped his belief in servant leadership: the idea that meaningful leadership begins with serving others and creating opportunities for those around you to succeed.",
+        "As MUSA’s First-Year Committee Chair, Ian hopes to be an active voice for incoming music students by listening to their concerns, advocating for their needs, and helping make their transition into university life a positive experience. He is particularly interested in organizing community events and initiatives that encourage connection, collaboration, and a stronger sense of belonging within the UBC School of Music. Above all, he hopes to contribute to an environment where every student feels welcomed, supported, and valued.",
+    ]
 }
 
 const FIRST_YEAR_MEMBER1 = {
     role: "First Year Committee",
-    applyURL: HIRING_URL,
+    name: "Andreas Tsang",
+    pronouns: "He/Him",
+    meta: ["1st-year BMus Undergraduate Student","Composition"],
+    instagram: "andreas.tsang",
+    photo: "/images/optimized/andreas-headshot.jpg",
+    bio: [
+        "Hi my name is Andreas Tsang. I am from Toronto, Ontario, and I am a first-year music composition major, serving in MUSA as a member of the First Year Committee.",
+        "Throughout my years as a musician, I have been involved in many collaborative projects and ensembles. I play the piano, double bass, and trumpet, and have conducted various ensembles too. I love working and performing with others, and I believe fostering community and collaboration, especially in music, is very important.",
+        "As a member of FYC, I will work with the other members to strengthen the community and to make UBC Music a fun place to learn and grow.",
+    ]
 }
 
 const FIRST_YEAR_MEMBER2 = {
     role: "First Year Committee",
-    applyURL: HIRING_URL,
+    name: "Maximillian Yip",
+    
 }
 
 const FIRST_YEAR_MEMBER3 = {
     role: "First Year Committee",
-    applyURL: HIRING_URL,
+    name: "Rae Huang",
+    pronouns: "She/Her",
+    meta: ["1st-year BMus Undergraduate Student","Cello Performance"],
+    instagram: "rui3ro",
+    photo: "/images/optimized/rae-headshot.jpg",
+    bio: [
+        "Hi! My name is Rae Huang, and I am a first-year music student at UBC, majoring in cello performance. I am serving as a member of MUSA’s First Year Committee!",
+        "I’ve been playing the cello for many years, and music has always been a huge part of my life. Throughout my musical journey, I’ve had the opportunity to perform in various places and ensembles. These experiences have allowed me to connect with other musicians and develop a strong appreciation for my community.",
+        "As a member of FYC, I hope to help create a welcoming and inclusive environment where everyone feels supported. I’m excited to work with the rest of MUSA to organize events, bring new ideas to life, and make UBC music even better!",
+
+    ]
 }
 
 const FIRST_YEAR_MEMBER4 = {
     role: "First Year Committee",
-    applyURL: HIRING_URL,
+    name: "Johnny Shen",
 }
 
 
@@ -273,8 +337,7 @@ const GROUPS = [
       STRING,
       KEYBOARD,
       VOICE_OPERA,
-      BRASS,
-      PERCUSSION,
+      WIND_BRASS_PERCUSSION,
       COMPOSITION,
       BAMUSIC
     ],
@@ -289,6 +352,8 @@ const GROUPS = [
 
 export default function WhoWeAre() {
   const [selected, setSelected] = useState(null);
+  const chartScrollRef = useRef(null);
+  const presidentRef = useRef(null);
   const [searchParams, setSearchParams] = useSearchParams();
   const profile = searchParams.get("profile");
 
@@ -308,6 +373,34 @@ export default function WhoWeAre() {
       setSearchParams(nextParams, { replace: true });
     }
   };
+
+
+  useLayoutEffect(() => {
+    const centerPresident = () => {
+        const container = chartScrollRef.current;
+        const president = presidentRef.current;
+
+        if (!container || !president || !container.clientWidth) return;
+
+        const containerRect = container.getBoundingClientRect();
+        const presidentRect = president.getBoundingClientRect();
+
+        const offset =
+        presidentRect.left +
+        presidentRect.width / 2 -
+        (containerRect.left + containerRect.width / 2);
+
+        container.scrollLeft += offset;
+    };
+
+    centerPresident();
+
+    window.addEventListener("resize", centerPresident);
+
+    return () => {
+        window.removeEventListener("resize", centerPresident);
+    };
+  }, []);
 
   return (
     <PageStub
@@ -376,9 +469,18 @@ export default function WhoWeAre() {
       </div>
 
       {/* Desktop: top-down horizontal org chart */}
-      <div className="mt-12 hidden overflow-x-auto pb-4 lg:block">
-        <div className="mx-auto flex w-max min-w-full flex-col items-center px-4">
-          <ChartCard person={PRESIDENT} onClick={open} />
+      {/* Desktop: top-down horizontal org chart */}
+      {/* Desktop: top-down horizontal org chart */}
+        <div
+            ref={chartScrollRef}
+            className="mt-12 hidden overflow-x-auto pb-4 lg:block"
+            tabIndex={0}
+            aria-label="Scrollable MUSA organizational chart"
+        >
+        <div className="mx-auto flex w-max min-w-full flex-col items-center px-6">
+            <div ref={presidentRef}>
+            <ChartCard person={PRESIDENT} onClick={open} />
+        </div>
 
           {GROUPS.map((g) => (
             <div key={g.label} className="flex flex-col items-center">
@@ -432,7 +534,13 @@ export default function WhoWeAre() {
 function hasDetail(person) {
   return (
     Array.isArray(person.bio) ||
-    !!(person.instagram || person.linkedin || person.email || person.applyUrl)
+    !!(
+      person.pronouns ||
+      person.instagram ||
+      person.linkedin ||
+      person.email ||
+      person.applyUrl
+    )
   );
 }
 
@@ -476,6 +584,9 @@ function ChartCard({ person, onClick, small = false }) {
       </div>
       <div className="mt-2">
         <div className="font-display text-sm leading-tight text-steel">{display}</div>
+        {person.pronouns && (
+          <div className="text-[10px] text-gray-500">{person.pronouns}</div>
+        )}
         <div className="mt-0.5 text-[11px] font-medium leading-tight text-gray-600">
           {person.role}
         </div>
@@ -550,6 +661,9 @@ function OrgCard({ person, onClick }) {
       </div>
       <div className="min-w-0">
         <div className="font-display text-xl leading-tight text-steel">{display}</div>
+        {person.pronouns && (
+          <div className="text-xs text-gray-500">{person.pronouns}</div>
+        )}
         <div className="truncate text-sm font-medium text-gray-600">{person.role}</div>
       </div>
     </>
@@ -629,6 +743,9 @@ function ExecModal({ exec, onClose }) {
               <h3 className="mt-2 font-display text-3xl text-steel sm:text-4xl">
                 {exec.name || "Position Open"}
               </h3>
+              {exec.pronouns && (
+                <p className="mt-1 text-sm text-gray-500">{exec.pronouns}</p>
+              )}
               {exec.meta && (
                 <div className="mt-3 text-sm text-gray-600">
                   {exec.meta.map((line, i) => (
