@@ -14,7 +14,7 @@ const EXECS = [
       "4th-year BMus Undergraduate Student",
       "Tenor, UBC Opera",
       "Councillor, AMS",
-      "Board Member, CiTR 101.9 FM",
+      "Board Member, CiTR 101.9 FM & Discorder",
     ],
     email: EMAILS.president,
     instagram: "millensandhu.musapresident",

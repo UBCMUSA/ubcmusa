@@ -25,7 +25,7 @@ export const EVENTS = [
       "Join AMS Mental Health Week to explore mental health resources, participate in engaging activities, and connect with the UBC community. Interested in attending? Click to learn how to RSVP!",
     details:
       "Hosted by Daniel Moody, UBC School of Music Professor of Voice, and Ryan Davis, Head of UBC Strings, the seminar provides tips for confidence and managing nerves when performing under pressure. RSVP or drop in!",
-    link: "https://www.ams.ubc.ca/linktree/category/mental-health-week-2026/",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfaFbuYSQWyZpZX9KoqN-tCuP5IqbpA38LfNw837d1BHhpbqg/viewform?usp=sharing&ouid=116069813193679950870",
     linkText: "Click here to RSVP!",
   },
   {

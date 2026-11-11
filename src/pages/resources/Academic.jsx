@@ -86,6 +86,16 @@ export default function Academic() {
             students mentor Masters students, and Masters students help Undergraduates
             navigate advanced theory, composition, and analysis.
           </p>
+          <div className="mt-6">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfqobzQfj3UaNs4Dfy_UyhF6EHKZ2ZpS2Xc13LCwxXzXxTYYw/viewform?usp=sharing&ouid=116069813193679950870"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex items-center gap-2 rounded-md bg-steel px-5 py-3 text-sm font-semibold text-white transition hover:bg-steel-dark"
+            >
+              Peer Mentor Form <span aria-hidden="true">↗</span>
+            </a>
+          </div>
           <p className="mt-3 text-sm italic text-gray-500">
             Sessions will vary in size and content. Please reach out to the MUSA VP
             Student Resource at{" "}
