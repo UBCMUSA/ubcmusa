@@ -12,6 +12,14 @@ function SubHead({ children }) {
   );
 }
 
+function SubSectionHead({ children }) {
+  return (
+    <h4 className="mt-5 text-xs font-semibold uppercase tracking-wider text-gray-700">
+      {children}
+    </h4>
+  );
+}
+
 export default function Personal() {
   return (
     <PageStub
@@ -138,35 +146,65 @@ export default function Personal() {
               treatment.
             </Lead>
           </ul>
-          <SubHead>Sexual Misconduct and Violence Support</SubHead>
-          <p className="mt-2 text-base leading-relaxed text-gray-700">
-            Access resources for students affected by sexual harassment, misconduct, or violence, 
-            including guidance, counselling, and assistance in acessing available campus services.
-          </p>
-          <ul className="mt-3 space-y-3 text-base leading-relaxed">
-            <Lead term="UBC SVPRO (Confidential Trauma-Informed Crisis Support)">
-              Provides confidential, trauma-informed support, safety planning, academic and workplace accommodations, 
-              and guidance on reporting options. Located in Room 2110, Brock Commons South (6180 Walter Gage Rd). 
-              Open Monday-Friday, 8:30 AM-4:30 PM. Call 604-822-1588 or email {" "}
-              <a href="mailto:svpro.vancouver@ubc.ca" className="text-logo hover:text-steel">
-              svpro.vancouver@ubc.ca
-              </a>{" "}
-            </Lead> 
-            <Lead term="AMS SASC (Confidential Peer Support and Advocacy)">
-              Offers free, confidential emotional support, crisis intervention, support groups, 
-              safety planning, and advocacy for people of all genders. Located in Nest Room 3130 (6133 University Blvd). 
-              Open weekdays 9:00 AM-8:00 PM and weekends 11:00 AM-7:00 PM. Call 604-827-5180 or email {" "}
-              <a href="mailto:sasc@ams.ubc.ca" className="text-logo hover:text-steel">
-              sasc@ams.ubc.ca
-              </a>{" "}
-            </Lead>
-            <Lead term="UBC Hospital (Immediate Medical and Forensic Care)">
-              Provides specialized medical care following sexual assault, including treatment, emotional support, 
-              and optional forensic examinations. Located at the UBC Hospital Urgent Care Centre (2211 Wesbrook Mall), 
-              with specialized services available 8:00 AM-8:00 PM daily. Call 604-822-7121 for UBC Hospital; 
-              for 24-hour emergency care, visit Vancouver General Hospital's Emergency Department.
-            </Lead>
-          </ul>
+          <section className="mt-7">
+            <SubHead>Sexual Misconduct and Violence Support</SubHead>
+            <p className="mt-2 text-base leading-relaxed text-gray-700">
+              Access resources for students affected by sexual harassment, misconduct, or violence,
+              including guidance, counselling, and assistance in accessing available campus services.
+            </p>
+            <div className="mt-4 border-l-2 border-steel/15 pl-5">
+              <SubSectionHead>On-Campus Care &amp; Support</SubSectionHead>
+              <ul className="mt-3 space-y-3 text-base leading-relaxed">
+                <Lead term="Sexual Violence Prevention and Response Office (Confidential Ongoing Support & Options)">
+                  Supports people impacted by sexual or gender-based violence, harassment, or harm. SVPRO can: help you understand your options;
+                  coordinate academic concessions & workplace accommodations; help with safety planning; explain reporting options; connect you with campus/community
+                  supports.
+                  Located in Room 2110, Brock Commons South (6180 Walter Gage Rd) by appointment + same-day appointments available.
+                  Open Monday-Friday, 8:30 AM-4:30 PM. Call 604-822-1588 or email{" "}
+                  <a href="mailto:svpro.vancouver@ubc.ca" className="text-logo hover:text-steel">
+                    svpro.vancouver@ubc.ca
+                  </a>
+                </Lead>
+                <Lead term="AMS Sexual Assault Support Centre (Confidential, Survivor-Centred Support)">
+                  Free and confidential support for people of all genders impacted by sexualized violence, as well as friends and family.
+                  Services include: crisis & short-term emotional support; advocacy & safety planning; support groups; support navigation for
+                  medical, police, court, and other processes. SASC is an AMS service and operates independently from UBC.
+                  Located in The Nest Room 3130 (6133 University Blvd). Drop-ins are welcome.
+                  Open Mon - Fri, 9:00 AM-8:00 PM, and Sat - Sun, 11:00 AM-7:00 PM. Call 604-827-5180 or Signal 604-729-5476.
+                </Lead>
+                <Lead term="UBC Hospital Sexual Assault Service (Medical Care)">
+                  UBC Hospital Sexual Assault Service can provide medical care and emotional support. This includes
+                  treatment, pregnancy/STI testing, and optional evidence collection for sexual assaults within the past 7 days.
+                  Located UBC Hospital (2211 Wesbrook Mall),
+                  with specialized services available 8:00 AM-8:00 PM daily. Call 604-822-7121 for UBC Hospital.
+                </Lead>
+                <Lead term="UBC Counselling Services (Mental Health Support)">
+                  Confidential counselling and mental-health support for UBC students.
+                  Located at the MacIssac Health Building, Level 3.
+                  Call 604-822-3811 to book an in-person or virtual appointment. Some appointments can be booked online, depending on faculty, program,
+                  and population-specific counselling appointments.
+                </Lead>
+                <Lead term="Not sure where to start?">
+                  You can come to the Wellness Centre (UBC Life Building 1400). You don't need to know which service you need before asking for help.
+                  Wellness Centre staff can listen, help you identify appropriate resources, and connect you with specialized support such as SASC or SVPRO.
+                  Available Mon - Fri, 9 AM - 8 PM, and Sat - Sun, 11 AM - 7 PM.
+                </Lead>
+              </ul>
+              <SubSectionHead>Off-Campus Care &amp; Support</SubSectionHead>
+              <ul className="mt-3 space-y-3 text-base leading-relaxed">
+                <Lead term="Foundry BC (For Youth 12-24)">
+                  Free and confidential counselling, mental-health support, physical & sexual health care, substance-use and peer support. 
+                  No referral required. Located at Foundry Vancouver-Granville (1260 Granville Street). Call at 604-806-9415. Virtual services are also 
+                  available across BC. Please note some counselling and health services are available by drop-in; call ahead when possible.
+                </Lead>
+                <Lead term="Family Services of Greater Vancouver (Long-Term Support)">
+                  Free, trauma-informed support for people impacted by violence and traume, including sexual abuse and intimate-partner/family violence. 
+                  Services include trauma counselling, safety planning, emotional support, advocacy, justice-system navigation, and connections to housing, medical,
+                  and other supports. Please call at 604-731-4951. Visit FSGV's Find Help page to find the appropriate program; access requirements vary by service.
+                </Lead>
+              </ul>
+            </div>
+          </section>
           <SubHead>BC Student &amp; Non-Emergency Health Resources</SubHead>
           <p className="mt-2 text-base leading-relaxed text-gray-700">
             Access specialized, free medical advice and student-focused single-session
