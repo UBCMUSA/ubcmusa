@@ -765,7 +765,7 @@ function ExecModal({ exec, onClose }) {
                 <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
                   {exec.instagram && (
                     <a
-                      href={`https://instagram.com/${exec.instagram}`}
+                      href={`https://www.instagram.com/${exec.instagram}`}
                       target="_blank"
                       rel="noreferrer noopener"
                       className="font-medium text-logo hover:text-steel"
