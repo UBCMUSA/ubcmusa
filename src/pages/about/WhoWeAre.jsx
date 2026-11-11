@@ -284,8 +284,14 @@ const COMPOSITION = {
 const BAMUSIC = {
     role: "BA in Music",
     name: "Ethan Kerouac",
+    pronouns: "He/Him",
+    meta: ["2nd-year BA in Music Undergraduate Student"],
     email: EMAILS.baMusicRep,
-    applyURL: HIRING_URL,
+    instagram: "ethankerouac",
+    photo: "/images/optimized/ethan-headshot.jpg",
+    bio: [
+        "Hey Music! My name’s Ethan and I’m very excited to represent the Arts students majoring in Music! Music has always been the biggest part of my life, and I’m looking forward to meeting new people and making our community an even better place for all Music students. Outside of UBC, I’m either bartending, producing music, taking photos, keeping up with my favourite fashion brands, cooking, and exploring the city trying new restaurants. I can't wait to meet everyone and make this year a success for MUSA!" 
+    ]
 }
 const FIRST_YEAR_CHAIR = {
     role: "First Year Chair",
@@ -319,6 +325,16 @@ const FIRST_YEAR_MEMBER1 = {
 const FIRST_YEAR_MEMBER2 = {
     role: "First Year Committee",
     name: "Maximillian Yip",
+    pronouns: "He/Him",
+    meta: ["1st-year BMus Undergraduate Student", "Violin Performance"],
+    instagram: "maximilianyip",
+    photo: "/images/optimized/maximillian-headshot.jpg",
+    bio: [
+        "My name is Max Yip, and I am a first-year BMus student in violin performance from Toronto, Ontario. As a violinist who has played in multiple symphonic orchestras growing up, I understand the importance of building a strong community and developing bonds with fellow musicians. Although pursuing a music degree requires intense dedication and often leads to long hours in the practice room, I believe that the relationships we form are just as important. ",
+        "As a member of MUSA’s first-year committee, I am here to ensure that our cohort’s ideas, concerns and feedback are always heard and represented. I am looking forward to serve and along with the other members of the first-year committee, we will be responsible for planning a variety of upcoming events! If you ever have any suggestions for future events or questions about anything, feel free to reach out!",
+        "Make sure to be on the lookout for all upcoming events! ",
+        "Outside of music, I am a very passionate basketball player. If I’m not sawing away at my violin in a practice room, you can probably find me at rec north putting shots up!",
+    ]
     
 }
 
