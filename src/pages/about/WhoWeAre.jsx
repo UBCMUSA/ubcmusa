@@ -74,13 +74,13 @@ const EXECS = [
     applyUrl: HIRING_URL,
   },
   {
-    role: "Vice-President Student Resource (Interim)",
+    role: "Vice-President Student Resource",
     name: "Pin Yi Hu",
     meta: ["2nd-year BMus Undergraduate Student", "Viola Performance"],
     email: EMAILS.vpStudentResource,
     instagram: "p.inyi",
     linkedin: "https://www.linkedin.com/in/pinyihu",
-    photo: "/images/optimized/pinyi-headshot.jpg",
+    photo: "/images/optimized/pinyi-headshot2.jpg",
     bio: [
       "Pin Yi Hu is a second-year Viola Performance student at the UBC School of Music and VP Student Resource for the Music Undergraduate Students' Association. Having grown up in the lower mainland, Pin Yi has been involved in the BC youth music community for years, performing with local ensembles across the Tri-Cities and Vancouver. This background within the local arts community motivates her commitment to creating stronger support networks for her peers. As the primary link between the student body and MUSA, her goal is to support an inclusive community where student voices are not just heard, but actively put into practice.",
       "Deeply curious about human behaviour, Pin Yi is currently working toward a double major in Music and Psychology. When she isn't practicing her viola or studying, you can find her mindlessly sketching on any paper surface, or attempting to make a new variation of a matcha latte.",
@@ -217,7 +217,14 @@ const LOUNGE_MANAGER = {
 const STRING = {
     role: "Strings",
     name: "Alesha Chan",
-    applyURL: HIRING_URL,
+    pronouns: "She/Her",
+    photo: "/images/optimized/alesha-headshot.jpg",
+    meta: ["2nd-year BMus Undergraduate Student", "Violin Performance"],
+    bio: [
+        "Alesha Chan is a second-year Violin Performance student at UBC, currently serving as the Violin Representative for the Music Undergraduate Students’ Association. With a passion for music and community involvement, Alesha was a member of the Richmond Delta Youth Orchestra for nine years, where she gained experience as both a principal violinist and concertmaster. Throughout her musical journey, she has also enjoyed performing in chamber ensembles, including quartets and quintets.",
+        "As the Violin Representative, Alesha hopes to serve as a bridge between string students and MUSA, ensuring that students feel heard and supported within the School of Music. She is excited to contribute to creating a welcoming and inclusive environment for everyone.",
+        "Outside of practicing and performing, Alesha enjoys cooking and baking for friends and family. She looks forward to meeting more students this year and encourages everyone to reach out with any questions or concerns!",
+    ]
 }
 
 const KEYBOARD = {
@@ -229,7 +236,13 @@ const KEYBOARD = {
 const VOICE_OPERA = {
     role: "Voice/Opera",
     name: "Anastasia Lutsenko",
-    applyURL: HIRING_URL,
+    meta: ["Anastasia Lutsenko-Goretoy","4th-year BMus Undergraduate Student","Voice Performance"],
+    instagram: "nastya.lutsenko_",
+    email: EMAILS.voiceOperaRep,
+    photo: "/images/optimized/anastasia-headshot.jpg",
+    bio: [
+        "Anastasia (Nastya) Goretoy is a soprano from Vernon, BC working towards a BMUS in Voice Performance. Since dedicating herself to music, she has performed and competed in various ensembles, masterclasses, and festivals across Canada and the West Coast. With boundless ambition, Nastya strives to become a prominent figure in the local music scene as a performer, educator, and entrepreneur. Alongside her husband Philip, she conducts choir at Westlynn Baptist Church in North Vancouver. When not practicing, Anastasia can be found hiking, serving in her church's Russian Language ministry, or experimenting with food.",
+    ]
 }
 
 const WIND_BRASS_PERCUSSION = {
