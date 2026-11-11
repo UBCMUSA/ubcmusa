@@ -3,17 +3,6 @@
 
 
 export const EVENTS = [
-  {
-    title: "Pizza Lunch with Dr. Law",
-    date: "Dec 4 2026",
-    time: "12:00 - 1:00 PM",
-    location: "",
-    image: "/images/optimized/dr-law-headshot.jpg",
-    blurb:
-      "Join us for a pizza lunch with Dr. Law from UBC! Enjoy some pizza, meet fellow students, and chat with Dr. Law in a casual setting.",
-    details:
-      "Join us for a pizza lunch with Dr. Law from UBC! Enjoy some pizza, meet fellow students, and chat with Dr. Law in a casual setting.",
-  },
 
   {
     title: "MUSA x AMS Mental Health Week - Performance Anxiety Seminar",
@@ -61,7 +50,18 @@ export const EVENTS = [
     details:
       "Celebrate the incredible talent of UBC School of Music faculty at the annual MUSA Faculty Showcase. This flagship concert brings students and instructors together outside the classroom to enjoy live performances, build community, and foster mentorship.",
   },
-  
+  {
+    title: "Pizza Lunch with Dr. Law",
+    date: "Dec 4 2026",
+    time: "12:00 - 1:00 PM",
+    location: "",
+    image: "/images/optimized/dr-law-headshot.jpg",
+    blurb:
+      "Join us for a pizza lunch with Dr. Law from UBC! Enjoy some pizza, meet fellow students, and chat with Dr. Law in a casual setting.",
+    details:
+      "Join us for a pizza lunch with Dr. Law from UBC! Enjoy some pizza, meet fellow students, and chat with Dr. Law in a casual setting.",
+  },
+
 
 
 
