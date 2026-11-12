@@ -3,11 +3,11 @@ import SectionEyebrow from "../../components/SectionEyebrow.jsx";
 import DownloadButton from "../../components/DownloadButton.jsx";
 
 const BUDGETS = [
-  {
-    year: "2025–2026",
-    filename: "MUSA Budget 2025-2026.xlsx",
-    href: "/documents/budgets/MUSA%20Budget%202025-2026.xlsx",
-  },
+//   {
+//     year: "2025–2026",
+//     filename: "MUSA Budget 2025-2026.xlsx",
+//     href: "/documents/budgets/MUSA%20Budget%202025-2026.xlsx",
+//   },
   {
     year: "2023–2024",
     filename: "MUSA Budget 2023-2024.xlsx",

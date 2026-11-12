@@ -84,7 +84,8 @@ export default function HowWeRun() {
           <div className="mt-5 flex flex-wrap gap-3">
             <DownloadButton
               label="MUSA 2026–2027 Budget (XLSX)"
-              note="To be released"
+              note="MUSA Budget 2025-2026.xlsx"
+              href="/documents/budgets/MUSA%20Budget%202025-2026.xlsx"
             />
             <Link
               to="/about/budgets"
