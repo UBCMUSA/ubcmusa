@@ -231,8 +231,18 @@ const STRING = {
 const KEYBOARD = {
     role: "Keyboard",
     name: "Shua Cho",
+    pronouns: "She/Her",
+    meta: ["3rd-year BMus Undergraduate Student", "Piano"],
     email: EMAILS.keyboardRep,
-    applyURL: HIRING_URL,
+    instagram: "shua.cho_",
+    photo: "/images/optimized/shua-headshot.jpg",
+    bio: [
+        "Shua Cho is a third-year BMus student specializing in Piano, serving as the Undergraduate Keyboard Representative for the Music Undergraduate Students’ Association. ",
+        "With a musically diverse background spanning classical, jazz, gospel, chamber, choral music and more, Shua has developed a particular passion for collaborative musicianship. Having worked with musicians and ensembles of various sizes, across multiple generations, cultures and musical traditions, she has come to appreciate music as a universal language that transcends all boundaries, connecting people from all walks of life.",
+        "As Keyboard Representative, she hopes to draw upon these experiences to be a voice for her fellow keyboard students while fostering a more connected and active musical community, encouraging collaboration across divisions and musical disciplines to explore music beyond our own instruments and practice rooms!",
+        "Beyond performance, Shua is especially fascinated by the intersection of music, language and cognitive science, and how these interdisciplinary fields continue to deepen our understanding of human creativity, communication and learning in the age of artificial intelligence. ",
+        "Outside of music and academics, Shua enjoys hiking, photography, travelling, and just about anything that involves good company! She is excited to be part of the MUSA team this year and looks forward to serving the music community - Feel free to reach out with any keyboard-related ideas, questions, or just to say hello!",
+    ]
 }
 
 const VOICE_OPERA = {
