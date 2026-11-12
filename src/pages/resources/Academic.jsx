@@ -63,8 +63,8 @@ export default function Academic() {
             Lockers vary in size to accommodate your instrument.
           </p>
           <p className="mt-3 text-sm italic text-gray-500">
-            Please contact the MUSA VP Student Resource at{" "}
-            <a href="mailto:vpstudentresource@ubcmusa.ca" className="text-logo hover:text-steel">
+            Please contact the MUSA VP Administration at{" "}
+            <a href="mailto:vpadmin@ubcmusa.ca" className="text-logo hover:text-steel">
               vpstudentresource@ubcmusa.ca
             </a>{" "}
             for any inquiries.
