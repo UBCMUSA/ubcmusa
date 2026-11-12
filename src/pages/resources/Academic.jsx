@@ -65,7 +65,7 @@ export default function Academic() {
           <p className="mt-3 text-sm italic text-gray-500">
             Please contact the MUSA VP Administration at{" "}
             <a href="mailto:vpadmin@ubcmusa.ca" className="text-logo hover:text-steel">
-              vpstudentresource@ubcmusa.ca
+              vpadmin@ubcmusa.ca
             </a>{" "}
             for any inquiries.
           </p>
