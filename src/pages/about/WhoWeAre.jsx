@@ -298,7 +298,7 @@ const BAMUSIC = {
     meta: ["2nd-year BA in Music Undergraduate Student"],
     email: EMAILS.baMusicRep,
     instagram: "ethankerouac",
-    photo: "/images/optimized/ethan-headshot.jpg",
+    photo: "/images/optimized/ethan-headshot2.jpg",
     bio: [
         "Hey Music! My name’s Ethan and I’m very excited to represent the Arts students majoring in Music! Music has always been the biggest part of my life, and I’m looking forward to meeting new people and making our community an even better place for all Music students. Outside of UBC, I’m either bartending, producing music, taking photos, keeping up with my favourite fashion brands, cooking, and exploring the city trying new restaurants. I can't wait to meet everyone and make this year a success for MUSA!" 
     ]
