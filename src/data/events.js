@@ -27,6 +27,8 @@ export const EVENTS = [
       "Join us for the UBC MUSA council meeting to connect with fellow music enthusiasts and learn about upcoming events and opportunities.",
     details:
       "Join us for the UBC MUSA meeting to connect with fellow music enthusiasts and learn about upcoming events and opportunities",
+    link: "/documents/agendas/agenda-2026-11-18.pdf",
+    linkText: "Download Meeting Agenda",
   },
   {
     title: "MUSA Annual General Meeting",

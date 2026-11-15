@@ -16,6 +16,7 @@ export const MEETING_DATES = [
 ];
 
 export const AGENDA_DATES_2026_2027 = [
+  "2026-11-18",
   "2026-10-28",
   "2026-10-21",
   "2026-10-01",
