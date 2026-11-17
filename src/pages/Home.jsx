@@ -14,6 +14,7 @@ export default function Home() {
     <>
       <Hero />
       <GetInvolvedSection />
+      <GraduationPortraitsSection />
       <UpcomingEventsSection />
       <PillarsSection />
       <AboutUsBand />
@@ -81,7 +82,7 @@ function GetInvolvedSection() {
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-          <div>
+          <div className="lg:order-2">
             <SectionEyebrow center>Get Involved</SectionEyebrow>
             <p className="mt-6 text-base leading-relaxed text-gray-700">
               Join MUSA under the right role for you! Under MUSA's Restructuring
@@ -102,10 +103,50 @@ function GetInvolvedSection() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-2xl shadow-sm transition-[transform,box-shadow] duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-xl">
+          <div className="overflow-hidden rounded-2xl shadow-sm transition-[transform,box-shadow] duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-xl lg:order-1">
             <img
               src="/images/ubc-opera-ball.jpg"
               alt="MUSA students gathered at a social event"
+              className="h-full max-h-[420px] w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function GraduationPortraitsSection() {
+  return (
+    <section className="bg-ivory">
+      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div>
+            <SectionEyebrow center>Graduation Portraits</SectionEyebrow>
+            <p className="mt-6 text-base leading-relaxed text-gray-700">
+              Graduating in November 2026 or May 2027? Book your Evangelos
+              Photography appointment to be included in this year's School of Music
+              class composite. Students must be photographed by January 15, 2027.
+              Appointments are open and should be booked 4–5 weeks in advance, as
+              time slots fill quickly.
+            </p>
+            <div className="mt-8">
+              <a
+                href="https://www.evangelosphotography.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2 rounded-md bg-steel px-5 py-3 text-sm font-semibold text-white transition hover:bg-steel-dark"
+              >
+                Book with Evangelos
+                <span aria-hidden>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl shadow-sm">
+            <img
+              src="/images/optimized/grad-1.jpg"
+              alt="Graduation portrait of a UBC School of Music student"
               className="h-full max-h-[420px] w-full object-cover"
             />
           </div>
