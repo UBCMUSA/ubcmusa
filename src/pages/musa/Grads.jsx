@@ -49,9 +49,11 @@ export default function Grads() {
           </p>
           <ul className="mt-5 space-y-3 text-base leading-relaxed">
             <Lead term="The Class Composite">
-              Being photographed by Evangelos ensures you are included in the official
-              MUSA Graduating Class Composite, which will be permanently framed and
-              displayed within the School of Music facilities.
+              This year's composite includes students graduating in November 2026 and
+              May 2027. Being photographed by Evangelos ensures you are included in
+              the official MUSA Graduating Class Composite, which will be permanently
+              framed and displayed within the School of Music facilities. Students
+              must be photographed by January 15, 2027, to be included.
             </Lead>
             <Lead term="What's Included">
               Your portrait session includes formal cap-and-gown photography,
@@ -59,15 +61,24 @@ export default function Grads() {
               you can use for your personal performance websites, casting portfolios,
               and studio biographies.
             </Lead>
-            <Lead term="Booking Details">
-              Appointment blocks specifically reserved for School of Music students
-              will open during the winter term. Links to secure your spot at
-              Evangelos' studio will be published here as soon as bookings go live.
+            <Lead term="Appointments">
+              Bookings are open, and all appointments must be booked online through{" "}
+              <a
+                href="https://www.evangelosphotography.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="text-logo hover:text-steel"
+              >
+                Evangelos Photography
+              </a>
+              . Students should book 4-5 weeks in advance, as time slots fill quickly.
+            </Lead>
+            <Lead term="Full Graduation Session Deposit">
+              Students choosing a full graduation session must place a $45 refundable
+              cash deposit at their appointment. The deposit is fully refundable under
+              the studio's 60 day policy.
             </Lead>
           </ul>
-          <p className="mt-4 text-sm italic text-gray-500">
-            More details will be published during the academic year. Stay tuned.
-          </p>
           <ContentImage
             className="mt-6"
             src="/images/optimized/grad-1.jpg"
